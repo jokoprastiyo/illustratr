@@ -124,43 +124,12 @@ Jetpack
 
 /* Infinite Scroll */
 #infinite-footer {
-	color: $light-color;
-	font-size: 0.73em;
-	z-index: 99997;
-	@include max-screen($tablet - 1px) {
-		display: none;
-	}
-	.container {
-		padding: ($vspacing / 2) $vspacing-double;
-		background: $lighter-color;
-		border: 0;
-	}
-	.blog-info,
-	.blog-credits {
-		color: inherit;
-		font-size: inherit;
-		a {
-			color: inherit;
-			font-size: inherit;
-			@include hover(color, $text-color);
-			@include hover(text-decoration, none);
-		}
-	}
-	.blog-info {
-		a {
-			text-transform: uppercase;
-		}
-	}
+	display: none;
 }
 .infinite-scroll {
 	.paging-navigation,
 	&.neverending .site-footer {
 		display: none;
-	}
-}
-@include min-screen($desktop) {
-	body:not(.custom-background) #infinite-footer {
-		padding-bottom: $vspacing;
 	}
 }
 .infinity-end {

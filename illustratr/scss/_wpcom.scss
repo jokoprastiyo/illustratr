@@ -1,3 +1,19 @@
 /*--------------------------------------------------------------
 WP.com
 --------------------------------------------------------------*/
+
+/* Sharedaddy */
+.page-content,
+.entry-content,
+.entry-summary {
+	> .sharedaddy {
+		.jetpack-likes-widget-wrapper {
+			padding: ($vspacing - 5px) 0;
+			border-top: 1px solid $lighter-color;
+			@include box-sizing(content-box);
+			.post-likes-widget {
+				top: $vspacing - (5px * 2) !important;
+			}
+		}
+	}
+}

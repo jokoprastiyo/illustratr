@@ -2590,35 +2590,11 @@ Jetpack
 
 /* Infinite Scroll */
 #infinite-footer {
-  color: #b1b2b3;
-  font-size: 0.73em;
-  z-index: 99997; }
-@media screen and (max-width: 767px) {
-  #infinite-footer {
-    display: none; } }
-#infinite-footer .container {
-  padding: 10px 40px;
-  background: #f1f2f3;
-  border: 0; }
-#infinite-footer .blog-info, #infinite-footer .blog-credits {
-  color: inherit;
-  font-size: inherit; }
-#infinite-footer .blog-info a, #infinite-footer .blog-credits a {
-  color: inherit;
-  font-size: inherit; }
-#infinite-footer .blog-info a:hover, #infinite-footer .blog-info a:focus, #infinite-footer .blog-info a:active, #infinite-footer .blog-credits a:hover, #infinite-footer .blog-credits a:focus, #infinite-footer .blog-credits a:active {
-  color: #7f8d8c; }
-#infinite-footer .blog-info a:hover, #infinite-footer .blog-info a:focus, #infinite-footer .blog-info a:active, #infinite-footer .blog-credits a:hover, #infinite-footer .blog-credits a:focus, #infinite-footer .blog-credits a:active {
-  text-decoration: none; }
-#infinite-footer .blog-info a {
-  text-transform: uppercase; }
+  display: none; }
 
 .infinite-scroll .paging-navigation, .infinite-scroll.neverending .site-footer {
   display: none; }
 
-@media screen and (min-width: 960px) {
-  body:not(.custom-background) #infinite-footer {
-    padding-bottom: 20px; } }
 .infinity-end.neverending .site-footer {
   display: block; }
 
