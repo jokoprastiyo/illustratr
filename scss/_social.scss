@@ -1,0 +1,197 @@
+/*--------------------------------------------------------------
+Social
+--------------------------------------------------------------*/
+
+.menu-social {
+	clear: both;
+	display: block;
+	width: 100%;
+	text-align: center;
+	ul {
+		display: block;
+		margin: 0 0 ($vspacing / 2);
+	}
+	li {
+		display: inline-block;
+		margin: 0 ($vspacing / 2 - 3px) ($vspacing / 2) 0;
+		line-height: 1;
+		&:last-child {
+			margin-right: 0;
+		}
+		a {
+			display: inline-block;
+			position: relative;
+			padding: $vspacing / 4;
+			border: 2px solid $light-color;
+			text-decoration: none;
+			@include border-radius(50%);
+			@include transition(all 250ms ease);
+			@include hover(border-color, $text-color);
+			&:before {
+				@include genericon('\f408');
+			}
+		}
+		a[href$="/feed/"] {
+			@include hover(border-color, #ee802f);
+			@include hover(color, #ee802f);
+			&:before {
+				content: '\f413';
+			}
+		}
+		a[href*="codepen.io"] {
+			@include hover(border-color, #000000);
+			@include hover(color, #000000);
+			&:before {
+				content: '\f216';
+			}
+		}
+		a[href*="digg.com"] {
+			@include hover(border-color, #000000);
+			@include hover(color, #000000);
+			&:before {
+				content: '\f221';
+			}
+		}
+		a[href*="dribbble.com"] {
+			@include hover(border-color, #ea4c89);
+			@include hover(color, #ea4c89);
+			&:before {
+				content: '\f201';
+			}
+		}
+		a[href*="dropbox.com"] {
+			@include hover(border-color, #007ee5);
+			@include hover(color, #007ee5);
+			&:before {
+				content: '\f225';
+			}
+		}
+		a[href*="facebook.com"] {
+			@include hover(border-color, #3b5998);
+			@include hover(color, #3b5998);
+			&:before {
+				content: '\f203';
+			}
+		}
+		a[href*="flickr.com"] {
+			@include hover(border-color, #ff0084);
+			@include hover(color, #ff0084);
+			&:before {
+				content: '\f211';
+			}
+		}
+		a[href*="plus.google.com"] {
+			@include hover(border-color, #dd4b39);
+			@include hover(color, #dd4b39);
+			&:before {
+				content: '\f206';
+			}
+		}
+		a[href*="github.com"] {
+			@include hover(border-color, #171515);
+			@include hover(color, #171515);
+			&:before {
+				content: '\f200';
+			}
+		}
+		a[href*="instagram.com"] {
+			@include hover(border-color, #3f729b);
+			@include hover(color, #3f729b);
+			&:before {
+				content: '\f215';
+			}
+		}
+		a[href*="linkedin.com"] {
+			@include hover(border-color, #0e76a8);
+			@include hover(color, #0e76a8);
+			&:before {
+				content: '\f208';
+			}
+		}
+		a[href*="pinterest.com"] {
+			@include hover(border-color, #c8232c);
+			@include hover(color, #c8232c);
+			&:before {
+				content: '\f210';
+			}
+		}
+		a[href*="getpocket.com"] {
+			@include hover(border-color, #ee4056);
+			@include hover(color, #ee4056);
+			&:before {
+				content: '\f224';
+			}
+		}
+		a[href*="polldaddy.com"] {
+			@include hover(border-color, #c43932);
+			@include hover(color, #c43932);
+			&:before {
+				content: '\f217';
+			}
+		}
+		a[href*="reddit.com"] {
+			@include hover(border-color, #ff4500);
+			@include hover(color, #ff4500);
+			&:before {
+				content: '\f222';
+			}
+		}
+		a[href*="skype.com"],
+		a[href*="skype:"]:before {
+			@include hover(border-color, #00aff0);
+			@include hover(color, #00aff0);
+			&:before {
+				content: '\f220';
+			}
+		}
+		a[href*="stumbleupon.com"] {
+			@include hover(border-color, #f74425);
+			@include hover(color, #f74425);
+			&:before {
+				content: '\f223';
+			}
+		}
+		a[href*="tumblr.com"] {
+			@include hover(border-color, #34526f);
+			@include hover(color, #34526f);
+			&:before {
+				content: '\f214';
+			}
+		}
+		a[href*="twitter.com"] {
+			@include hover(border-color, #55acee);
+			@include hover(color, #55acee);
+			&:before {
+				content: '\f202';
+			}
+		}
+		a[href*="vimeo.com"] {
+			@include hover(border-color, #44bbff);
+			@include hover(color, #44bbff);
+			&:before {
+				content: '\f212';
+			}
+		}
+		a[href*="wordpress.com"],
+		a[href*="wordpress.org"] {
+			&:before {
+				content: '\f205';
+			}
+		}
+		a[href*="wordpress.com"] {
+			@include hover(border-color, #1e8cbe);
+			@include hover(color, #1e8cbe);
+		}
+		a[href*="wordpress.org"] {
+			@include hover(border-color, #21759b);
+			@include hover(color, #21759b);
+		}
+		a[href*="youtube.com"] {
+			@include hover(border-color, #c4302b);
+			@include hover(color, #c4302b);
+			&:before {
+				content: '\f213';
+			}
+		}
+	}
+}
