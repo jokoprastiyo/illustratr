@@ -57,7 +57,6 @@ add_action( 'wp_enqueue_scripts', 'illustratr_wpcom_styles' );
 /**
  * Enable Infinite Scroll on archive pages.
  */
-/*
 function illustratr_infinite_scroll_archive_supported( $supported ) {
 	return array(
 		is_home(),
@@ -66,4 +65,3 @@ function illustratr_infinite_scroll_archive_supported( $supported ) {
 	);
 }
 add_filter( 'infinite_scroll_archive_supported', 'illustratr_infinite_scroll_archive_supported' );
-*/
