@@ -606,19 +606,19 @@ body {
   opacity: 0; }
 
 /* Blocks */
-.site-branding, .site-image, .main-navigation, .footer-area, .nav-links, .entry-thumbnail, .entry-gallery, .entry-media {
+.site-branding, .site-image, .main-navigation, .footer-area, .nav-links, .entry-thumbnail, .entry-gallery, .entry-media, .hentry.format-video > .video-wrapper {
   width: 840px;
   display: block;
   margin-left: auto;
   margin-right: auto; }
 @media screen and (min-width: 1220px) {
-  .site-branding, .site-image, .main-navigation, .footer-area, .nav-links, .entry-thumbnail, .entry-gallery, .entry-media {
+  .site-branding, .site-image, .main-navigation, .footer-area, .nav-links, .entry-thumbnail, .entry-gallery, .entry-media, .hentry.format-video > .video-wrapper {
     width: 1100px; } }
 @media screen and (min-width: 768px) and (max-width: 959px) {
-  .site-branding, .site-image, .main-navigation, .footer-area, .nav-links, .entry-thumbnail, .entry-gallery, .entry-media {
+  .site-branding, .site-image, .main-navigation, .footer-area, .nav-links, .entry-thumbnail, .entry-gallery, .entry-media, .hentry.format-video > .video-wrapper {
     width: 648px; } }
 @media screen and (max-width: 767px) {
-  .site-branding, .site-image, .main-navigation, .footer-area, .nav-links, .entry-thumbnail, .entry-gallery, .entry-media {
+  .site-branding, .site-image, .main-navigation, .footer-area, .nav-links, .entry-thumbnail, .entry-gallery, .entry-media, .hentry.format-video > .video-wrapper {
     width: 100%; } }
 
 .widgets-area {
@@ -1814,9 +1814,9 @@ Post Formats
 @media screen and (min-width: 1220px) {
   .hentry.format-image .wp-caption .size-full {
     max-width: 100%; } }
-.hentry.format-video .entry-media, .hentry.format-audio .entry-media {
+.hentry.format-video .entry-media, .hentry.format-video > .video-wrapper, .hentry.format-audio .entry-media, .hentry.format-audio > .video-wrapper {
   margin-bottom: 40px; }
-.hentry.format-video .entry-media p, .hentry.format-video .entry-media embed, .hentry.format-video .entry-media iframe, .hentry.format-video .entry-media object, .hentry.format-video .entry-media video, .hentry.format-video .entry-media audio, .hentry.format-video .entry-media .mejs-audio, .hentry.format-audio .entry-media p, .hentry.format-audio .entry-media embed, .hentry.format-audio .entry-media iframe, .hentry.format-audio .entry-media object, .hentry.format-audio .entry-media video, .hentry.format-audio .entry-media audio, .hentry.format-audio .entry-media .mejs-audio {
+.hentry.format-video .entry-media p, .hentry.format-video .entry-media embed, .hentry.format-video .entry-media iframe, .hentry.format-video .entry-media object, .hentry.format-video .entry-media video, .hentry.format-video .entry-media audio, .hentry.format-video .entry-media .mejs-audio, .hentry.format-video > .video-wrapper p, .hentry.format-video > .video-wrapper embed, .hentry.format-video > .video-wrapper iframe, .hentry.format-video > .video-wrapper object, .hentry.format-video > .video-wrapper video, .hentry.format-video > .video-wrapper audio, .hentry.format-video > .video-wrapper .mejs-audio, .hentry.format-audio .entry-media p, .hentry.format-audio .entry-media embed, .hentry.format-audio .entry-media iframe, .hentry.format-audio .entry-media object, .hentry.format-audio .entry-media video, .hentry.format-audio .entry-media audio, .hentry.format-audio .entry-media .mejs-audio, .hentry.format-audio > .video-wrapper p, .hentry.format-audio > .video-wrapper embed, .hentry.format-audio > .video-wrapper iframe, .hentry.format-audio > .video-wrapper object, .hentry.format-audio > .video-wrapper video, .hentry.format-audio > .video-wrapper audio, .hentry.format-audio > .video-wrapper .mejs-audio {
   display: block;
   margin: 0 auto; }
 .hentry.format-status .featured-post, .hentry.format-status .cat-links {

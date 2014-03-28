@@ -49,7 +49,8 @@ body {
 .nav-links,
 .entry-thumbnail,
 .entry-gallery,
-.entry-media {
+.entry-media,
+.hentry.format-video > .video-wrapper {
 	width: $desktop - ($vspacing-double * 2 + $vspacing * 2);
 	@include center-block;
 	@include min-screen($widescreen) {

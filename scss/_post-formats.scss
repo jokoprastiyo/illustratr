@@ -34,7 +34,8 @@ Post Formats
 	// Video & Audio
 	&.format-video,
 	&.format-audio {
-		.entry-media {
+		.entry-media,
+		> .video-wrapper {
 			margin-bottom: $vspacing-double;
 			p,
 			embed,
