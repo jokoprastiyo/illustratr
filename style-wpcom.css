@@ -66,3 +66,12 @@
 /*--------------------------------------------------------------
 WP.com
 --------------------------------------------------------------*/
+/* Sharedaddy */
+.page-content > .sharedaddy .jetpack-likes-widget-wrapper, .entry-content > .sharedaddy .jetpack-likes-widget-wrapper, .entry-summary > .sharedaddy .jetpack-likes-widget-wrapper {
+  padding: 15px 0;
+  border-top: 1px solid #f1f2f3;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+.page-content > .sharedaddy .jetpack-likes-widget-wrapper .post-likes-widget, .entry-content > .sharedaddy .jetpack-likes-widget-wrapper .post-likes-widget, .entry-summary > .sharedaddy .jetpack-likes-widget-wrapper .post-likes-widget {
+  top: 10px !important; }
