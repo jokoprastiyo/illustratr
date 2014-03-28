@@ -6,8 +6,13 @@
 	function image_post_format() {
 		
 		$( '.hentry.format-image img, .portfolio-entry .entry-content img' ).each( function() {
-			var img_width = $( this ).attr( 'width' ),
-			    caption = $( this ).closest( 'div' );
+			var img = $( this ),
+			    caption = $( this ).closest( 'div' ),
+			    new_img = new Image();
+			    
+			new_img.src = img.attr('src');
+			var img_width = new_img.width;
+			    
 			if ( img_width >= 1100 ) {
 				$( this ).addClass( 'image-big' );
 				$( this ).parents( 'p' ).addClass( 'image-big-wrapper' );
