@@ -34,10 +34,15 @@ if ( isset( $GLOBALS['content_width'] ) ) {
 		}
 	?>
 	
-	<footer class="entry-meta<?php if ( ! current_user_can( 'edit_posts' ) && ! $comments_status ) echo ' empty-meta' ?>">
-		<?php
-			echo get_the_term_list( $post->ID, 'jetpack-portfolio-tag', '<span class="tags-links">', _x(', ', 'Used between list items, there is a space after the comma.', 'illustratr' ), '</span>' );
-		?>
+	<?php
+		/* translators: used between list items, there is a space after the comma */
+		$tags_list = get_the_term_list( $post->ID, 'jetpack-portfolio-tag', '', __( ', ', 'illustratr' ) );
+	?>
+	
+	<footer class="entry-meta<?php if ( ! current_user_can( 'edit_posts' ) && ! $comments_status && ! $tags_list ) echo ' empty-meta' ?>">
+		<?php if ( $tags_list ) : ?>
+			<span class="tags-links"><?php printf( __( 'Tagged %1$s', 'illustratr' ), $tags_list ); ?></span>
+		<?php endif; ?>
 
 		<?php if ( $comments_status ) : ?>
 		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'illustratr' ), __( '1 Comment', 'illustratr' ), __( '% Comments', 'illustratr' ) ); ?></span>

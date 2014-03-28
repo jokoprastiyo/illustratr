@@ -2172,13 +2172,12 @@ Comments
 /* Comment meta */
 .comment-meta {
   padding-bottom: 20px; }
-
-.fn {
+.comment-meta .fn {
   color: #24282d;
   font-weight: 900;
   font-style: normal;
   text-transform: uppercase; }
-.fn a {
+.comment-meta .fn a {
   color: inherit;
   text-decoration: none; }
 

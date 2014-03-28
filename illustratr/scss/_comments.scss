@@ -99,15 +99,15 @@ Comments
 /* Comment meta */
 .comment-meta {
 	padding-bottom: $vspacing;
-}
-.fn {
-	color: $darker-color;
-	font-weight: 900;
-	font-style: normal;
-	text-transform: uppercase;
-	a {
-		color: inherit;
-		text-decoration: none;
+	.fn {
+		color: $darker-color;
+		font-weight: 900;
+		font-style: normal;
+		text-transform: uppercase;
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
 	}
 }
 .comment-meta-details {
