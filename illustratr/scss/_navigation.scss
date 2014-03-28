@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+Navigation
+--------------------------------------------------------------*/
+
+/* Links */
+a {
+	color: $link-color;
+	@include hover(color, $text-color);
+}
+a:visited {
+	color: $link-visited;
+}
+
+/*  Pagination */
+.site-main {
+	.comment-navigation,
+	.paging-navigation,
+	.post-navigation,
+	.portfolio-navigation {
+		position: relative;
+		padding-bottom: $vspacing;
+		@include hentry;
+		.nav-previous,
+		.nav-next {
+			width: 50%;
+		}
+		.nav-previous {
+			float: left;
+		}
+		.nav-next {
+			float: right;
+			text-align: right;
+		}
+		a {
+			@include navigation-link;
+		}
+	}
+}

@@ -1,0 +1,54 @@
+/*
+Theme Name: Illustratr
+Theme URI: http://underscores.me/
+Author: Automattic
+Author URI: http://themes.wordpress.com
+Description: I am not quite sure yet
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: illustratr
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Illustratr is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+// Compass
+@import "compass";
+
+// Settings
+@import 'settings';
+
+// Mixins
+@import 'mixins';
+
+// Reset
+@import 'reset';
+
+// Theme
+@import 'typography';
+@import 'elements';
+@import 'forms';
+@import 'navigation';
+@import 'accessibility';
+@import 'alignments';
+@import 'clearings';
+@import 'layout';
+@import 'menu';
+@import 'social';
+@import 'widgets';
+@import 'content';
+@import 'post-formats';
+@import 'portfolio';
+@import 'comments';
+@import 'media';
+@import 'jetpack';
