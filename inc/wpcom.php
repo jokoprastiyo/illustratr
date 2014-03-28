@@ -44,7 +44,7 @@ function illustratr_add_wpcom_support() {
 	// Add print stylesheet.
 	add_theme_support( 'print-style' );
 }
-add_action( 'after_setup_theme', 'illustratr_wpcom_setup' );
+add_action( 'after_setup_theme', 'illustratr_add_wpcom_support' );
 
 /**
  * Enqueue wp.com-specific styles
