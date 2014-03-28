@@ -184,7 +184,7 @@ function illustratr_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	printf( __( '<span class="posted-on">Posted on %1$s</span><span class="byline"> by %2$s</span>', 'illustratr' ),
+	printf( '<span class="posted-on">%1$s</span> <span class="byline">%2$s</span>',
 		sprintf( '<a href="%1$s" rel="bookmark">%2$s</a>',
 			esc_url( get_permalink() ),
 			$time_string
