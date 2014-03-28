@@ -43,7 +43,7 @@
 	 */
 	function calc() {
 		
-		$( '.entry-thumbnail, .entry-gallery, .entry-media, .caption-big' ).each( function() {
+		$( '.entry-thumbnail, .entry-gallery, .entry-media, .hentry.format-video > .video-wrapper, .caption-big' ).each( function() {
 			if( $( window ).width() < 960 ) {
 	    		$( this ).css( {
 	    			'width': '100%',
