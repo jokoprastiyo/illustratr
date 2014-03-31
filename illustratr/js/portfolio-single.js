@@ -1,7 +1,7 @@
 ( function( $ ) {
 
 	/*
-	 * Resize entires for full width on small screens.
+	 * Resize video-wrapper and portfolio-gallery for full width on small screens.
 	 */
 	function calc() {
 		
@@ -24,8 +24,12 @@
 
 	$( window ).load( function() {
 		
+		/*
+		 * Wrap galleries in a div.
+		 */
 		$( '.portfolio-entry .gallery, .portfolio-entry .tiled-gallery' ).each( function() {
 			$( this ).wrap( '<div class="portfolio-gallery" />' );
+			// Trigger resize to make sure tiled galleries are full width.
 			$( this ).trigger( 'resize' );
 		} );
 		

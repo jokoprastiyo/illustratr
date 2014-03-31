@@ -26,7 +26,7 @@
 	}
 	
 	/*
-	 * Remove content if it's empty.
+	 * Remove content if empty.
 	 */
 	function content() {
 		
@@ -39,7 +39,7 @@
 	}
 	
 	/*
-	 * Resize entires for full width on small screens.
+	 * Resize entry-thumbnail, entry-gallery, entry-media, video-wrapper (video post format), caption-big and image-big for full width on small screens.
 	 */
 	function calc() {
 		
@@ -95,6 +95,7 @@
 		
 		load_fuctions();
 		
+		// Show content
 		$( '#primary' ).animate( {
 			'opacity': 1
 		}, 250 );

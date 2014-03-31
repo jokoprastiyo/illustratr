@@ -9,7 +9,7 @@ if ( isset( $GLOBALS['content_width'] ) ) {
 }
 
 $content = apply_filters( 'the_content', get_the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'illustratr' ) ) );
-$media = get_media_embedded_in_content( $content );
+$media = get_media_embedded_in_content( $content, array( 'audio', 'object', 'embed', 'iframe' ) );
 if ( ! empty( $media ) ) {
     foreach( $media as $embed_html ) {
         $content = str_replace( $embed_html, '', $content );

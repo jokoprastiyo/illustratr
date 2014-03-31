@@ -1834,8 +1834,6 @@ Portfolio
 .portfolio-wrapper {
   padding-top: 40px;
   margin-bottom: -20px; }
-.portfolio-wrapper.hide-page-content {
-  padding-top: 0; }
 .portfolio-wrapper .hentry + .hentry {
   padding-top: 0;
   margin-top: 0; }
@@ -1860,6 +1858,9 @@ Portfolio
     width: 100%;
     margin: 0;
     padding: 0 0 40px; } }
+
+.hide-portfolio-page-content .portfolio-wrapper {
+  padding-top: 0; }
 
 .page-content + .portfolio-wrapper, .entry-meta + .portfolio-wrapper {
   padding-top: 20px; }
