@@ -28,17 +28,11 @@
 		?>
 	</div><!-- .entry-content -->
 	
-	<?php
-		$comments_status = false;
-		if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) {
-			$comments_status = true;
-		}
-	?>
-	
-	<footer class="entry-meta<?php if ( ! current_user_can( 'edit_posts' ) && ! $comments_status ) echo ' empty-meta' ?>">
-		<?php if ( $comments_status ) : ?>
+	<footer class="entry-meta">
+		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'illustratr' ), __( '1 Comment', 'illustratr' ), __( '% Comments', 'illustratr' ) ); ?></span>
 		<?php endif; ?>
+		
 		<?php edit_post_link( __( 'Edit', 'illustratr' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-meta -->
 </article><!-- #post-## -->

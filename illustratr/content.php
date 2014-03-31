@@ -67,7 +67,7 @@ $format = get_post_format();
 	?>
 
 	<?php if ( 'jetpack-portfolio' != get_post_type() ) : // Don't display entry-meta for Portfolio ?>
-		<footer class="entry-meta<?php if ( ! current_user_can( 'edit_posts' ) && 'post' != get_post_type() && ! $comments_status ) echo ' empty-meta' ?>">
+		<footer class="entry-meta">
 			<?php if ( 'post' == get_post_type() ) : // Hide post meta for pages on Search ?>
 				<?php illustratr_posted_on(); ?>
 				
@@ -84,7 +84,7 @@ $format = get_post_format();
 				<?php endif; // End if $tags_list ?>
 			<?php endif; // End if 'post' == get_post_type() ?>
 	
-			<?php if ( $comments_status ) : ?>
+			<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
 				<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'illustratr' ), __( '1 Comment', 'illustratr' ), __( '% Comments', 'illustratr' ) ); ?></span>
 			<?php endif; ?>
 	

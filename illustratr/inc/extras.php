@@ -30,7 +30,7 @@ function illustratr_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
-	
+	// Adds a class of hide-portfolio-page-content if Theme Option hide portfolio page content is ticked
 	if ( get_theme_mod( 'illustratr_hide_portfolio_page_content' ) ) {
 		$classes[] = 'hide-portfolio-page-content';
 	}
@@ -46,6 +46,19 @@ add_filter( 'body_class', 'illustratr_body_classes' );
  * @return array
  */
 function illustratr_post_classes( $classes ) {
+
+	// Adds a class of empty-entry-meta to pages/projects without any entry meta.
+	$comments_status = false;
+	$tags_list = false;
+	if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) {
+		$comments_status = true;
+	}
+	if ( 'jetpack-portfolio' == get_post_type() ) {
+		$tags_list = get_the_term_list( $post->ID, 'jetpack-portfolio-tag' );
+	}
+	if ( ! current_user_can( 'edit_posts' ) && 'post' != get_post_type() && ! $comments_status && ! $tags_list ) {
+		$classes[] = 'empty-entry-meta';
+	}
 	// Adds a class of portfolio-entry to portfolio projects.
 	if ( 'jetpack-portfolio' == get_post_type() ) {
 		$classes[] = 'portfolio-entry';
