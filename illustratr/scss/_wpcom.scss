@@ -146,6 +146,39 @@ WP.com
 	}
 }
 
+/* Ratings */
+.pd-rating {
+	padding: ($vspacing / 2) $vspacing;
+	margin: 0 0 $vspacing-double;
+	background: $lighter-color;
+	font-size: 0.73em;
+	line-height: 1;
+	text-transform: uppercase;
+	& + br {
+		display: none;
+	}
+}
+.sd-rating {
+	padding: ($vspacing - 5px) 0 $vspacing 0;
+	margin: 0;
+	border-top: 1px solid $lighter-color;
+	.pd-rating {
+		padding: 0;
+		margin: 0;
+		background: transparent;
+	}
+}
+.comment-body {
+	.pd-rating {
+		padding: $vspacing 0;
+		margin: 0;
+		background: transparent;
+	}
+	.comment-meta + .pd-rating {
+		padding-top: 0;
+	}
+}
+
 /* WPStats */
 img#wpstats,
 img[id*="botd"] {
