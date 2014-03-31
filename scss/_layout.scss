@@ -6,7 +6,7 @@ body {
 	padding: $vspacing;
 	background: $darker-color;
 	@include min-screen($desktop) {
-		&:not(.custom-background) {
+		&.default-background {
 			&:before,
 			&:after {
 				content: '';

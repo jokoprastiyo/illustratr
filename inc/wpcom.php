@@ -33,7 +33,7 @@ function illustratr_add_wpcom_support() {
 	// Set theme colors for third party services.
 	if ( ! isset( $themecolors ) ) {
 		$themecolors = array(
-			'bg'     => '24282d',
+			'bg'     => 'ffffff',
 			'border' => 'f1f2f3',
 			'text'   => '7f8d8c',
 			'link'   => 'e06d5e',
