@@ -26,11 +26,15 @@ add_filter( 'wp_page_menu_args', 'illustratr_page_menu_args' );
  * @return array
  */
 function illustratr_body_classes( $classes ) {
+	// Adds a class of default-background to blogs with default background settings.
+	if ( '24282d' == get_background_color() && ! get_background_image() ) {
+		$classes[] = 'default-background';
+	}
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
-	// Adds a class of hide-portfolio-page-content if Theme Option hide portfolio page content is ticked
+	// Adds a class of hide-portfolio-page-content to blogs if Theme Option hide portfolio page content is ticked
 	if ( get_theme_mod( 'illustratr_hide_portfolio_page_content' ) ) {
 		$classes[] = 'hide-portfolio-page-content';
 	}

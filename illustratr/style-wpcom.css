@@ -66,6 +66,101 @@
 /*--------------------------------------------------------------
 WP.com
 --------------------------------------------------------------*/
+/* Comments */
+#comments #respond {
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  font-family: inherit; }
+#comments #respond #commentform {
+  width: 840px !important;
+  background: transparent;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  #comments #respond #commentform {
+    width: 648px !important; } }
+@media screen and (max-width: 767px) {
+  #comments #respond #commentform {
+    width: 100% !important; } }
+#comments #respond .comment-reply-title {
+  padding-bottom: 22px;
+  margin-top: 0;
+  margin-bottom: 40px; }
+#comments #respond .comment-reply-title small {
+  float: none; }
+#comments #respond #comment-form-comment {
+  padding: 0 !important;
+  border: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none; }
+#comments #respond #comment-form-comment #comment {
+  padding: 10px;
+  background: #f1f2f3 !important;
+  border: 1px solid #f1f2f3 !important; }
+@media screen and (max-width: 767px) {
+  #comments #respond #comment-form-comment #comment {
+    padding: 5px; } }
+#comments #respond #comment-form-comment #comment:focus {
+  background: white !important; }
+#comments #respond .comment-form-padder {
+  padding: 0; }
+#comments #respond .comment-form-service {
+  background: white;
+  border-bottom-color: #f1f2f3; }
+#comments #respond #comment-form-subscribe {
+  padding: 0; }
+#comments #respond .form-submit {
+  padding: 10px 0; }
+#comments #respond label {
+  font-weight: normal; }
+#comments #respond #comment-submit {
+  padding: 10px 20px !important;
+  background: #464d4d !important;
+  border: 1px solid #464d4d;
+  color: white !important;
+  font-family: inherit !important;
+  font-size: 0.73rem !important;
+  font-weight: 900 !important;
+  line-height: 1.5 !important;
+  text-shadow: none !important;
+  -webkit-border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -ms-border-radius: 0 !important;
+  -o-border-radius: 0 !important;
+  border-radius: 0 !important; }
+@media screen and (max-width: 767px) {
+  #comments #respond #comment-submit {
+    padding: 5px 10px !important; } }
+#comments #respond #comment-submit:hover, #comments #respond #comment-submit:focus, #comments #respond #comment-submit:active {
+  background: #e06d5e !important; }
+#comments #respond #comment-submit:hover, #comments #respond #comment-submit:focus, #comments #respond #comment-submit:active {
+  border-color: #e06d5e !important; }
+#comments .comment-list + #respond {
+  padding-top: 81px;
+  margin-top: 60px; }
+@media screen and (max-width: 767px) {
+  #comments .comment-list + #respond {
+    margin-top: 20px;
+    padding-top: 41px; } }
+#comments .comment-list + #respond:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: 0;
+  height: 1px;
+  background: #f1f2f3;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: -40px;
+  width: 100%;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
 /* Sharedaddy */
 .page-content > .sharedaddy .jetpack-likes-widget-wrapper, .entry-content > .sharedaddy .jetpack-likes-widget-wrapper, .entry-summary > .sharedaddy .jetpack-likes-widget-wrapper {
   padding: 15px 0;
@@ -75,3 +170,8 @@ WP.com
   box-sizing: content-box; }
 .page-content > .sharedaddy .jetpack-likes-widget-wrapper .post-likes-widget, .entry-content > .sharedaddy .jetpack-likes-widget-wrapper .post-likes-widget, .entry-summary > .sharedaddy .jetpack-likes-widget-wrapper .post-likes-widget {
   top: 10px !important; }
+
+/* WPStats */
+img#wpstats, img[id*="botd"] {
+  position: absolute;
+  top: -9999px; }

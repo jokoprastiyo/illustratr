@@ -2,6 +2,87 @@
 WP.com
 --------------------------------------------------------------*/
 
+/* Comments */
+#comments {
+	#respond {
+		padding: 0;
+		margin: 0;
+		overflow: visible;
+		font-family: inherit;
+		#commentform {
+			width: $desktop - ($vspacing-double * 2 + $vspacing * 2) !important;
+			background: transparent;
+			@include center-block;
+			@include screen($tablet, $desktop - 1px) {
+				width: $tablet - ($vspacing-double * 2 + $vspacing * 2) !important;
+			}
+			@include max-screen($tablet - 1px) {
+				width: $mobile !important;
+			}
+		}
+		.comment-reply-title {
+			padding-bottom: $vspacing + 2px;
+			margin-top: 0;
+			margin-bottom: $vspacing-double;
+			small {
+				float: none;
+			}
+		}
+		#comment-form-comment {
+			padding: 0 !important;
+			border: none;
+			@include box-shadow(none);
+			#comment {
+				padding: $vspacing / 2;
+				background: $lighter-color !important;
+				border: 1px solid $lighter-color !important;
+				@include max-screen($tablet - 1px) {
+					padding: $vspacing / 4;
+				}
+				&:focus {
+					background: $background-color !important;
+				}
+			}
+		}
+		.comment-form-padder {
+			padding: 0;
+		}
+		.comment-form-service {
+			background: $background-color;
+			border-bottom-color: $lighter-color;
+		}
+		#comment-form-subscribe {
+			padding: 0;
+		}
+		.form-submit {
+			padding: 10px 0;
+		}
+		label {
+			font-weight: normal;
+		}
+		#comment-submit {
+			padding: ($vspacing / 2) $vspacing !important;
+			background: $dark-color !important;
+			border: 1px solid $dark-color;
+			color: $background-color !important;
+			font-family: inherit !important;
+			font-size: 0.73rem !important;
+			font-weight: 900 !important;
+			line-height: 1.5 !important;
+			text-shadow:  none !important;
+			@include border-radius(0 !important);
+			@include max-screen($tablet - 1px) {
+				padding: ($vspacing / 4) ($vspacing / 2) !important;
+			}
+			@include hover(background, $link-color !important);
+			@include hover(border-color, $link-color !important);
+		}
+	}
+	.comment-list + #respond {
+		@include hentry;
+	}
+}
+
 /* Sharedaddy */
 .page-content,
 .entry-content,
@@ -16,4 +97,11 @@ WP.com
 			}
 		}
 	}
+}
+
+/* WPStats */
+img#wpstats,
+img[id*="botd"] {
+	position: absolute;
+	top: -9999px;
 }
