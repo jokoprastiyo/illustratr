@@ -2538,15 +2538,20 @@ Jetpack
 .page-content > .sharedaddy, .entry-content > .sharedaddy, .entry-summary > .sharedaddy {
   font-family: inherit !important;
   font-size: inherit !important; }
-.page-content > .sharedaddy .sd-sharing, .page-content > .sharedaddy.jetpack-likes-widget-wrapper, .entry-content > .sharedaddy .sd-sharing, .entry-content > .sharedaddy.jetpack-likes-widget-wrapper, .entry-summary > .sharedaddy .sd-sharing, .entry-summary > .sharedaddy.jetpack-likes-widget-wrapper {
+.page-content > .sharedaddy .sd-sharing, .page-content > .sharedaddy .sd-gplus, .page-content > .sharedaddy.jetpack-likes-widget-wrapper, .entry-content > .sharedaddy .sd-sharing, .entry-content > .sharedaddy .sd-gplus, .entry-content > .sharedaddy.jetpack-likes-widget-wrapper, .entry-summary > .sharedaddy .sd-sharing, .entry-summary > .sharedaddy .sd-gplus, .entry-summary > .sharedaddy.jetpack-likes-widget-wrapper {
   padding: 15px 0;
   border-top: 1px solid #f1f2f3; }
 .page-content > .sharedaddy .jetpack-likes-widget, .entry-content > .sharedaddy .jetpack-likes-widget, .entry-summary > .sharedaddy .jetpack-likes-widget {
   margin-top: 5px !important; }
+.page-content > .sharedaddy .sd-gplus, .entry-content > .sharedaddy .sd-gplus, .entry-summary > .sharedaddy .sd-gplus {
+  padding-bottom: 20px;
+  margin: 0; }
 .page-content > .sharedaddy .sd-title, .entry-content > .sharedaddy .sd-title, .entry-summary > .sharedaddy .sd-title {
   margin: 5px 0 !important;
   font-family: inherit !important;
   line-height: 1.5 !important; }
+.page-content > .sharedaddy .sd-content ul, .entry-content > .sharedaddy .sd-content ul, .entry-summary > .sharedaddy .sd-content ul {
+  margin: 0 !important; }
 .page-content > .jp-relatedposts, .entry-content > .jp-relatedposts, .entry-summary > .jp-relatedposts {
   padding: 20px 0 0;
   margin: 0;
