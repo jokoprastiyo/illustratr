@@ -85,16 +85,31 @@ get_header(); ?>
 			
 			<?php if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) : ?>
 			
-				<div class="portfolio-wrapper">
-
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-		
-						<?php get_template_part( 'content', 'portfolio' ); ?>
-		
-					<?php endwhile; ?>
+				<?php
+					$args = array(
+						'post_type'      => 'jetpack-portfolio',
+						'posts_per_page' => -1,
+					);
+					$project_query = new WP_Query ( $args );
+	
+					if ( $project_query -> have_posts() ) :
+				?>
 				
-				</div><!-- .portfolio-wrapper -->
+					<div class="portfolio-wrapper">
+					
+					<?php
+						while ( $project_query -> have_posts() ) : $project_query -> the_post();
+		
+							get_template_part( 'content', 'portfolio' );
+		
+						endwhile;				
+					?>
+					
+					</div><!-- .portfolio-wrapper -->
+					
+					<?php wp_reset_postdata(); ?>
+	
+				<?php endif; ?>
 			
 			<?php else : ?>
 			
@@ -104,10 +119,10 @@ get_header(); ?>
 					<?php get_template_part( 'content', get_post_format() ); ?>
 	
 				<?php endwhile; ?>
+				
+				<?php illustratr_paging_nav(); ?>
 			
 			<?php endif; ?>
-
-			<?php illustratr_paging_nav(); ?>
 
 		<?php else : ?>
 

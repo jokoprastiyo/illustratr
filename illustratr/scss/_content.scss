@@ -64,7 +64,7 @@ Content
 		content: '';
 		display: block;
 		position: absolute;
-		bottom: 0;
+		bottom: 2px;
 		left: 50%;
 		margin-left: -$vspacing * 10;
 		width: $vspacing * 20;
@@ -135,7 +135,7 @@ Content
 		content: '';
 		display: block;
 		position: absolute;
-		top: 1px;
+		top: 0;
 		left: 50%;
 		margin-left: -$vspacing * 10;
 		width: $vspacing * 20;

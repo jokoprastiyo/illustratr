@@ -157,24 +157,11 @@ Jetpack
 		@include full-width-area;
 	}
 	span {
-		display: inline-block;
 		padding: 0;
-		height: $vspacing-double;
-		width: $vspacing-double;
-		background: $link-color;
-		border: 1px solid $link-color;
-		color: $background-color;
+		background: transparent;
 		font-size: inherit;
-		line-height: $vspacing-double;
-		overflow: hidden;
-		@include border-radius(50%);
-		@include transition(all 250ms ease);
-		@include hover(background, $background-color);
-		@include hover(border-color, $lighter-color);
-		@include hover(color, $darker-color);
-		&:before {
-			@include genericon('\f431', 1em, $vspacing-double);
-		}
+		@include navigation-link;
+		@include border-radius(0);
 	}
 }
 span.infinite-loader {
