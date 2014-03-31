@@ -47,6 +47,7 @@ Jetpack
 		font-family: inherit !important;
 		font-size: inherit !important;
 		.sd-sharing,
+		.sd-gplus,
 		&.jetpack-likes-widget-wrapper {
 			padding: ($vspacing - 5px) 0;
 			border-top: 1px solid $lighter-color;
@@ -54,10 +55,19 @@ Jetpack
 		.jetpack-likes-widget {
 			margin-top: 5px !important;
 		}
+		.sd-gplus {
+			padding-bottom: $vspacing;
+			margin: 0;
+		}
 		.sd-title {
 			margin: 5px 0 !important;
 			font-family: inherit !important;
 			line-height: 1.5 !important;
+		}
+		.sd-content {
+			ul {
+				margin: 0 !important;
+			}
 		}
 	}
 	> .jp-relatedposts {
