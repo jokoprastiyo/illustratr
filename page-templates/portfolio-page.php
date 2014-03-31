@@ -38,12 +38,9 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
 		<?php endif; ?>
 
-			<!-- Projects -->
 			<?php
-				//$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 				$args = array(
 					'post_type'      => 'jetpack-portfolio',
-					//'paged'          => $paged,
 					'posts_per_page' => -1,
 				);
 				$project_query = new WP_Query ( $args );
@@ -51,22 +48,19 @@ get_header(); ?>
 				if ( $project_query -> have_posts() ) :
 			?>
 			
-			<div class="portfolio-wrapper">
-			
-			<?php
-				while ( $project_query -> have_posts() ) : $project_query -> the_post();
-
-					get_template_part( 'content', 'portfolio' );
-
-				endwhile;				
-			?>
-			
-			</div><!-- .portfolio-wrapper -->
-			
-			<?php
-				//illustratr_paging_nav( $project_query->max_num_pages );
-				wp_reset_postdata();
-			?>
+				<div class="portfolio-wrapper">
+				
+				<?php
+					while ( $project_query -> have_posts() ) : $project_query -> the_post();
+	
+						get_template_part( 'content', 'portfolio' );
+	
+					endwhile;				
+				?>
+				
+				</div><!-- .portfolio-wrapper -->
+				
+				<?php wp_reset_postdata(); ?>
 
 			<?php else : ?>
 

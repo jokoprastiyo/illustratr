@@ -53,15 +53,3 @@ function illustratr_wpcom_styles() {
 	wp_enqueue_style( 'illustratr-wpcom', get_template_directory_uri() . '/style-wpcom.css', '20140328' );
 }
 add_action( 'wp_enqueue_scripts', 'illustratr_wpcom_styles' );
-
-/**
- * Enable Infinite Scroll on archive pages.
- */
-function illustratr_infinite_scroll_archive_supported( $supported ) {
-	return array(
-		is_home(),
-		is_archive(),
-		is_search(),
-	);
-}
-add_filter( 'infinite_scroll_archive_supported', 'illustratr_infinite_scroll_archive_supported' );
