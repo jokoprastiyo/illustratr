@@ -479,7 +479,7 @@ a:visited {
   content: '';
   display: block;
   position: absolute;
-  top: 0;
+  top: 1px;
   z-index: 0;
   height: 1px;
   background: #f1f2f3;
@@ -1474,7 +1474,7 @@ Content
   content: '';
   display: block;
   position: absolute;
-  top: 0;
+  top: 1px;
   z-index: 0;
   height: 1px;
   background: #f1f2f3;
@@ -1588,13 +1588,13 @@ Content
 /* Entry header */
 .page-header, .entry-header {
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 22px;
   text-align: center; }
 .page-header:after, .entry-header:after {
   content: '';
   display: block;
   position: absolute;
-  bottom: 0;
+  bottom: 2px;
   left: 50%;
   margin-left: -200px;
   width: 400px;
@@ -1675,7 +1675,7 @@ Content
 /* Entry meta */
 .entry-meta {
   position: relative;
-  padding: 20px 0;
+  padding: 21px 0 20px 0;
   margin-top: 20px;
   color: #7f8d8c;
   font-family: "PT Serif", serif;
@@ -1692,7 +1692,7 @@ Content
   content: '';
   display: block;
   position: absolute;
-  top: 0;
+  top: 1px;
   left: 50%;
   margin-left: -200px;
   width: 400px;
@@ -1709,10 +1709,11 @@ Content
 .entry-meta span:last-of-type:after {
   display: none;
   margin-left: 0; }
-.entry-meta.empty-meta {
+
+.empty-entry-meta .entry-meta {
   padding-bottom: 0;
   margin-top: -20px; }
-.entry-meta.empty-meta:before {
+.empty-entry-meta .entry-meta:before {
   display: none; }
 
 .entry-header + .entry-meta {
@@ -2064,7 +2065,7 @@ Comments
   content: '';
   display: block;
   position: absolute;
-  top: 0;
+  top: 1px;
   z-index: 0;
   height: 1px;
   background: #f1f2f3;
@@ -2240,7 +2241,7 @@ Comments
   content: '';
   display: block;
   position: absolute;
-  top: 0;
+  top: 1px;
   z-index: 0;
   height: 1px;
   background: #f1f2f3;
@@ -2609,7 +2610,7 @@ Jetpack
   content: '';
   display: block;
   position: absolute;
-  top: 0;
+  top: 1px;
   z-index: 0;
   height: 1px;
   background: #f1f2f3;
@@ -2635,7 +2636,7 @@ Jetpack
   content: '';
   display: block;
   position: absolute;
-  top: 0;
+  top: 1px;
   z-index: 0;
   height: 1px;
   background: #f1f2f3;

@@ -27,25 +27,17 @@ if ( isset( $GLOBALS['content_width'] ) ) {
 		?>
 	</div><!-- .entry-content -->
 	
-	<?php
-		$comments_status = false;
-		if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) {
-			$comments_status = true;
-		}
-	?>
-	
-	<?php
-		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_term_list( $post->ID, 'jetpack-portfolio-tag', '', __( ', ', 'illustratr' ) );
-	?>
-	
-	<footer class="entry-meta<?php if ( ! current_user_can( 'edit_posts' ) && ! $comments_status && ! $tags_list ) echo ' empty-meta' ?>">
-		<?php if ( $tags_list ) : ?>
+	<footer class="entry-meta">
+		<?php
+			/* translators: used between list items, there is a space after the comma */
+			$tags_list = get_the_term_list( $post->ID, 'jetpack-portfolio-tag', '', __( ', ', 'illustratr' ) );
+			if ( $tags_list ) :
+		?>
 			<span class="tags-links"><?php printf( __( 'Tagged %1$s', 'illustratr' ), $tags_list ); ?></span>
 		<?php endif; ?>
 
-		<?php if ( $comments_status ) : ?>
-		<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'illustratr' ), __( '1 Comment', 'illustratr' ), __( '% Comments', 'illustratr' ) ); ?></span>
+		<?php if ( ! post_password_required() && ( comments_open() || '0' != get_comments_number() ) ) : ?>
+			<span class="comments-link"><?php comments_popup_link( __( 'Leave a comment', 'illustratr' ), __( '1 Comment', 'illustratr' ), __( '% Comments', 'illustratr' ) ); ?></span>
 		<?php endif; ?>
 
 		<?php edit_post_link( __( 'Edit', 'illustratr' ), '<span class="edit-link">', '</span>' ); ?>

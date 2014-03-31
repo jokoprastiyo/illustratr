@@ -38,9 +38,7 @@
 	<footer class="entry-meta">
 		<?php illustratr_posted_on(); ?>
 		
-		<?php if( has_post_format() ) : ?>
-			<span class="entry-format"><a href="<?php echo esc_url( get_post_format_link( 'link' ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'All %s posts', 'illustratr' ), get_post_format_string( 'link' ) ) ); ?>"><?php echo get_post_format_string( 'link' ); ?></a></span>
-		<?php endif; ?>
+		<span class="entry-format"><a href="<?php echo esc_url( get_post_format_link( 'link' ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'All %s posts', 'illustratr' ), get_post_format_string( 'link' ) ) ); ?>"><?php echo get_post_format_string( 'link' ); ?></a></span>
 
 		<?php
 			/* translators: used between list items, there is a space after the comma */
