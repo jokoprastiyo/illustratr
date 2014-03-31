@@ -34,8 +34,8 @@ function illustratr_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
-	// Adds a class of hide-portfolio-page-content to blogs if Theme Option hide portfolio page content is ticked
-	if ( get_theme_mod( 'illustratr_hide_portfolio_page_content' ) ) {
+	// Adds a class of hide-portfolio-page-content to blogs if Theme Option hide portfolio page content is ticked and page is using the Portfolio Template
+	if ( get_theme_mod( 'illustratr_hide_portfolio_page_content' ) && is_page_template( 'page-templates/portfolio-page.php' ) ) {
 		$classes[] = 'hide-portfolio-page-content';
 	}
 
