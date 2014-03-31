@@ -9,8 +9,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( '' != get_the_post_thumbnail() ) : ?>
 		<div class="portfolio-thumbnail">
-			<a href="<?php the_permalink(); ?>" rel="<?php the_ID(); ?>">
-				<?php the_post_thumbnail( 'portfolio-featured-image' ); ?>
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail( 'illustratr-portfolio-featured-image' ); ?>
 			</a>
 		</div><!-- .portfolio-thumbnail -->
 	<?php endif; ?>

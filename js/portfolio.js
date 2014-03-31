@@ -1,7 +1,7 @@
 ( function( $ ) {
 
 	/*
-	 * Resize entires for full width on small screens.
+	 * Resize portfolio-wrapper for full width on small screens.
 	 */
 	function calc() {
 		
@@ -28,7 +28,10 @@
 	}
 
 	$( window ).load( function() {
-	
+		
+		/*
+		 * Wrap portfolio-featured-image in a div.
+		 */
 		$( '.portfolio-featured-image' ).each( function() {
 			$( this ).wrap( '<div class="portfolio-thumbnail" />' );
 		} );

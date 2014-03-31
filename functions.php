@@ -45,8 +45,8 @@ function illustratr_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size( 400, 300, true );
-	add_image_size( 'featured-image', 1100, 500, true );
-	add_image_size( 'portfolio-featured-image', 800, 9999 );
+	add_image_size( 'illustratr-featured-image', 1100, 500, true );
+	add_image_size( 'illustratr-portfolio-featured-image', 800, 9999 );
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus( array(
@@ -110,7 +110,7 @@ function illustratr_fonts() {
 
 		$protocol = is_ssl() ? 'https' : 'http';
 		$query_args = array(
-			'family' => 'Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic',
+			'family' => 'Source+Sans+Pro:400,700,900,400italic,700italic,900italic',
 			'subset' => $subsets,
 		);
 		wp_register_style( 'illustratr-source-sans-pro', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );

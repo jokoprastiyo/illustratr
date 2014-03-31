@@ -5,14 +5,19 @@
  * @package illustratr
  */
 
-$hide_portfolio = get_theme_mod( 'illustratr_hide_portfolio_page_content' );
 get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		
-		<?php if ( ! $hide_portfolio ) : ?>
+		<?php if ( ! get_theme_mod( 'illustratr_hide_portfolio_page_content' ) ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
+				
+				<?php if ( '' != get_the_post_thumbnail() ) : ?>
+					<div class="entry-thumbnail">
+						<?php the_post_thumbnail( 'illustratr-featured-image' ); ?>
+					</div><!-- .entry-thumbnail -->
+				<?php endif; ?>
 
 				<?php the_title( '<header class="page-header"><h1 class="page-title">', '</h1></header>' ); ?>
 
@@ -46,7 +51,7 @@ get_header(); ?>
 				if ( $project_query -> have_posts() ) :
 			?>
 			
-			<div class="portfolio-wrapper<?php if ( $hide_portfolio ) echo ' hide-page-content' ?>">
+			<div class="portfolio-wrapper">
 			
 			<?php
 				while ( $project_query -> have_posts() ) : $project_query -> the_post();

@@ -30,6 +30,10 @@ function illustratr_body_classes( $classes ) {
 	if ( is_multi_author() ) {
 		$classes[] = 'group-blog';
 	}
+	
+	if ( get_theme_mod( 'illustratr_hide_portfolio_page_content' ) ) {
+		$classes[] = 'hide-portfolio-page-content';
+	}
 
 	return $classes;
 }

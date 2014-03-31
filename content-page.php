@@ -9,7 +9,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if ( '' != get_the_post_thumbnail() ) : ?>
 		<div class="entry-thumbnail">
-			<?php the_post_thumbnail( 'featured-image' ); ?>
+			<?php the_post_thumbnail( 'illustratr-featured-image' ); ?>
 		</div><!-- .entry-thumbnail -->
 	<?php endif; ?>
 

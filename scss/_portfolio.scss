@@ -6,9 +6,6 @@ Portfolio
 .portfolio-wrapper {
 	padding-top: $vspacing-double;
 	margin-bottom: -$vspacing;
-	&.hide-page-content {
-		padding-top: 0;
-	}
 	.hentry + .hentry {
 		padding-top: 0;
 		margin-top: 0;
@@ -33,6 +30,11 @@ Portfolio
 			margin: 0;
 			padding: 0 0 $vspacing-double;
 		}
+	}
+}
+.hide-portfolio-page-content {
+	.portfolio-wrapper {
+		padding-top: 0;
 	}
 }
 .page-content + .portfolio-wrapper,

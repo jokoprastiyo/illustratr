@@ -11,11 +11,11 @@ $format = get_post_format();
 	<?php if ( '' != get_the_post_thumbnail() && '' == $format ) : ?>
 		<div class="entry-thumbnail">
 			<?php if ( ! is_single() ) : ?>
-			<a href="<?php the_permalink(); ?>" rel="<?php the_ID(); ?>">
-				<?php the_post_thumbnail( 'featured-image' ); ?>
+			<a href="<?php the_permalink(); ?>">
+				<?php the_post_thumbnail( 'illustratr-featured-image' ); ?>
 			</a>
 			<?php else : ?>
-				<?php the_post_thumbnail( 'featured-image' ); ?>
+				<?php the_post_thumbnail( 'illustratr-featured-image' ); ?>
 			<?php endif; ?>
 		</div><!-- .entry-thumbnail -->
 	<?php endif; ?>
