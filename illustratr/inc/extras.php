@@ -58,7 +58,7 @@ function illustratr_post_classes( $classes ) {
 		$comments_status = true;
 	}
 	if ( 'jetpack-portfolio' == get_post_type() ) {
-		$tags_list = get_the_term_list( $post->ID, 'jetpack-portfolio-tag' );
+		$tags_list = get_the_term_list( get_the_ID(), 'jetpack-portfolio-tag' );
 	}
 	if ( ! current_user_can( 'edit_posts' ) && 'post' != get_post_type() && ! $comments_status && ! $tags_list ) {
 		$classes[] = 'empty-entry-meta';
