@@ -263,13 +263,17 @@ WP.com
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
-  border-radius: 0; }
+  border-radius: 0;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease; }
 .widget_akismet_widget .a-stats a:hover, .widget_akismet_widget .a-stats a:focus, .widget_akismet_widget .a-stats a:active {
   background: white; }
 .widget_akismet_widget .a-stats a:hover, .widget_akismet_widget .a-stats a:focus, .widget_akismet_widget .a-stats a:active {
   border-color: white; }
 .widget_akismet_widget .a-stats a:hover, .widget_akismet_widget .a-stats a:focus, .widget_akismet_widget .a-stats a:active {
-  color: #464d4d; }
+  color: #e06d5e; }
 .widget_akismet_widget .a-stats a .count {
   color: inherit; }
 
