@@ -449,9 +449,11 @@ label[class*="radio"], label[class*="checkbox"] {
   background: #24282d;
   border-color: #24282d; }
 .widgets-area button:hover, .widgets-area button:focus, .widgets-area button:active, .widgets-area input[type="button"]:hover, .widgets-area input[type="button"]:focus, .widgets-area input[type="button"]:active, .widgets-area input[type="reset"]:hover, .widgets-area input[type="reset"]:focus, .widgets-area input[type="reset"]:active, .widgets-area input[type="submit"]:hover, .widgets-area input[type="submit"]:focus, .widgets-area input[type="submit"]:active {
-  background: #e06d5e; }
+  background: white; }
 .widgets-area button:hover, .widgets-area button:focus, .widgets-area button:active, .widgets-area input[type="button"]:hover, .widgets-area input[type="button"]:focus, .widgets-area input[type="button"]:active, .widgets-area input[type="reset"]:hover, .widgets-area input[type="reset"]:focus, .widgets-area input[type="reset"]:active, .widgets-area input[type="submit"]:hover, .widgets-area input[type="submit"]:focus, .widgets-area input[type="submit"]:active {
-  border-color: #e06d5e; }
+  border-color: white; }
+.widgets-area button:hover, .widgets-area button:focus, .widgets-area button:active, .widgets-area input[type="button"]:hover, .widgets-area input[type="button"]:focus, .widgets-area input[type="button"]:active, .widgets-area input[type="reset"]:hover, .widgets-area input[type="reset"]:focus, .widgets-area input[type="reset"]:active, .widgets-area input[type="submit"]:hover, .widgets-area input[type="submit"]:focus, .widgets-area input[type="submit"]:active {
+  color: #e06d5e; }
 
 /*--------------------------------------------------------------
 Navigation
@@ -1420,8 +1422,8 @@ Widgets
 .widget_tag_cloud a {
   display: inline-block;
   float: left;
-  padding: 5px 10px;
-  margin: 0 5px 5px 0;
+  padding: 5px 10px !important;
+  margin: 0 5px 5px 0 !important;
   background: #24282d;
   color: white;
   font-size: inherit !important;
@@ -1431,9 +1433,9 @@ Widgets
   -o-transition: all 250ms ease;
   transition: all 250ms ease; }
 .widget_tag_cloud a:hover, .widget_tag_cloud a:focus, .widget_tag_cloud a:active {
-  background: #e06d5e; }
+  background: white; }
 .widget_tag_cloud a:hover, .widget_tag_cloud a:focus, .widget_tag_cloud a:active {
-  color: white; }
+  color: #e06d5e; }
 .widget_tag_cloud .tagcloud {
   margin-bottom: 20px; }
 .widget_tag_cloud .tagcloud:before, .widget_tag_cloud .tagcloud:after {

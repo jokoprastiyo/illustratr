@@ -326,15 +326,15 @@ Widgets
 	a {
 		display: inline-block;
 		float: left;
-		padding: ($vspacing / 4) ($vspacing / 2);
-		margin: 0 ($vspacing / 4) ($vspacing / 4) 0;
+		padding: ($vspacing / 4) ($vspacing / 2) !important;
+		margin: 0 ($vspacing / 4) ($vspacing / 4) 0 !important;
 		background: $darker-color;
 		color: $background-color;
 		font-size: inherit !important;
 		text-decoration: none;
 		@include transition(all 250ms ease);
-		@include hover(background, $link-color);
-		@include hover(color, $background-color);
+		@include hover(background, $background-color);
+		@include hover(color, $link-color);
 	}
 	.tagcloud {
 		margin-bottom: $vspacing;

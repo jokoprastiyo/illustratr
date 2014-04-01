@@ -229,9 +229,10 @@ WP.com
 			border-color: $darker-color;
 			color: $background-color;
 			@include border-radius(0);
+			@include transition(all 250ms ease);
 			@include hover(background, $background-color);
 			@include hover(border-color, $background-color);
-			@include hover(color, $dark-color);
+			@include hover(color, $link-color);
 			.count {
 				color: inherit;
 			}

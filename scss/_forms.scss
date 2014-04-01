@@ -130,7 +130,8 @@ label {
 	input[type="submit"] {
 		background: $darker-color;
 		border-color: $darker-color;
-		@include hover(background, $link-color);
-		@include hover(border-color, $link-color);
+		@include hover(background, $background-color);
+		@include hover(border-color, $background-color);
+		@include hover(color, $link-color);
 	}
 }
