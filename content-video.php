@@ -18,7 +18,7 @@ if ( ! empty( $media ) ) {
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 	<?php if ( ! empty( $media ) ) : ?>
 	    <div class="entry-media">
 		    <?php
@@ -28,7 +28,7 @@ if ( ! empty( $media ) ) {
 		    ?>
 	    </div><!-- .entry-media -->
 	<?php endif; ?>
-	
+
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -37,7 +37,7 @@ if ( ! empty( $media ) ) {
 				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 			}
 		?>
-		
+
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'illustratr' ) );
@@ -46,7 +46,7 @@ if ( ! empty( $media ) ) {
 			<span class="cat-links"><?php echo $categories_list; ?></span>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
-	
+
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
@@ -66,7 +66,7 @@ if ( ! empty( $media ) ) {
 
 	<footer class="entry-meta">
 		<?php illustratr_posted_on(); ?>
-		
+
 		<span class="entry-format"><a href="<?php echo esc_url( get_post_format_link( 'video' ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'All %s posts', 'illustratr' ), get_post_format_string( 'video' ) ) ); ?>"><?php echo get_post_format_string( 'video' ); ?></a></span>
 
 		<?php

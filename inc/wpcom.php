@@ -6,7 +6,7 @@
  *
  * @package Illustratr
  */
- 
+
 /*
  * De-queue Google fonts if custom fonts are being used instead.
  */
@@ -41,7 +41,7 @@ function illustratr_add_wpcom_support() {
 			'url'    => 'e06d5e',
 		);
 	}
-	
+
 	// Add print stylesheet.
 	add_theme_support( 'print-style' );
 }

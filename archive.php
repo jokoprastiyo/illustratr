@@ -61,13 +61,13 @@ get_header(); ?>
 
 						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
 							_e( 'Chats', 'illustratr' );
-							
+
 						elseif ( is_post_type_archive( 'jetpack-portfolio' ) ) :
 							_e( 'Projects', 'illustratr' );
 
 						elseif ( is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) :
 							single_term_title();
-							
+
 						else :
 							_e( 'Archives', 'illustratr' );
 
@@ -82,46 +82,46 @@ get_header(); ?>
 					endif;
 				?>
 			</header><!-- .page-header -->
-			
+
 			<?php if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) : ?>
-			
+
 				<?php
 					$args = array(
 						'post_type'      => 'jetpack-portfolio',
 						'posts_per_page' => -1,
 					);
 					$project_query = new WP_Query ( $args );
-	
+
 					if ( $project_query -> have_posts() ) :
 				?>
-				
+
 					<div class="portfolio-wrapper">
-					
+
 					<?php
 						while ( $project_query -> have_posts() ) : $project_query -> the_post();
-		
+
 							get_template_part( 'content', 'portfolio' );
-		
-						endwhile;				
+
+						endwhile;
 					?>
-					
+
 					</div><!-- .portfolio-wrapper -->
-					
+
 					<?php wp_reset_postdata(); ?>
-	
+
 				<?php endif; ?>
-			
+
 			<?php else : ?>
-			
+
 				<?php /* Start the Loop */ ?>
 				<?php while ( have_posts() ) : the_post(); ?>
-	
+
 					<?php get_template_part( 'content', get_post_format() ); ?>
-	
+
 				<?php endwhile; ?>
-				
+
 				<?php illustratr_paging_nav(); ?>
-			
+
 			<?php endif; ?>
 
 		<?php else : ?>

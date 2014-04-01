@@ -9,10 +9,10 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		
+
 		<?php if ( ! get_theme_mod( 'illustratr_hide_portfolio_page_content' ) ) : ?>
 			<?php while ( have_posts() ) : the_post(); ?>
-				
+
 				<?php if ( '' != get_the_post_thumbnail() ) : ?>
 					<div class="entry-thumbnail">
 						<?php the_post_thumbnail( 'illustratr-featured-image' ); ?>
@@ -47,19 +47,19 @@ get_header(); ?>
 
 				if ( $project_query -> have_posts() ) :
 			?>
-			
+
 				<div class="portfolio-wrapper">
-				
+
 				<?php
 					while ( $project_query -> have_posts() ) : $project_query -> the_post();
-	
+
 						get_template_part( 'content', 'portfolio' );
-	
-					endwhile;				
+
+					endwhile;
 				?>
-				
+
 				</div><!-- .portfolio-wrapper -->
-				
+
 				<?php wp_reset_postdata(); ?>
 
 			<?php else : ?>

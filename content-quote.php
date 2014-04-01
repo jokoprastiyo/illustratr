@@ -5,7 +5,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
@@ -22,7 +22,7 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-	
+
 	<header class="entry-header">
 		<?php
 			if ( is_single() ) {
@@ -31,7 +31,7 @@
 				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 			}
 		?>
-		
+
 		<?php
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( __( ', ', 'illustratr' ) );
@@ -43,7 +43,7 @@
 
 	<footer class="entry-meta">
 		<?php illustratr_posted_on(); ?>
-		
+
 		<span class="entry-format"><a href="<?php echo esc_url( get_post_format_link( 'quote' ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'All %s posts', 'illustratr' ), get_post_format_string( 'quote' ) ) ); ?>"><?php echo get_post_format_string( 'quote' ); ?></a></span>
 
 		<?php
