@@ -14,9 +14,10 @@ function illustratr_dequeue_fonts() {
 	if ( class_exists( 'TypekitData' ) && class_exists( 'CustomDesign' ) && CustomDesign::is_upgrade_active() ) {
 		$customfonts = TypekitData::get( 'families' );
 
-		if ( $customfonts['site-title']['id'] && $customfonts['headings']['id'] && $customfonts['body-text']['id'] )
+		if ( $customfonts['headings']['id'] && $customfonts['body-text']['id'] ) {
 			wp_dequeue_style( 'illustratr-source-sans-pro' );
 			wp_dequeue_style( 'illustratr-pt-serif' );
+		}
 	}
 }
 add_action( 'wp_enqueue_scripts', 'illustratr_dequeue_fonts' );
