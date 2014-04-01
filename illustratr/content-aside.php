@@ -5,7 +5,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
@@ -22,7 +22,7 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-	
+
 	<header class="entry-header">
 		<?php if ( 'post' == get_post_type() ) : ?>
 			<?php
@@ -37,7 +37,7 @@
 
 	<footer class="entry-meta">
 		<?php illustratr_posted_on(); ?>
-		
+
 		<span class="entry-format"><a href="<?php echo esc_url( get_post_format_link( 'aside' ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'All %s posts', 'illustratr' ), get_post_format_string( 'aside' ) ) ); ?>"><?php echo get_post_format_string( 'aside' ); ?></a></span>
 
 		<?php

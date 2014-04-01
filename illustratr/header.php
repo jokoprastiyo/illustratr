@@ -30,7 +30,7 @@
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><img src="<?php header_image(); ?>" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" class="header-image" /></a>
 			</div><!-- .site-image -->
 		<?php endif; ?>
-		
+
 		<div class="site-branding">
 			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
@@ -40,7 +40,7 @@
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<h1 class="menu-toggle"><span class="genericon genericon-menu"><span class="screen-reader-text"><?php _e( 'Menu', 'illustratr' ); ?></span></span></h1>
 				<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'illustratr' ); ?></a>
-	
+
 				<?php
 					wp_nav_menu( array(
 						'theme_location'  => 'primary',

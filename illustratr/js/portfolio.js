@@ -4,7 +4,7 @@
 	 * Resize portfolio-wrapper for full width on small screens.
 	 */
 	function calc() {
-		
+
 		$( '.portfolio-wrapper' ).each( function() {
 			if( ( $( window ).width() < 960 ) && ( $( window ).width() > 767 ) ) {
 	    		$( this ).css( {
@@ -24,29 +24,29 @@
 				} );
 			}
 		} );
-			
+
 	}
 
 	$( window ).load( function() {
-		
+
 		/*
 		 * Wrap portfolio-featured-image in a div.
 		 */
 		$( '.portfolio-featured-image' ).each( function() {
 			$( this ).wrap( '<div class="portfolio-thumbnail" />' );
 		} );
-	
+
 		calc();
-	
+
 		var portfolio_wrapper = $( '.portfolio-wrapper, .jetpack-portfolio-shortcode' );
-	
+
 		portfolio_wrapper.imagesLoaded( function() {
 			portfolio_wrapper.masonry( {
 				columnWidth: 1,
 				itemSelector: '.portfolio-entry',
 				transitionDuration: 0
 			} );
-			
+
 			// Show the blocks
 			$( '.portfolio-entry' ).animate( {
 				'opacity' : 1
@@ -62,7 +62,7 @@
 			}, 1500 );
 
 		} );
-		
+
 		// Layout posts that arrive via infinite scroll
 		$( document.body ).on( 'post-load', function () {
 
@@ -73,14 +73,14 @@
 
 			// Force layout correction after 1500 milliseconds
 			setTimeout( function () {
-				
+
 				portfolio_wrapper.masonry();
-				
+
 				// Show the blocks
 				$( '.portfolio-entry' ).animate( {
 					'opacity' : 1
 				}, 250 );
-				
+
 			}, 1500 );
 
 		} );

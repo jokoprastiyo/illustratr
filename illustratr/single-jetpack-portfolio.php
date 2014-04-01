@@ -20,7 +20,7 @@ get_header(); ?>
 					comments_template();
 				endif;
 			?>
-			
+
 			<?php illustratr_portfolio_nav(); ?>
 
 		<?php endwhile; // end of the loop. ?>

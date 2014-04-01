@@ -32,7 +32,7 @@ function illustratr_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-	
+
 	/**
 	 * Editor styles.
 	 */
@@ -70,7 +70,7 @@ function illustratr_setup() {
 		'comment-form',
 		'gallery',
 	) );
-	
+
 	// Remove default gallery style
 	add_filter( 'use_default_gallery_style', '__return_false' );
 }
@@ -100,10 +100,10 @@ function illustratr_fonts() {
 	   by Source Sans Pro, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Source Sans Pro font: on or off', 'illustratr' ) ) {
 		$subsets = 'latin,latin-ext';
-		
+
 		/* translators: To add an additional Source Sans Pro character subset specific to your language, translate this to 'vietnamese'. Do not translate into your own language. */
 		$subset = _x( 'no-subset', 'Source Sans Pro font: add new subset (vietnamese)', 'illustratr' );
-		
+
 		if ( 'vietnamese' == $subset ) {
 			$subsets .= ',vietnamese';
 		}
@@ -116,15 +116,15 @@ function illustratr_fonts() {
 		wp_register_style( 'illustratr-source-sans-pro', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
 
 	}
-	
+
 	/* translators: If there are characters in your language that are not supported
 	   by PT Serif, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'PT Serif font: on or off', 'illustratr' ) ) {
 		$subsets = 'latin,latin-ext';
-		
+
 		/* translators: To add an additional PT Serif character subset specific to your language, translate this to 'cyrillic'. Do not translate into your own language. */
 		$subset = _x( 'no-subset', 'PT Serif font: add new subset (cyrillic)', 'illustratr' );
-		
+
 		if ( 'cyrillic' == $subset ) {
 			$subsets .= ',cyrillic-ext,cyrillic';
 		}
@@ -137,7 +137,7 @@ function illustratr_fonts() {
 		wp_register_style( 'illustratr-pt-serif', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
 
 	}
-	
+
 	/* translators: If there are characters in your language that are not supported
 	   by Source Code Pro, translate this to 'off'. Do not translate into your own language. */
 	if ( 'off' !== _x( 'on', 'Source Code Pro font: on or off', 'illustratr' ) ) {
@@ -155,11 +155,11 @@ add_action( 'init', 'illustratr_fonts' );
  */
 function illustratr_scripts() {
 	wp_enqueue_style( 'illustratr-source-sans-pro' );
-	
+
 	wp_enqueue_style( 'illustratr-pt-serif' );
-	
+
 	wp_enqueue_style( 'illustratr-source-code-pro' );
-	
+
 	if ( wp_style_is( 'genericons', 'registered' ) ) {
 		wp_enqueue_style( 'genericons' );
 	} else {
@@ -175,11 +175,11 @@ function illustratr_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-	
+
 	if ( is_active_sidebar( 'sidebar-1' ) ) {
 		wp_enqueue_script( 'illustratr-sidebar', get_template_directory_uri() . '/js/sidebar.js', array( 'jquery', 'jquery-masonry' ), '20140325', true );
 	}
-		
+
 	wp_enqueue_script( 'illustratr-script', get_template_directory_uri() . '/js/illustratr.js', array( 'jquery', 'underscore' ), '20140317', true );
 }
 add_action( 'wp_enqueue_scripts', 'illustratr_scripts' );

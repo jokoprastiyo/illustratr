@@ -26,7 +26,7 @@ get_header(); ?>
 					comments_template();
 				endif;
 			?>
-			
+
 			<?php illustratr_post_nav(); ?>
 
 		<?php endwhile; // end of the loop. ?>

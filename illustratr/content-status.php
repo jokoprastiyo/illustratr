@@ -5,7 +5,7 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	
+
 	<?php if ( is_search() ) : // Only display Excerpts for Search ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
@@ -22,13 +22,13 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-	
+
 	<?php if ( illustratr_validate_gravatar( get_the_author_meta( 'email' ) ) ) : ?>
 		<div class="entry-avatar">
 			<?php echo get_avatar( get_the_author_meta( 'email' ), '60' ); ?>
 		</div><!-- .entry-avatar -->
 	<?php endif; ?>
-	
+
 	<header class="entry-header">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
@@ -41,7 +41,7 @@
 
 	<footer class="entry-meta">
 		<?php illustratr_posted_on(); ?>
-		
+
 		<span class="entry-format"><a href="<?php echo esc_url( get_post_format_link( 'status' ) ); ?>" title="<?php echo esc_attr( sprintf( __( 'All %s posts', 'illustratr' ), get_post_format_string( 'status' ) ) ); ?>"><?php echo get_post_format_string( 'status' ); ?></a></span>
 
 		<?php

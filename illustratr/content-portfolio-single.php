@@ -2,7 +2,7 @@
 /**
  * @package Illustratr
  */
- 
+
 // Access global variable directly to adjust the content width for portfolio single page
 if ( isset( $GLOBALS['content_width'] ) ) {
 	$GLOBALS['content_width'] = 1100;
@@ -12,10 +12,10 @@ if ( isset( $GLOBALS['content_width'] ) ) {
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		
+
 		<?php echo get_the_term_list( $post->ID, 'jetpack-portfolio-type', '<span class="portfolio-entry-meta">', _x(', ', 'Used between list items, there is a space after the comma.', 'illustratr' ), '</span>' ); ?>
 	</header><!-- .entry-header -->
-	
+
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
@@ -26,7 +26,7 @@ if ( isset( $GLOBALS['content_width'] ) ) {
 			) );
 		?>
 	</div><!-- .entry-content -->
-	
+
 	<footer class="entry-meta">
 		<?php
 			/* translators: used between list items, there is a space after the comma */
