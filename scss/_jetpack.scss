@@ -42,8 +42,9 @@ Jetpack
 /* Sharedaddy */
 .page-content,
 .entry-content,
-.entry-summary {
+.entry-sharedaddy {
 	> .sharedaddy {
+		padding-top: 0 !important;
 		font-family: inherit !important;
 		font-size: inherit !important;
 		.sd-sharing,
@@ -129,6 +130,15 @@ Jetpack
 #page {
 	#primary .sharedaddy h3 {
 		font-size: 0.73em;
+	}
+}
+.entry-sharedaddy {
+	margin-top: $vspacing-double;
+	#jp-post-flair {
+		> div:first-of-type {
+			margin-top: -$vspacing;
+			border-top: 0 !important;
+		}
 	}
 }
 
