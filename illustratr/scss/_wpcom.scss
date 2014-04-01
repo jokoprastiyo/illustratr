@@ -219,6 +219,26 @@ WP.com
 	}
 }
 
+/* Widget - Akismet */
+.widget_akismet_widget {
+	.a-stats {
+		padding-bottom: $vspacing;
+		a {
+			padding: ($vspacing / 2) $vspacing;
+			background: $darker-color;
+			border-color: $darker-color;
+			color: $background-color;
+			@include border-radius(0);
+			@include hover(background, $background-color);
+			@include hover(border-color, $background-color);
+			@include hover(color, $dark-color);
+			.count {
+				color: inherit;
+			}
+		}
+	}
+}
+
 /* Widget - GoodReads */
 .widget_goodreads {
 	div[class^="gr_custom_container"] {
