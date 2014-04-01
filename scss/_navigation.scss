@@ -7,9 +7,6 @@ a {
 	color: $link-color;
 	@include hover(color, $text-color);
 }
-a:visited {
-	color: $link-visited;
-}
 
 /*  Pagination */
 .site-main {
