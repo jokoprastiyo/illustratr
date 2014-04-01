@@ -35,4 +35,14 @@
 			}
 		} );
 	} );
+	// Background color.
+	wp.customize( 'background_color', function( value ) {
+		value.bind( function( to ) {
+			if ( '#24282d' === to ) {
+				$( 'body' ).addClass( 'default-background' );
+			} else {
+				$( 'body' ).removeClass( 'default-background' );
+			}
+		} );
+	} );
 } )( jQuery );

@@ -200,10 +200,12 @@ Menu
 					padding: 0;
 				}
 				> ul {
-					margin: $vspacing / 2 auto;
+					margin-top: $vspacing / 2;
+					margin-bottom: $vspacing / 2;
 				}
-				&.menu-item-has-children li:last-child {
+				&.menu-item-has-children > ul > li:last-child {
 					padding-bottom: 0;
+					margin-bottom: $vspacing / 2;
 				}
 			}
 			.menu-item-has-children {
