@@ -91,13 +91,6 @@ Widgets
 	}
 }
 
-/* Archives */
-.widget_archive {
-	select {
-		margin-bottom: $vspacing;
-	}
-}
-
 /* Blog Subscriptions */
 .jetpack_subscription_widget {
 	#subscribe-email {
@@ -150,9 +143,6 @@ Widgets
 		width: 100% !important;
 	}
 }
-
-/* Gallery */
-.widget-gallery {}
 
 /* Gravatar Profile */
 .widget-grofile {
@@ -300,8 +290,11 @@ Widgets
 }
 		
 /* Select */
-.widget select {
-	max-width: 100%;
+.widget {
+	select {
+		margin-bottom: $vspacing;
+		max-width: 100%;
+	}
 }
 
 /* Send to Readmill */

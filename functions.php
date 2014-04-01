@@ -177,11 +177,7 @@ function illustratr_scripts() {
 	}
 	
 	if ( is_active_sidebar( 'sidebar-1' ) ) {
-		if ( version_compare( $GLOBALS['wp_version'], '3.9', '>=' ) ) {
-			wp_enqueue_script( 'illustratr-sidebar', get_template_directory_uri() . '/js/sidebar.js', array( 'jquery', 'masonry' ), '20140325', true );
-		} else {
-			wp_enqueue_script( 'illustratr-sidebar', get_template_directory_uri() . '/js/sidebar.js', array( 'jquery', 'jquery-masonry' ), '20140325', true );
-		}
+		wp_enqueue_script( 'illustratr-sidebar', get_template_directory_uri() . '/js/sidebar.js', array( 'jquery', 'jquery-masonry' ), '20140325', true );
 	}
 		
 	wp_enqueue_script( 'illustratr-script', get_template_directory_uri() . '/js/illustratr.js', array( 'jquery', 'underscore' ), '20140317', true );

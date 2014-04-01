@@ -1269,10 +1269,6 @@ Widgets
 .page-content .widget .wp-smiley {
   display: none; }
 
-/* Archives */
-.widget_archive select {
-  margin-bottom: 20px; }
-
 /* Blog Subscriptions */
 .jetpack_subscription_widget #subscribe-email input {
   width: 100%;
@@ -1304,7 +1300,6 @@ Widgets
 .widget_facebook_likebox iframe {
   width: 100% !important; }
 
-/* Gallery */
 /* Gravatar Profile */
 .widget-grofile > img {
   display: block;
@@ -1402,6 +1397,7 @@ Widgets
 
 /* Select */
 .widget select {
+  margin-bottom: 20px;
   max-width: 100%; }
 
 /* Send to Readmill */
