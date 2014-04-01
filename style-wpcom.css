@@ -251,6 +251,28 @@ WP.com
 .aboutme_widget #am_services a.am_service_icon img {
   margin-bottom: 5px; }
 
+/* Widget - Akismet */
+.widget_akismet_widget .a-stats {
+  padding-bottom: 20px; }
+.widget_akismet_widget .a-stats a {
+  padding: 10px 20px;
+  background: #24282d;
+  border-color: #24282d;
+  color: white;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0; }
+.widget_akismet_widget .a-stats a:hover, .widget_akismet_widget .a-stats a:focus, .widget_akismet_widget .a-stats a:active {
+  background: white; }
+.widget_akismet_widget .a-stats a:hover, .widget_akismet_widget .a-stats a:focus, .widget_akismet_widget .a-stats a:active {
+  border-color: white; }
+.widget_akismet_widget .a-stats a:hover, .widget_akismet_widget .a-stats a:focus, .widget_akismet_widget .a-stats a:active {
+  color: #464d4d; }
+.widget_akismet_widget .a-stats a .count {
+  color: inherit; }
+
 /* Widget - GoodReads */
 .widget_goodreads div[class^="gr_custom_container"] {
   padding: 0 0 20px;
