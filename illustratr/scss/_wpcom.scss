@@ -179,6 +179,46 @@ WP.com
 	}
 }
 
+/* Widget - About.me */
+.aboutme_widget {
+	#am_thumbnail,
+	#am_name,
+	#am_headline,
+	#am_bio {
+		margin: 0 0 ($vspacing / 2);
+	}
+	#am_thumbnail {
+		a,
+		img {
+			display: block;
+		}
+		img {
+			max-width: 100%;
+			border: none;
+		}
+	}
+	#am_name {
+		text-transform: uppercase;
+		a {
+			font-size: inherit !important;
+			text-decoration: none;
+		}
+	}
+	#am_services {
+		padding-bottom: ($vspacing / 4);
+		a,
+		img {
+			display: inline-block;
+			line-height: 0;
+		}
+		a.am_service_icon {
+			img {
+				margin-bottom: ($vspacing / 4);
+			}
+		}
+	}
+}
+
 /* Widget - GoodReads */
 .widget_goodreads {
 	div[class^="gr_custom_container"] {

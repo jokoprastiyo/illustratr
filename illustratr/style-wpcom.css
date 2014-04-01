@@ -230,6 +230,27 @@ WP.com
 .comment-body .comment-meta + .pd-rating {
   padding-top: 0; }
 
+/* Widget - About.me */
+.aboutme_widget #am_thumbnail, .aboutme_widget #am_name, .aboutme_widget #am_headline, .aboutme_widget #am_bio {
+  margin: 0 0 10px; }
+.aboutme_widget #am_thumbnail a, .aboutme_widget #am_thumbnail img {
+  display: block; }
+.aboutme_widget #am_thumbnail img {
+  max-width: 100%;
+  border: none; }
+.aboutme_widget #am_name {
+  text-transform: uppercase; }
+.aboutme_widget #am_name a {
+  font-size: inherit !important;
+  text-decoration: none; }
+.aboutme_widget #am_services {
+  padding-bottom: 5px; }
+.aboutme_widget #am_services a, .aboutme_widget #am_services img {
+  display: inline-block;
+  line-height: 0; }
+.aboutme_widget #am_services a.am_service_icon img {
+  margin-bottom: 5px; }
+
 /* Widget - GoodReads */
 .widget_goodreads div[class^="gr_custom_container"] {
   padding: 0 0 20px;
