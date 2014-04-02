@@ -1462,6 +1462,9 @@ Widgets
 /*--------------------------------------------------------------
 Content
 --------------------------------------------------------------*/
+.sticky {
+  position: relative; }
+
 .page-header, .hentry {
   position: relative; }
 .page-header + .hentry, .hentry + .hentry {
@@ -2054,6 +2057,9 @@ Comments
 .comment-content a {
   word-wrap: break-word; }
 
+.bypostauthor {
+  position: relative; }
+
 .comments-area, .comment-list + .comment-respond {
   position: relative;
   padding-top: 81px;
@@ -2135,6 +2141,12 @@ Comments
   list-style: none;
   padding-top: 61px;
   margin-left: 80px; }
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .comment-list .children {
+    margin-left: 40px; } }
+@media screen and (max-width: 767px) {
+  .comment-list .children {
+    margin-left: 20px; } }
 .comment-list .children:before {
   content: '';
   display: block;
