@@ -145,6 +145,23 @@ WP.com
 		}
 	}
 }
+.portfolio-sharedaddy {
+	> .sharedaddy {
+		.jetpack-likes-widget-wrapper {
+			padding: $vspacing 0;
+			border-top: 1px solid $lighter-color;
+			@include box-sizing(content-box);
+			.post-likes-widget {
+				top: $vspacing - 5px !important;
+			}
+		}
+		.sd-title {
+			&:before {
+				display: none;
+			}
+		}
+	}
+}
 
 /* Ratings */
 .pd-rating {
@@ -166,6 +183,13 @@ WP.com
 		padding: 0;
 		margin: 0;
 		background: transparent;
+	}
+}
+.entry-summary {
+	.sd-title {
+		margin: 5px 0;
+		font-size: 0.73em;
+		line-height: 1.5;
 	}
 }
 .comment-body {
