@@ -5,7 +5,9 @@ Comments
 .comment-content a {
 	word-wrap: break-word;
 }
-.bypostauthor {}
+.bypostauthor {
+	position: relative;
+}
 
 .comments-area,
 .comment-list + .comment-respond {
@@ -64,6 +66,12 @@ Comments
 		list-style: none;
 		padding-top: $vspacing-triple + 1px;
 		margin-left: $vspacing + 60px; // wp_list_comments( avatar_size );
+		@include screen($tablet, $desktop - 1px) {
+			margin-left: $vspacing-double;
+		}
+		@include max-screen($tablet - 1px) {
+			margin-left: $vspacing;
+		}
 		&:before {
 			content: '';
 			display: block;
