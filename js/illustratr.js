@@ -16,6 +16,10 @@
 			if ( img_width >= 1100 ) {
 				$( this ).addClass( 'image-big' );
 				$( this ).parents( 'p' ).addClass( 'image-big-wrapper' );
+				if ( $.trim( $( this ).parents( 'p' ).text() ) != '' ) {
+					$( this ).parents( 'p' ).contents().filter( 'a, img' ).wrap( '<span class="image-big-wrapper" />' );
+					$( this ).parents( 'p' ).removeClass( 'image-big-wrapper' );
+				}
 			}
 			if ( caption.hasClass( 'wp-caption' ) && img_width >= 1080 ) {
 				$( this ).removeClass( 'image-big' );
@@ -66,12 +70,14 @@
 		} );
 		$( '.image-big' ).each( function() {
 			if( $( window ).width() < 960 ) {
-	    		$( this ).parents( 'p' ).css( {
+	    		$( this ).parents( '.image-big-wrapper' ).css( {
+	    			'display': 'block',
 	    			'width': '100%',
 	    			'margin-left': '-40px',
 	    		} ).css( 'width', '+=80px' );
 			} else {
-				$( this ).parents( 'p' ).css( {
+				$( this ).parents( '.image-big-wrapper' ).css( {
+					'display': '',
 					'width': '',
 					'margin-right': '',
 					'margin-left': ''
