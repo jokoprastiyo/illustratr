@@ -44,5 +44,8 @@ function illustratr_jetpack_scripts() {
 	if ( is_singular() && 'jetpack-portfolio' == get_post_type() ) {
 		wp_enqueue_script( 'illustratr-portfolio-single', get_template_directory_uri() . '/js/portfolio-single.js', array( 'jquery', 'underscore' ), '20140328', true );
 	}
+	if ( is_page_template( 'page-templates/portfolio-page.php' ) ) {
+		wp_enqueue_script( 'illustratr-portfolio-page', get_template_directory_uri() . '/js/portfolio-page.js', array( 'jquery' ), '20140402', true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'illustratr_jetpack_scripts' );

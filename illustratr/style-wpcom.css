@@ -203,6 +203,17 @@ WP.com
 .page-content > .sharedaddy .sd-title:before, .entry-content > .sharedaddy .sd-title:before, .entry-sharedaddy > .sharedaddy .sd-title:before {
   display: none; }
 
+.portfolio-sharedaddy > .sharedaddy .jetpack-likes-widget-wrapper {
+  padding: 20px 0;
+  border-top: 1px solid #f1f2f3;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+.portfolio-sharedaddy > .sharedaddy .jetpack-likes-widget-wrapper .post-likes-widget {
+  top: 15px !important; }
+.portfolio-sharedaddy > .sharedaddy .sd-title:before {
+  display: none; }
+
 /* Ratings */
 .pd-rating {
   padding: 10px 20px;
@@ -222,6 +233,11 @@ WP.com
   padding: 0;
   margin: 0;
   background: transparent; }
+
+.entry-summary .sd-title {
+  margin: 5px 0;
+  font-size: 0.73em;
+  line-height: 1.5; }
 
 .comment-body .pd-rating {
   padding: 20px 0;
