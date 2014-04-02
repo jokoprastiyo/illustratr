@@ -240,6 +240,111 @@ WP.com
 	}
 }
 
+/* Widget - Author Grid */
+.widgets-area{
+	.widget_author_grid {
+		margin-top: -($vspacing / 2);
+		margin-bottom: $vspacing / 2;
+		ul {
+			li {
+				padding: $vspacing / 2 !important;
+				margin: 0 !important;
+				a {
+					margin: 0;
+				}
+				img {
+					display: block;
+				}
+			}
+		}
+	}
+}
+
+/* Widget - Authors */
+.widget_authors {
+	a {
+		text-decoration: none;
+	}
+	img {
+		margin-right: 5px;
+		vertical-align: middle;
+	}
+}
+
+/* Widget - Blog Stats */
+.widget_blog-stats {
+	ul {
+		padding: ($vspacing / 4) ($vspacing / 2);
+		border: 1px solid lighten($dark-color, 5%);
+		list-style: none;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+/* Widget - Contact Info */
+.widget_contact_info {
+	#contact-map,
+	.confit-address,
+	.confit-phone,
+	.confit-hours {
+		margin-bottom: $vspacing;
+	}
+	#contact-map + * {
+		padding-top: $vspacing;
+		border-top: 2px solid $darker-color;
+	}
+}
+
+/* Widget - Flickr */
+.widget_flickr {
+	table {
+		margin: 0;
+		border: 0;
+	}
+	td {
+		padding: 0;
+		border: 0;
+	}
+	#flickr_badge_wrapper {
+		padding-bottom: $vspacing;
+		background: transparent;
+		border: 0;
+		td {
+			text-align: center;
+		}
+	}
+	br {
+		display: none;
+	}
+	#flickr_badge_uber_wrapper {
+		a {
+			&:not(:last-of-type) {
+				display: block;
+				float: left;
+				padding: $vspacing / 2;
+				margin: 0;
+				max-width: $mobile / 3;
+				img {
+					display: block;
+				}
+			}
+			&:last-of-type {
+				display: inline-block;
+				clear: both;
+				padding: ($vspacing / 4) ($vspacing / 2);
+				margin: ($vspacing / 2) auto 0 auto;
+				border: 1px solid lighten($dark-color, 5%);
+				color: $background-color !important;
+				@include transition(all 250ms ease);
+				@include hover(background, lighten($dark-color, 5%) !important);
+				@include hover(color, $darker-color);
+			}
+		}
+	}
+}
+
 /* Widget - GoodReads */
 .widget_goodreads {
 	div[class^="gr_custom_container"] {
@@ -303,6 +408,7 @@ WP.com
 }
 
 /* Widget - Lists */
+.widget_authors,
 .widget_jp_blogs_i_follow,
 .widget_links {
 	ul {
@@ -345,4 +451,15 @@ img#wpstats,
 img[id*="botd"] {
 	position: absolute;
 	top: -9999px;
+}
+
+/* Right to Left */
+.rtl {
+	// Widget authors
+	.widget_authors {
+		img {
+			margin-right: auto;
+			margin-left: 5px;
+		}
+	}
 }
