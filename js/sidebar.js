@@ -8,6 +8,8 @@
 			event.preventDefault();
 			$( this ).toggleClass( 'active' );
 			$( '.widgets-wrapper' ).slideToggle( 100 );
+			// Trigger resize to make sure widgets fit prefectly.
+			$( this ).trigger( 'resize' );
 
 			// Masonry blocks
 			widgets_area.imagesLoaded( function() {
