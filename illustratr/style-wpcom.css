@@ -277,6 +277,80 @@ WP.com
 .widget_akismet_widget .a-stats a .count {
   color: inherit; }
 
+/* Widget - Author Grid */
+.widgets-area .widget_author_grid {
+  margin-top: -10px;
+  margin-bottom: 10px; }
+.widgets-area .widget_author_grid ul li {
+  padding: 10px !important;
+  margin: 0 !important; }
+.widgets-area .widget_author_grid ul li a {
+  margin: 0; }
+.widgets-area .widget_author_grid ul li img {
+  display: block; }
+
+/* Widget - Authors */
+.widget_authors a {
+  text-decoration: none; }
+.widget_authors img {
+  margin-right: 5px;
+  vertical-align: middle; }
+
+/* Widget - Blog Stats */
+.widget_blog-stats ul {
+  padding: 5px 10px;
+  border: 1px solid #525a5a;
+  list-style: none;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase; }
+
+/* Widget - Contact Info */
+.widget_contact_info #contact-map, .widget_contact_info .confit-address, .widget_contact_info .confit-phone, .widget_contact_info .confit-hours {
+  margin-bottom: 20px; }
+.widget_contact_info #contact-map + * {
+  padding-top: 20px;
+  border-top: 2px solid #24282d; }
+
+/* Widget - Flickr */
+.widget_flickr table {
+  margin: 0;
+  border: 0; }
+.widget_flickr td {
+  padding: 0;
+  border: 0; }
+.widget_flickr #flickr_badge_wrapper {
+  padding-bottom: 20px;
+  background: transparent;
+  border: 0; }
+.widget_flickr #flickr_badge_wrapper td {
+  text-align: center; }
+.widget_flickr br {
+  display: none; }
+.widget_flickr #flickr_badge_uber_wrapper a:not(:last-of-type) {
+  display: block;
+  float: left;
+  padding: 10px;
+  margin: 0;
+  max-width: 33.33333%; }
+.widget_flickr #flickr_badge_uber_wrapper a:not(:last-of-type) img {
+  display: block; }
+.widget_flickr #flickr_badge_uber_wrapper a:last-of-type {
+  display: inline-block;
+  clear: both;
+  padding: 5px 10px;
+  margin: 10px auto 0 auto;
+  border: 1px solid #525a5a;
+  color: white !important;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  transition: all 250ms ease; }
+.widget_flickr #flickr_badge_uber_wrapper a:last-of-type:hover, .widget_flickr #flickr_badge_uber_wrapper a:last-of-type:focus, .widget_flickr #flickr_badge_uber_wrapper a:last-of-type:active {
+  background: #525a5a !important; }
+.widget_flickr #flickr_badge_uber_wrapper a:last-of-type:hover, .widget_flickr #flickr_badge_uber_wrapper a:last-of-type:focus, .widget_flickr #flickr_badge_uber_wrapper a:last-of-type:active {
+  color: #24282d; }
+
 /* Widget - GoodReads */
 .widget_goodreads div[class^="gr_custom_container"] {
   padding: 0 0 20px;
@@ -325,14 +399,14 @@ WP.com
   margin: 0 0 20px; }
 
 /* Widget - Lists */
-.widget_jp_blogs_i_follow ul, .widget_links ul {
+.widget_authors ul, .widget_jp_blogs_i_follow ul, .widget_links ul {
   list-style: none; }
-.widget_jp_blogs_i_follow li, .widget_links li {
+.widget_authors li, .widget_jp_blogs_i_follow li, .widget_links li {
   padding: 10px 0;
   border-bottom: 1px solid #525a5a; }
-.widget_jp_blogs_i_follow li:first-child, .widget_links li:first-child {
+.widget_authors li:first-child, .widget_jp_blogs_i_follow li:first-child, .widget_links li:first-child {
   padding-top: 0; }
-.widget_jp_blogs_i_follow li:last-child, .widget_links li:last-child {
+.widget_authors li:last-child, .widget_jp_blogs_i_follow li:last-child, .widget_links li:last-child {
   padding-bottom: 0;
   border-bottom: 0; }
 
@@ -358,3 +432,8 @@ WP.com
 img#wpstats, img[id*="botd"] {
   position: absolute;
   top: -9999px; }
+
+/* Right to Left */
+.rtl .widget_authors img {
+  margin-right: auto;
+  margin-left: 5px; }
