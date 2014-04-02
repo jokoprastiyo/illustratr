@@ -1301,6 +1301,10 @@ Widgets
 .widget_facebook_likebox iframe {
   width: 100% !important; }
 
+/* Gallery */
+.widget-gallery img {
+  height: auto !important; }
+
 /* Gravatar Profile */
 .widget-grofile > img {
   display: block;

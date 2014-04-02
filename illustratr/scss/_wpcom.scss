@@ -243,9 +243,9 @@ WP.com
 /* Widget - Author Grid */
 .widgets-area{
 	.widget_author_grid {
-		margin-top: -($vspacing / 2);
-		margin-bottom: $vspacing / 2;
 		ul {
+			margin-top: -($vspacing / 2);
+			margin-bottom: $vspacing / 2;
 			li {
 				padding: $vspacing / 2 !important;
 				margin: 0 !important;
@@ -268,6 +268,7 @@ WP.com
 	img {
 		margin-right: 5px;
 		vertical-align: middle;
+		@include border-radius(50%);
 	}
 }
 
@@ -325,7 +326,7 @@ WP.com
 				float: left;
 				padding: $vspacing / 2;
 				margin: 0;
-				max-width: $mobile / 3;
+				max-width: 33.33333333333333%;
 				img {
 					display: block;
 				}
@@ -379,6 +380,16 @@ WP.com
 	}
 }
 
+/* Widget - Gravatar */
+.widget_gravatar {
+	p:first-of-type {
+		img {
+			display: block;
+			@include border-radius(50%);
+		}
+	}
+}
+
 /* Widget - Grid */
 .widget {
 	.widgets-multi-column-grid {
@@ -400,10 +411,87 @@ WP.com
 	}
 }
 
+/* Widget - Instagram */
+.widget_wpcom_instagram_widget {
+	a,
+	img {
+		display: block;
+	}
+	.wpcom-instagram-columns-1 {
+		img {
+			margin: 0 0 $vspacing;
+			max-width: 100%;
+		}
+	}
+	.wpcom-instagram-columns-2,
+	.wpcom-instagram-columns-3 {
+		margin-top: -($vspacing / 2);
+		margin-bottom: $vspacing / 2;
+		img {
+			padding: $vspacing / 2;
+			margin: 0;
+		}
+	}
+	.wpcom-instagram-columns-2 {
+		img {
+			max-width: 50%;
+		}
+	}
+	.wpcom-instagram-columns-3 {
+		img {
+			max-width: 33.33333333333333%;
+		}
+	}
+}
+
 /* Widget - Milestone */
 .milestone-widget {
+	.milestone-header {
+		background: lighten($dark-color, 5%);
+	}
+	.milestone-countdown,
+	.milestone-message {
+		background: transparent;
+		border-color: lighten($dark-color, 5%);
+		color: $background-color;
+	}
 	.milestone-content {
 		margin: 0 0 $vspacing;
+		max-width: 100%;
+	}
+}
+
+/* Music Player */
+.widget.music-player {
+	.wp-playlist {
+		padding: $vspacing;
+		margin: 0 0 $vspacing;
+		background: transparent;
+		border-color: lighten($dark-color, 5%);
+		color: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		.wp-playlist-current-item {
+			margin-bottom: $vspacing;
+			height: auto;
+			max-height: $vspacing-triple;
+		}
+		.wp-playlist-tracks {
+			margin-top: $vspacing - ($vspacing / 4);
+			margin-bottom: -($vspacing / 4);
+			border: 0;
+		}
+		.wp-playlist-playing {
+			background: transparent;
+			color: inherit;
+		}
+		.wp-playlist-item {
+			padding: $vspacing / 4;
+			border: 0;
+		}
+		.mejs-container {
+			width: 100% !important;
+		}
 	}
 }
 
