@@ -29,7 +29,8 @@ add_action( 'after_setup_theme', 'illustratr_jetpack_setup' );
  * Enable Infinite Scroll only on index.
  */
 function illustratr_infinite_scroll_archive_supported( $supported ) {
-	return array( is_home() );
+	$supported = current_theme_supports( 'infinite-scroll' ) && ( is_home() || is_search() );
+	return $supported;
 }
 add_filter( 'infinite_scroll_archive_supported', 'illustratr_infinite_scroll_archive_supported' );
 
