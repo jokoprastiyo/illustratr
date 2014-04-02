@@ -2502,7 +2502,7 @@ Media
 /* Iframes */
 embed, iframe, object, video, audio, .mejs-audio {
   display: block;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   max-width: 100%; }
 
 /* Audio */

@@ -170,7 +170,7 @@ video,
 audio,
 .mejs-audio {
 	display: block;
-	margin-bottom: $vspacing;
+	margin: 0 auto $vspacing auto;
 	max-width: 100%;
 }
 
