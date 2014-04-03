@@ -973,20 +973,24 @@ Menu
     display: block;
     padding: 10px 0;
     margin: 0;
-    min-height: 39px;
-    border-bottom: 1px solid #f1f2f3; }
+    min-height: 38px;
+    border-bottom: 1px solid #f1f2f3;
+    line-height: 18px; }
   .main-navigation ul li a {
     padding: 0; }
   .main-navigation ul li a:hover, .main-navigation ul li a:focus, .main-navigation ul li a:active {
     color: #24282d; }
   .main-navigation ul li > ul {
-    margin-top: 8px;
-    margin-bottom: 10px; }
+    margin-top: 8px; }
   .main-navigation ul li.menu-item-has-children > ul > li:last-child {
-    padding-bottom: 0;
-    margin-bottom: 10px; }
-  .main-navigation ul .menu-item-has-children {
-    padding-bottom: 0; }
+    padding-bottom: 1px;
+    margin-bottom: -1px; }
+  .main-navigation ul .menu-item-has-children.toggle-on {
+    padding-bottom: 1px; }
+  .main-navigation ul .menu-item-has-children.toggle-on > .toggle-on {
+    margin-top: 10px; }
+  .main-navigation ul .menu-item-has-children > a {
+    padding-right: 50px; }
   .main-navigation ul ul {
     display: none;
     position: inherit;
