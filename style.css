@@ -1367,12 +1367,7 @@ Widgets
 .widget-grofile > img {
   display: block;
   max-width: 60px;
-  margin: 0 0 20px;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%; }
+  margin: 0 0 20px; }
 .widget-grofile h4 {
   margin: 0 0 20px !important; }
 .widget-grofile > h4:last-of-type {
@@ -1421,13 +1416,18 @@ Widgets
     left: -20px; } }
 
 /* List Layout & Grid Layout */
+.widget .widgets-list-layout img {
+  vertical-align: middle; }
 .widget .widgets-list-layout li {
   margin-bottom: 0; }
+.widget .widgets-list-layout span {
+  opacity: 1; }
 .widget .widgets-list-layout .widgets-list-layout-blavatar {
   width: 40px; }
 .widget .widgets-list-layout .widgets-list-layout-links {
   float: none;
-  padding-left: 60px; }
+  padding-left: 60px;
+  width: 100%; }
 .widget .widgets-grid-layout {
   margin-top: -10px;
   margin-bottom: 10px; }

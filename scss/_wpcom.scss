@@ -290,9 +290,8 @@ WP.com
 		text-decoration: none;
 	}
 	img {
-		margin-right: 5px;
+		margin-right: $vspacing - 5px;
 		vertical-align: middle;
-		@include border-radius(50%);
 	}
 }
 
@@ -409,7 +408,6 @@ WP.com
 	p:first-of-type {
 		img {
 			display: block;
-			@include border-radius(50%);
 		}
 	}
 }
@@ -468,61 +466,11 @@ WP.com
 	}
 }
 
-/* Widget - Milestone */
-.milestone-widget {
-	.milestone-header {
-		background: lighten($dark-color, 5%);
-	}
-	.milestone-countdown,
-	.milestone-message {
-		background: transparent;
-		border-color: lighten($dark-color, 5%);
-		color: $background-color;
-	}
-	.milestone-content {
-		margin: 0 0 $vspacing;
-		max-width: 100%;
-	}
-}
-
-/* Music Player */
-.widget.music-player {
-	.wp-playlist {
-		padding: $vspacing;
-		margin: 0 0 $vspacing;
-		background: transparent;
-		border-color: lighten($dark-color, 5%);
-		color: inherit;
-		font-size: inherit;
-		line-height: inherit;
-		.wp-playlist-current-item {
-			margin-bottom: $vspacing;
-			height: auto;
-			max-height: $vspacing-triple;
-		}
-		.wp-playlist-tracks {
-			margin-top: $vspacing - ($vspacing / 4);
-			margin-bottom: -($vspacing / 4);
-			border: 0;
-		}
-		.wp-playlist-playing {
-			background: transparent;
-			color: inherit;
-		}
-		.wp-playlist-item {
-			padding: $vspacing / 4;
-			border: 0;
-		}
-		.mejs-container {
-			width: 100% !important;
-		}
-	}
-}
-
 /* Widget - Lists */
 .widget_authors,
 .widget_jp_blogs_i_follow,
-.widget_links {
+.widget_links,
+.widget_jetpack_posts_i_like {
 	ul {
 		list-style: none;
 	}
@@ -557,6 +505,119 @@ WP.com
 		}
 	}
 }
+
+/* Widget - Milestone */
+.milestone-widget {
+	.milestone-header {
+		background: lighten($dark-color, 5%);
+	}
+	.milestone-countdown,
+	.milestone-message {
+		background: transparent;
+		border-color: lighten($dark-color, 5%);
+		color: $background-color;
+	}
+	.milestone-content {
+		margin: 0 0 $vspacing;
+		max-width: 100%;
+	}
+}
+
+/* Widget - Music Player */
+.widget.music-player {
+	.wp-playlist {
+		padding: $vspacing;
+		margin: 0 0 $vspacing;
+		background: transparent;
+		border-color: lighten($dark-color, 5%);
+		color: inherit;
+		font-size: inherit;
+		line-height: inherit;
+		.wp-playlist-current-item {
+			margin-bottom: $vspacing;
+			height: auto;
+			max-height: $vspacing-triple;
+		}
+		.wp-playlist-tracks {
+			margin-top: $vspacing - ($vspacing / 4);
+			margin-bottom: -($vspacing / 4);
+			border: 0;
+		}
+		.wp-playlist-playing {
+			background: transparent;
+			color: inherit;
+		}
+		.wp-playlist-item {
+			padding: $vspacing / 4;
+			border: 0;
+		}
+		.mejs-container {
+			width: 100% !important;
+		}
+	}
+}
+
+/* Widget - Posts I Like */
+.widget_jetpack_posts_i_like {
+	ul {
+		margin-bottom: $vspacing;
+	}
+}
+
+/* Widget - Recent Comments */
+.widget_recent_comments {
+	table {
+		border-top: 0;
+	}
+	td {
+		padding: ($vspacing / 2) 0 !important;
+		vertical-align: middle;
+		&:nth-of-type(2n) {
+			padding-left: $vspacing !important;
+		}
+		&.recentcommentstexttop,
+		&.recentcommentstextend {
+			border-bottom: 1px solid lighten($dark-color, 5%) !important;
+		}
+		&.recentcommentsavatartop,
+		&.recentcommentsavatarend {
+			img,
+			a {
+				display: block;
+			}
+		}
+	}
+	tr {
+		&:first-of-type {
+			td {
+				padding-top: 0 !important;
+			}
+		}
+		&:last-of-type {
+			td {
+				padding-bottom: 0 !important;
+				border-bottom: 0 !important;
+			}
+		}
+	}
+}
+
+/* Widget - Recent Images */
+.widget_recent_images {
+	a,
+	img {
+		display: block;
+	}
+	a {
+		float: left;
+		padding: $vspacing / 2;
+		max-width: 25%;
+	}
+	.recent_images {
+		margin: -($vspacing / 2) 0 ($vspacing / 2) 0;
+	}
+}
+
 
 /* WPStats */
 img#wpstats,
