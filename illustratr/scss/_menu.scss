@@ -51,6 +51,24 @@ Menu
 				color: $link-color;
 			}
 		}
+		.genericon {
+			position: absolute;
+			top: -1px;
+			right: 0;
+			z-index: 9999;
+			width: $vspacing-double;
+			height: $vspacing-double;
+			background: $background-color;
+			border: 1px solid $lighter-color;
+			color: $darker-color;
+			font-size: 24px;
+			line-height: $vspacing-double;
+			text-align: center;
+			&.genericon-collapse {
+				background: $link-color;
+				color: $background-color;
+			}
+		}
 		
 		// 2nd level
 		ul {
@@ -124,22 +142,32 @@ Menu
 	.menu-toggle {
 		display: none;
 		cursor: pointer;
-		margin: 0;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		z-index: 1;
+		margin: 0 0 0 (-$vspacing);
 		width: $vspacing-double;
 		height: $vspacing-double;
-		background: $link-color;
-		color: $background-color;
-		border-right: 1px solid $lighter-color;
-		border-left: 1px solid $lighter-color;
+		background: $background-color;
+		color: $darker-color;
+		border: 1px solid $lighter-color;
 		.genericon {
 			line-height: $vspacing-double;
+		}
+	}
+	&.toggled {
+		.menu-toggle {
+			background: $link-color;
+			color: $background-color;
 		}
 	}
 	
 	@include max-screen($desktop - 1px) {
 		position: relative;
-		padding: 1px 0;
+		padding: 0;
 		width: 100%;
+		min-height: $vspacing-double;
 		&:before,
 		&:after {
 			content: '';
@@ -161,16 +189,13 @@ Menu
 			display: inline-block;
 		}
 		&.toggled {
-			.menu-toggle {
-				background: $background-color;
-				color: $darker-color;
-			}
 			.menu-wrapper {
+				padding-top: $vspacing-double;
 				&:before {
 					content: '';
 					display: block;
 					position: absolute;
-					top: $vspacing-double + 1px;
+					top: $vspacing-double - 1px;
 					left: -$vspacing-double;
 					padding: 0 $vspacing-double;
 					width: 100%;
@@ -195,12 +220,14 @@ Menu
 				display: block;
 				padding: ($vspacing / 2) 0;
 				margin: 0;
+				min-height: $vspacing-double - 1px; // border-bottom-width
 				border-bottom: 1px solid $lighter-color;
 				a {
 					padding: 0;
+					@include hover(color, $darker-color);
 				}
 				> ul {
-					margin-top: $vspacing / 2;
+					margin-top: ($vspacing / 2) - 2px;
 					margin-bottom: $vspacing / 2;
 				}
 				&.menu-item-has-children > ul > li:last-child {
@@ -214,7 +241,7 @@ Menu
 			
 			// 2nd level
 			ul {
-				display: block;
+				display: none;
 				position: inherit;
 				top: auto;
 				left: auto;
@@ -234,6 +261,9 @@ Menu
 					height: 1px;
 					background: $lighter-color;
 				}
+				&.toggle-on {
+					display: block;
+				}
 				a {
 					padding: 0;
 					width: 100%;
@@ -250,7 +280,7 @@ Menu
 						padding-bottom: ($vspacing / 2);
 					}
 					> ul {
-						margin-top: $vspacing / 2;
+						margin-top: ($vspacing / 2) - 2px;
 					}
 				}
 				

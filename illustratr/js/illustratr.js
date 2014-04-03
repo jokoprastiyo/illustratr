@@ -1,6 +1,24 @@
 ( function( $ ) {
 
 	/*
+	 * Add dropdown toggle that display child menu items.
+	 */
+	function primary_nav() {
+
+		$( '.main-navigation ul .genericon' ).remove();
+
+		if( $( window ).width() < 960 ) {
+			$( '.main-navigation .page_item_has_children > a, .main-navigation .menu-item-has-children > a' ).append( '<span class="genericon genericon-expand" />' );
+			$( '.main-navigation ul .genericon' ).click( function( event ) {
+				event.preventDefault();
+				$( this ).toggleClass( 'genericon-expand' ).toggleClass( 'genericon-collapse' );
+				$( this ).parent().next( '.children, .sub-menu' ).toggleClass( 'toggle-on' );
+			} );
+		}
+
+	}
+
+	/*
 	 * Add classes to images and captions if image post format.
 	 */
 	function image_post_format() {
@@ -106,6 +124,7 @@
 	 */
 	function load_fuctions() {
 
+		primary_nav();
 		image_post_format();
 		content();
 		calc();
