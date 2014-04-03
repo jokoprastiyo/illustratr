@@ -1317,10 +1317,14 @@ Widgets
     margin-right: 40px; } }
 .page-content .widget li {
   border-bottom-color: #f1f2f3; }
-.page-content .widget:last-of-type {
+.page-content .widget.widget_tag_cloud {
   clear: both;
   padding-bottom: 0;
   width: 100%; }
+.page-content .widget .children {
+  border-top-color: #f1f2f3; }
+.page-content .widget .children:before {
+  background: #f1f2f3; }
 .page-content .widget .wp-smiley {
   display: none; }
 
@@ -1657,7 +1661,7 @@ Content
   content: '';
   display: block;
   position: absolute;
-  bottom: 2px;
+  bottom: 0;
   left: 50%;
   margin-left: -200px;
   width: 400px;
@@ -1852,6 +1856,8 @@ Content
 /* Error 404 */
 .error-404 .search-form {
   margin-bottom: 40px; }
+.error-404 .page-content {
+  margin-bottom: -20px; }
 
 /*--------------------------------------------------------------
 Post Formats

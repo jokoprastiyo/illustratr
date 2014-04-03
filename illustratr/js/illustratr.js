@@ -47,6 +47,19 @@
 		} );
 
 	}
+	
+	/*
+	 * Remove Flash Fallback from HTML5 Audio in audio post format.
+	 */
+	function audio_post_format() {
+
+		$( '.hentry.format-audio .entry-media audio' ).each( function() {
+			var audio_id = $( this ).attr( 'id' );
+			$( this ).next( '#' + audio_id + '-flash' ).remove();
+			$( this ).parent().siblings( '.entry-content' ).find( '#' + audio_id + '-flash' ).parents( 'span' ).remove();
+		} );
+
+	}
 
 	/*
 	 * Remove content if empty.
@@ -138,6 +151,7 @@
 
 		primary_nav();
 		image_post_format();
+		audio_post_format();
 		content();
 		calc();
 		sharedaddy();

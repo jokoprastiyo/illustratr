@@ -89,12 +89,23 @@ get_header(); ?>
 					$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 					// Make it ready for when portfolio reading option will be implemented
 					$posts_per_page = get_option( 'posts_per_page' );
-					print_r($maxposts);
-					$args = array(
-						'post_type'      => 'jetpack-portfolio',
-						'posts_per_page' => $posts_per_page,
-						'paged'          => $paged,
-					);
+					$term_slug = get_queried_object()->slug;
+					$term_taxonomy = get_queried_object()->taxonomy;
+					if ( is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) {
+						$args = array(
+							'post_type'      => 'jetpack-portfolio',
+							'taxonomy'       => $term_taxonomy,
+							'term'           => $term_slug,
+							'posts_per_page' => $posts_per_page,
+							'paged'          => $paged,
+						);
+					} else {
+						$args = array(
+							'post_type'      => 'jetpack-portfolio',
+							'posts_per_page' => $posts_per_page,
+							'paged'          => $paged,
+						);
+					}
 					$project_query = new WP_Query ( $args );
 
 					if ( $project_query -> have_posts() ) :

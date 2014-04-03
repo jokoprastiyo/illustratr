@@ -80,10 +80,16 @@ Widgets
 		li {
 			border-bottom-color: $lighter-color;
 		}
-		&:last-of-type {
+		&.widget_tag_cloud {
 			clear: both;
 			padding-bottom: 0;
 			width: 100%;
+		}
+		.children {
+			border-top-color: $lighter-color;
+			&:before {
+				background: $lighter-color;
+			}
 		}
 		.wp-smiley {
 			display: none;
