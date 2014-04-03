@@ -160,6 +160,11 @@ WP.com
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box; }
+@media screen and (max-width: 767px) {
+  #comments .comment-list + #respond:before {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: -20px; } }
 
 /* Sharedaddy */
 .page-content > .sharedaddy .jetpack-likes-widget-wrapper, .entry-content > .sharedaddy .jetpack-likes-widget-wrapper, .entry-sharedaddy > .sharedaddy .jetpack-likes-widget-wrapper {

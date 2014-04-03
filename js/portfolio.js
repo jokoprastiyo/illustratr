@@ -6,16 +6,16 @@
 	function calc() {
 
 		$( '.portfolio-wrapper' ).each( function() {
-			if( ( $( window ).width() < 960 ) && ( $( window ).width() > 767 ) ) {
+			if( $( window ).width() < 768 ) {
+	    		$( this ).css( {
+	    			'width': '100%',
+	    			'margin-left': '-20px',
+	    		} ).css( 'width', '+=40px' );
+			} else if( $( window ).width() < 960 ) {
 	    		$( this ).css( {
 	    			'width': '100%',
 	    			'margin-left': '-60px',
 	    		} ).css( 'width', '+=120px' );
-	    	} else if ( $( window ).width() < 768 ) {
-	    		$( this ).css( {
-	    			'width': '100%',
-	    			'margin-left': '-40px',
-	    		} ).css( 'width', '+=80px' );
 			} else {
 				$( this ).css( {
 					'width': '',

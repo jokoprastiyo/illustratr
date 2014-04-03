@@ -27,7 +27,9 @@
 			var video_ratio   = $( this ).attr( 'data-ratio' ),
 			    video_wrapper = $( this ).parent();
 
-			if( $( window ).width() < 960 ) {
+			if( $( window ).width() < 768 ) {
+				var container_width = video_wrapper.width() + 40; // $vspacing * 2
+			} else if( $( window ).width() < 960 ) {
 				var container_width = video_wrapper.width() + 80; // $vspacing-double * 2
 			} else {
 				var container_width = video_wrapper.width();

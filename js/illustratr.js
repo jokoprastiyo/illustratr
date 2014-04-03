@@ -67,7 +67,12 @@
 	function calc() {
 
 		$( '.entry-thumbnail, .entry-gallery, .entry-media, .hentry.format-video > .video-wrapper, .caption-big' ).each( function() {
-			if( $( window ).width() < 960 ) {
+			if( $( window ).width() < 768 ) {
+	    		$( this ).css( {
+	    			'width': '100%',
+	    			'margin-left': '-20px',
+	    		} ).css( 'width', '+=40px' );
+			} else if( $( window ).width() < 960 ) {
 	    		$( this ).css( {
 	    			'width': '100%',
 	    			'margin-left': '-40px',
@@ -88,7 +93,13 @@
 			}
 		} );
 		$( '.image-big' ).each( function() {
-			if( $( window ).width() < 960 ) {
+			if( $( window ).width() < 768 ) {
+	    		$( this ).parents( '.image-big-wrapper' ).css( {
+	    			'display': 'block',
+	    			'width': '100%',
+	    			'margin-left': '-20px',
+	    		} ).css( 'width', '+=40px' );
+			} else if( $( window ).width() < 960 ) {
 	    		$( this ).parents( '.image-big-wrapper' ).css( {
 	    			'display': 'block',
 	    			'width': '100%',

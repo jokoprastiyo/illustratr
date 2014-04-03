@@ -6,7 +6,12 @@
 	function calc() {
 
 		$( '.portfolio-entry .video-wrapper, .portfolio-gallery' ).each( function() {
-			if( $( window ).width() < 960 ) {
+			if( $( window ).width() < 768 ) {
+	    		$( this ).css( {
+	    			'width': '100%',
+	    			'margin-left': '-20px',
+	    		} ).css( 'width', '+=40px' );
+			} else if( $( window ).width() < 960 ) {
 	    		$( this ).css( {
 	    			'width': '100%',
 	    			'margin-left': '-40px',
