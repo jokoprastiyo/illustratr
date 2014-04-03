@@ -314,13 +314,8 @@ WP.com
 .widget_authors a {
   text-decoration: none; }
 .widget_authors img {
-  margin-right: 5px;
-  vertical-align: middle;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%; }
+  margin-right: 15px;
+  vertical-align: middle; }
 
 /* Widget - Blog Stats */
 .widget_blog-stats ul {
@@ -409,12 +404,7 @@ WP.com
 
 /* Widget - Gravatar */
 .widget_gravatar p:first-of-type img {
-  display: block;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border-radius: 50%; }
+  display: block; }
 
 /* Widget - Grid */
 .widget .widgets-multi-column-grid {
@@ -446,6 +436,36 @@ WP.com
 .widget_wpcom_instagram_widget .wpcom-instagram-columns-3 img {
   max-width: 33.33333333333333%; }
 
+/* Widget - Lists */
+.widget_authors ul, .widget_jp_blogs_i_follow ul, .widget_links ul, .widget_jetpack_posts_i_like ul {
+  list-style: none; }
+.widget_authors li, .widget_jp_blogs_i_follow li, .widget_links li, .widget_jetpack_posts_i_like li {
+  padding: 10px 0;
+  border-bottom: 1px solid #525a5a; }
+.widget_authors li:first-child, .widget_jp_blogs_i_follow li:first-child, .widget_links li:first-child, .widget_jetpack_posts_i_like li:first-child {
+  padding-top: 0; }
+.widget_authors li:last-child, .widget_jp_blogs_i_follow li:last-child, .widget_links li:last-child, .widget_jetpack_posts_i_like li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0; }
+
+.widget_links .children {
+  position: relative;
+  padding-top: 10px;
+  margin-top: 10px;
+  border-top: 1px solid #525a5a; }
+.widget_links .children:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: -40px;
+  width: 100%;
+  height: 1px;
+  background: #525a5a; }
+@media screen and (max-width: 767px) {
+  .widget_links .children:before {
+    left: -20px; } }
+
 /* Widget - Milestone */
 .milestone-widget .milestone-header {
   background: #525a5a; }
@@ -457,7 +477,7 @@ WP.com
   margin: 0 0 20px;
   max-width: 100%; }
 
-/* Music Player */
+/* Widget - Music Player */
 .widget.music-player .wp-playlist {
   padding: 20px;
   margin: 0 0 20px;
@@ -483,35 +503,37 @@ WP.com
 .widget.music-player .wp-playlist .mejs-container {
   width: 100% !important; }
 
-/* Widget - Lists */
-.widget_authors ul, .widget_jp_blogs_i_follow ul, .widget_links ul {
-  list-style: none; }
-.widget_authors li, .widget_jp_blogs_i_follow li, .widget_links li {
-  padding: 10px 0;
-  border-bottom: 1px solid #525a5a; }
-.widget_authors li:first-child, .widget_jp_blogs_i_follow li:first-child, .widget_links li:first-child {
-  padding-top: 0; }
-.widget_authors li:last-child, .widget_jp_blogs_i_follow li:last-child, .widget_links li:last-child {
-  padding-bottom: 0;
-  border-bottom: 0; }
+/* Widget - Posts I Like */
+.widget_jetpack_posts_i_like ul {
+  margin-bottom: 20px; }
 
-.widget_links .children {
-  position: relative;
-  padding-top: 10px;
-  margin-top: 10px;
-  border-top: 1px solid #525a5a; }
-.widget_links .children:before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -1px;
-  left: -40px;
-  width: 100%;
-  height: 1px;
-  background: #525a5a; }
-@media screen and (max-width: 767px) {
-  .widget_links .children:before {
-    left: -20px; } }
+/* Widget - Recent Comments */
+.widget_recent_comments table {
+  border-top: 0; }
+.widget_recent_comments td {
+  padding: 10px 0 !important;
+  vertical-align: middle; }
+.widget_recent_comments td:nth-of-type(2n) {
+  padding-left: 20px !important; }
+.widget_recent_comments td.recentcommentstexttop, .widget_recent_comments td.recentcommentstextend {
+  border-bottom: 1px solid #525a5a !important; }
+.widget_recent_comments td.recentcommentsavatartop img, .widget_recent_comments td.recentcommentsavatartop a, .widget_recent_comments td.recentcommentsavatarend img, .widget_recent_comments td.recentcommentsavatarend a {
+  display: block; }
+.widget_recent_comments tr:first-of-type td {
+  padding-top: 0 !important; }
+.widget_recent_comments tr:last-of-type td {
+  padding-bottom: 0 !important;
+  border-bottom: 0 !important; }
+
+/* Widget - Recent Images */
+.widget_recent_images a, .widget_recent_images img {
+  display: block; }
+.widget_recent_images a {
+  float: left;
+  padding: 10px;
+  max-width: 25%; }
+.widget_recent_images .recent_images {
+  margin: -10px 0 10px 0; }
 
 /* WPStats */
 img#wpstats, img[id*="botd"] {

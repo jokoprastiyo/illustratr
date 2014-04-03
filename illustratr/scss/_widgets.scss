@@ -163,7 +163,6 @@ Widgets
 		display: block;
 		max-width: $vspacing-triple;
 		margin: 0 0 $vspacing;
-		@include border-radius(50%);
 	}
 	h4 {
 		margin: 0 0 $vspacing !important;
@@ -246,8 +245,14 @@ Widgets
 /* List Layout & Grid Layout */
 .widget {
 	.widgets-list-layout {
+		img {
+			vertical-align: middle;
+		}
 		li {
 			margin-bottom: 0;
+		}
+		span {
+			opacity: 1;
 		}
 		.widgets-list-layout-blavatar {
 			width: 40px;
@@ -255,6 +260,7 @@ Widgets
 		.widgets-list-layout-links {
 			float: none;
 			padding-left: $vspacing + 40px;
+			width: 100%;
 		}
 	}
 	.widgets-grid-layout {
