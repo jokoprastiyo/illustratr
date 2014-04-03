@@ -12,6 +12,7 @@
 			$( '.main-navigation ul .genericon' ).click( function( event ) {
 				event.preventDefault();
 				$( this ).toggleClass( 'genericon-expand' ).toggleClass( 'genericon-collapse' );
+				$( this ).closest( 'li' ).toggleClass( 'toggle-on' );
 				$( this ).parent().next( '.children, .sub-menu' ).toggleClass( 'toggle-on' );
 			} );
 		}
