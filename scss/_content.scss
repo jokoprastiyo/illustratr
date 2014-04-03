@@ -65,7 +65,7 @@ Content
 		content: '';
 		display: block;
 		position: absolute;
-		bottom: 2px;
+		bottom: 0;
 		left: 50%;
 		margin-left: -$vspacing * 10;
 		width: $vspacing * 20;
@@ -220,5 +220,8 @@ Content
 .error-404 {
 	.search-form {
 		margin-bottom: $vspacing-double;
+	}
+	.page-content {
+		margin-bottom: -$vspacing;
 	}
 }
