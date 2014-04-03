@@ -21,6 +21,11 @@
 	margin-left: -$vspacing-double;
 	width: 100%;
 	@include box-sizing(content-box);
+	@media screen and (max-width: $tablet - 1px) {
+		padding-left: $vspacing;
+		padding-right: $vspacing;
+		margin-left: -$vspacing;
+	}
 }
 
 // Hentry

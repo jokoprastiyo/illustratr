@@ -209,6 +209,7 @@ Jetpack
 		@include full-width-area;
 	}
 	span {
+		display: inline-block;
 		padding: 0;
 		background: transparent;
 		font-size: inherit;

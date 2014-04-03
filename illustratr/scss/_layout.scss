@@ -36,6 +36,9 @@ body {
 #page {
 	padding: 0 $vspacing-double;
 	background: $background-color;
+	@include max-screen($tablet - 1px) {
+		padding: 0 $vspacing;
+	}
 }
 #primary {
 	opacity: 0;
