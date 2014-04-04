@@ -204,6 +204,7 @@ Widgets
 .widget_recent_entries,
 .widget_rss,
 .widget_rss_links,
+.widget_top-clicks,
 .widget_top-posts {
 	ul {
 		list-style: none;
@@ -355,7 +356,8 @@ Widgets
 		@include hover(background, $background-color);
 		@include hover(color, $link-color);
 	}
-	.tagcloud {
+	.tagcloud,
+	> div {
 		margin-bottom: $vspacing;
 		&:before,
 	    &:after {
@@ -377,9 +379,6 @@ Widgets
 	}
 	
 }
-
-/* Top Posts & Pages */
-.widget_top-posts {}
 
 /* Twitter Timeline */
 .widget_twitter_timeline {

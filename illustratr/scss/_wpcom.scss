@@ -470,7 +470,9 @@ WP.com
 .widget_authors,
 .widget_jp_blogs_i_follow,
 .widget_links,
-.widget_jetpack_posts_i_like {
+.widget_jetpack_posts_i_like,
+.widget.top_rated,
+.widget_upcoming_events_widget {
 	ul {
 		list-style: none;
 	}
@@ -618,6 +620,65 @@ WP.com
 	}
 }
 
+/* Widget - Tag Cloud */
+.wp_widget_tag_cloud {
+	padding-bottom: $vspacing - ($vspacing / 4);
+	a {
+		display: inline-block;
+		float: left;
+		padding: ($vspacing / 4) ($vspacing / 2) !important;
+		margin: 0 ($vspacing / 4) ($vspacing / 4) 0 !important;
+		background: $darker-color;
+		color: $background-color;
+		font-size: inherit !important;
+		text-decoration: none;
+		@include transition(all 250ms ease);
+		@include hover(background, $background-color);
+		@include hover(color, $link-color);
+	}
+	> div {
+		margin-bottom: $vspacing;
+		&:before,
+	    &:after {
+	        content: '';
+	        display: table;
+	    }
+	    &:after {
+	        clear: both;
+	    }
+    	a {
+    	
+    	}
+	}
+}
+
+/* Widget - Top Rated */
+.widget.top_rated {
+	ul {
+		padding: $vspacing;
+		border: 1px solid lighten($dark-color, 5%);
+	}
+	.pd_top_rated_holder_posts {
+		> p {
+			padding: $vspacing;
+			margin: 0;
+			border: 1px solid lighten($dark-color, 5%);
+			border-bottom: 0;
+			&:first-of-type {
+				background: lighten($dark-color, 5%);
+			}
+		}
+	}
+}
+
+/* Widget - Upcoming Events */
+.widget_upcoming_events_widget {
+	.upcoming-events {
+		li {
+			margin-bottom: 0;
+		}
+	}
+}
 
 /* WPStats */
 img#wpstats,

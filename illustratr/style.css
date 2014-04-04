@@ -1386,14 +1386,14 @@ Widgets
   margin: 0; }
 
 /* Lists */
-.widget_archive ul, .widget_categories ul, .widget_nav_menu ul, .widget_meta ul, .widget_pages ul, .widget_recent_comments ul, .widget_recent_entries ul, .widget_rss ul, .widget_rss_links ul, .widget_top-posts ul {
+.widget_archive ul, .widget_categories ul, .widget_nav_menu ul, .widget_meta ul, .widget_pages ul, .widget_recent_comments ul, .widget_recent_entries ul, .widget_rss ul, .widget_rss_links ul, .widget_top-clicks ul, .widget_top-posts ul {
   list-style: none; }
-.widget_archive li, .widget_categories li, .widget_nav_menu li, .widget_meta li, .widget_pages li, .widget_recent_comments li, .widget_recent_entries li, .widget_rss li, .widget_rss_links li, .widget_top-posts li {
+.widget_archive li, .widget_categories li, .widget_nav_menu li, .widget_meta li, .widget_pages li, .widget_recent_comments li, .widget_recent_entries li, .widget_rss li, .widget_rss_links li, .widget_top-clicks li, .widget_top-posts li {
   padding: 10px 0;
   border-bottom: 1px solid #525a5a; }
-.widget_archive li:first-child, .widget_categories li:first-child, .widget_nav_menu li:first-child, .widget_meta li:first-child, .widget_pages li:first-child, .widget_recent_comments li:first-child, .widget_recent_entries li:first-child, .widget_rss li:first-child, .widget_rss_links li:first-child, .widget_top-posts li:first-child {
+.widget_archive li:first-child, .widget_categories li:first-child, .widget_nav_menu li:first-child, .widget_meta li:first-child, .widget_pages li:first-child, .widget_recent_comments li:first-child, .widget_recent_entries li:first-child, .widget_rss li:first-child, .widget_rss_links li:first-child, .widget_top-clicks li:first-child, .widget_top-posts li:first-child {
   padding-top: 0; }
-.widget_archive li:last-child, .widget_categories li:last-child, .widget_nav_menu li:last-child, .widget_meta li:last-child, .widget_pages li:last-child, .widget_recent_comments li:last-child, .widget_recent_entries li:last-child, .widget_rss li:last-child, .widget_rss_links li:last-child, .widget_top-posts li:last-child {
+.widget_archive li:last-child, .widget_categories li:last-child, .widget_nav_menu li:last-child, .widget_meta li:last-child, .widget_pages li:last-child, .widget_recent_comments li:last-child, .widget_recent_entries li:last-child, .widget_rss li:last-child, .widget_rss_links li:last-child, .widget_top-clicks li:last-child, .widget_top-posts li:last-child {
   padding-bottom: 0;
   border-bottom: 0; }
 
@@ -1498,12 +1498,12 @@ Widgets
   background: white; }
 .widget_tag_cloud a:hover, .widget_tag_cloud a:focus, .widget_tag_cloud a:active {
   color: #e06d5e; }
-.widget_tag_cloud .tagcloud {
+.widget_tag_cloud .tagcloud, .widget_tag_cloud > div {
   margin-bottom: 20px; }
-.widget_tag_cloud .tagcloud:before, .widget_tag_cloud .tagcloud:after {
+.widget_tag_cloud .tagcloud:before, .widget_tag_cloud .tagcloud:after, .widget_tag_cloud > div:before, .widget_tag_cloud > div:after {
   content: '';
   display: table; }
-.widget_tag_cloud .tagcloud:after {
+.widget_tag_cloud .tagcloud:after, .widget_tag_cloud > div:after {
   clear: both; }
 
 .page-content .widget_tag_cloud a {
@@ -1511,7 +1511,6 @@ Widgets
 .page-content .widget_tag_cloud a:hover, .page-content .widget_tag_cloud a:focus, .page-content .widget_tag_cloud a:active {
   background: #e06d5e; }
 
-/* Top Posts & Pages */
 /* Twitter Timeline */
 .widget_twitter_timeline iframe {
   width: 100% !important;
