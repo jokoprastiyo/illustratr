@@ -42,26 +42,23 @@ get_header(); ?>
 				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 				// Make it ready for when portfolio reading option will be implemented
 				$posts_per_page = get_option( 'posts_per_page' );
-				print_r($maxposts);
 				$args = array(
 					'post_type'      => 'jetpack-portfolio',
 					'posts_per_page' => $posts_per_page,
 					'paged'          => $paged,
 				);
 				$project_query = new WP_Query ( $args );
-
 				if ( $project_query -> have_posts() ) :
 			?>
 
 				<div class="portfolio-wrapper">
 
-				<?php
-					while ( $project_query -> have_posts() ) : $project_query -> the_post();
+					<?php /* Start the Loop */ ?>
+					<?php while ( $project_query -> have_posts() ) : $project_query -> the_post(); ?>
 
-						get_template_part( 'content', 'portfolio' );
+						<?php get_template_part( 'content', 'portfolio' ); ?>
 
-					endwhile;
-				?>
+					<?php endwhile; ?>
 
 				</div><!-- .portfolio-wrapper -->
 
