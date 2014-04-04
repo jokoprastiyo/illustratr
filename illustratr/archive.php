@@ -85,50 +85,16 @@ get_header(); ?>
 
 			<?php if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) : ?>
 
-				<?php
-					$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-					// Make it ready for when portfolio reading option will be implemented
-					$posts_per_page = get_option( 'posts_per_page' );
-					$term_slug = get_queried_object()->slug;
-					$term_taxonomy = get_queried_object()->taxonomy;
-					if ( is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) {
-						$args = array(
-							'post_type'      => 'jetpack-portfolio',
-							'taxonomy'       => $term_taxonomy,
-							'term'           => $term_slug,
-							'posts_per_page' => $posts_per_page,
-							'paged'          => $paged,
-						);
-					} else {
-						$args = array(
-							'post_type'      => 'jetpack-portfolio',
-							'posts_per_page' => $posts_per_page,
-							'paged'          => $paged,
-						);
-					}
-					$project_query = new WP_Query ( $args );
+				<div class="portfolio-wrapper">
 
-					if ( $project_query -> have_posts() ) :
-				?>
+					<?php /* Start the Loop */ ?>
+					<?php while ( have_posts() ) : the_post(); ?>
+	
+						<?php get_template_part( 'content', 'portfolio' ); ?>
+	
+					<?php endwhile; ?>
 
-					<div class="portfolio-wrapper">
-
-					<?php
-						while ( $project_query -> have_posts() ) : $project_query -> the_post();
-
-							get_template_part( 'content', 'portfolio' );
-
-						endwhile;
-					?>
-
-					</div><!-- .portfolio-wrapper -->
-
-					<?php
-						illustratr_paging_nav( $project_query->max_num_pages );
-						wp_reset_postdata();
-					?>
-
-				<?php endif; ?>
+				</div><!-- .portfolio-wrapper -->
 
 			<?php else : ?>
 
@@ -139,9 +105,9 @@ get_header(); ?>
 
 				<?php endwhile; ?>
 
-				<?php illustratr_paging_nav(); ?>
-
 			<?php endif; ?>
+
+			<?php illustratr_paging_nav( $post->max_num_pages ); ?>
 
 		<?php else : ?>
 
