@@ -37,7 +37,11 @@ $format = get_post_format();
 			<span class="cat-links"><?php echo $categories_list; ?></span>
 		<?php endif; ?>
 
-		<?php echo get_the_term_list( $post->ID, 'jetpack-portfolio-type', '<span class="portfolio-entry-meta">', _x(', ', 'Used between list items, there is a space after the comma.', 'illustratr' ), '</span>' ); ?>
+		<?php
+			if ( 'jetpack-portfolio' == get_post_type() ) {
+				echo get_the_term_list( $post->ID, 'jetpack-portfolio-type', '<span class="portfolio-entry-meta">', _x(', ', 'Used between list items, there is a space after the comma.', 'illustratr' ), '</span>' );
+			}
+		?>
 	</header><!-- .entry-header -->
 
 	<?php if ( 'jetpack-portfolio' != get_post_type() ) : // Don't display Content for Portfolio ?>
