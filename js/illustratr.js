@@ -67,7 +67,7 @@
 	function content() {
 
 		$( '.page-content, .entry-content, .entry-summary, .entry-sharedaddy, .sharedaddy' ).each( function() {
-			if ( $.trim( $( this ).text() ) === '' ) {
+			if ( $.trim( $( this ).html() ) === '' ) {
 				$( this ).remove();
 			}
 		} );
