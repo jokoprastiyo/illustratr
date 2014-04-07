@@ -2,6 +2,11 @@
 /**
  * @package Illustratr
  */
+ 
+// Access global variable directly to adjust the content width for audio post format
+if ( isset( $GLOBALS['content_width'] ) ) {
+	$GLOBALS['content_width'] = 1100;
+}
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
