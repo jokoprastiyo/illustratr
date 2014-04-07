@@ -26,7 +26,7 @@ function illustratr_customize_register( $wp_customize ) {
 	) );
 
 	$wp_customize->add_control( 'illustratr_hide_portfolio_page_content', array(
-		'label'             => __( 'Hide title and content on portfolio page template', 'illustratr' ),
+		'label'             => __( 'Hide title and content on Portfolio Page Template', 'illustratr' ),
 		'section'           => 'illustratr_theme_options',
 		'type'              => 'checkbox',
 	) );
