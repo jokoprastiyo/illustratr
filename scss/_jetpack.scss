@@ -48,6 +48,9 @@ Jetpack
 		padding-top: 0 !important;
 		font-family: inherit !important;
 		font-size: inherit !important;
+		&:empty {
+			display: none;
+		}
 		.sd-sharing,
 		.sd-gplus,
 		&.jetpack-likes-widget-wrapper {

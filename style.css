@@ -2626,6 +2626,8 @@ Jetpack
   padding-top: 0 !important;
   font-family: inherit !important;
   font-size: inherit !important; }
+.page-content > .sharedaddy:empty, .entry-content > .sharedaddy:empty, .entry-sharedaddy > .sharedaddy:empty, .portfolio-sharedaddy > .sharedaddy:empty {
+  display: none; }
 .page-content > .sharedaddy .sd-sharing, .page-content > .sharedaddy .sd-gplus, .page-content > .sharedaddy.jetpack-likes-widget-wrapper, .entry-content > .sharedaddy .sd-sharing, .entry-content > .sharedaddy .sd-gplus, .entry-content > .sharedaddy.jetpack-likes-widget-wrapper, .entry-sharedaddy > .sharedaddy .sd-sharing, .entry-sharedaddy > .sharedaddy .sd-gplus, .entry-sharedaddy > .sharedaddy.jetpack-likes-widget-wrapper, .portfolio-sharedaddy > .sharedaddy .sd-sharing, .portfolio-sharedaddy > .sharedaddy .sd-gplus, .portfolio-sharedaddy > .sharedaddy.jetpack-likes-widget-wrapper {
   padding: 15px 0;
   border-top: 1px solid #f1f2f3; }
