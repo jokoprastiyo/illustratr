@@ -47,7 +47,7 @@
 		} );
 
 	}
-	
+
 	/*
 	 * Remove Flash Fallback from HTML5 Audio in audio post format.
 	 */
@@ -67,7 +67,7 @@
 	function content() {
 
 		$( '.page-content, .entry-content, .entry-summary, .entry-sharedaddy, .sharedaddy' ).each( function() {
-			if ( $.trim( $( this ).html() ) === '' ) {
+			if ( ! $( this ).find( 'img' ).length && $.trim( $( this ).text() ) === '' ) {
 				$( this ).remove();
 			}
 		} );
