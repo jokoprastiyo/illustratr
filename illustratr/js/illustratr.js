@@ -66,7 +66,7 @@
 	 */
 	function content() {
 
-		$( '.page-content, .entry-content, .entry-summary, entry-sharedaddy' ).each( function() {
+		$( '.page-content, .entry-content, .entry-summary, .entry-sharedaddy' ).each( function() {
 			if ( $.trim( $( this ).text() ) === '' ) {
 				$( this ).remove();
 			}
