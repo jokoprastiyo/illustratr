@@ -45,6 +45,8 @@ get_header(); ?>
 				$args = array(
 					'post_type'      => 'jetpack-portfolio',
 					'posts_per_page' => $posts_per_page,
+					'order'          => 'ASC',
+					'orderby'        => 'menu_order',
 					'paged'          => $paged,
 				);
 				$project_query = new WP_Query ( $args );
