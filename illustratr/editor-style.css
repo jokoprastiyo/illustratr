@@ -254,10 +254,10 @@ big {
 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #ccc;
-  border: 0;
+  margin-bottom: 20px;
   height: 1px;
-  margin-bottom: 20px; }
+  background: #f1f2f3;
+  border: 0; }
 
 ul, ol {
   margin: 0 0 20px; }

@@ -47,6 +47,9 @@ Widgets
 		h6 {
 			color: inherit;
 		}
+		hr {
+			background: lighten($dark-color, 5%);
+		}
 		@include min-screen($widescreen) {
 			@include column-block($widescreen);
 		}

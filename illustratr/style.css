@@ -277,10 +277,10 @@ big {
 Elements
 --------------------------------------------------------------*/
 hr {
-  background-color: #ccc;
-  border: 0;
+  margin-bottom: 20px;
   height: 1px;
-  margin-bottom: 20px; }
+  background: #f1f2f3;
+  border: 0; }
 
 ul, ol {
   margin: 0 0 20px; }
@@ -1293,6 +1293,8 @@ Widgets
   color: white; }
 .widgets-area .widget h1, .widgets-area .widget h2, .widgets-area .widget h3, .widgets-area .widget h4, .widgets-area .widget h5, .widgets-area .widget h6 {
   color: inherit; }
+.widgets-area .widget hr {
+  background: #525a5a; }
 @media screen and (min-width: 1220px) {
   .widgets-area .widget {
     margin: 0 20px;

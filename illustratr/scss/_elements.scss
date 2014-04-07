@@ -3,10 +3,10 @@ Elements
 --------------------------------------------------------------*/
 
 hr {
-	background-color: #ccc;
-	border: 0;
-	height: 1px;
 	margin-bottom: $vspacing;
+	height: 1px;
+	background: $lighter-color;
+	border: 0;
 }
 ul,
 ol {
