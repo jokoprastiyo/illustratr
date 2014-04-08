@@ -162,7 +162,10 @@
 		load_fuctions();
 
 		// Show content
-		$( '#primary' ).animate( {
+		$( '#spinner' ).fadeOut( 250, function() {
+			$( this ).remove();
+		} );
+		$( '#primary' ).delay( 500 ).animate( {
 			'opacity': 1
 		}, 250 );
 

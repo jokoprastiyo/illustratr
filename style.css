@@ -47,19 +47,6 @@ and Blueprint http://www.blueprintcss.org/
     display: block;
     opacity: 1; } }
 
-@-ms-keyframes fade-in {
-  0% {
-    display: none;
-    opacity: 0; }
-
-  1% {
-    display: block;
-    opacity: 0; }
-
-  100% {
-    display: block;
-    opacity: 1; } }
-
 @-o-keyframes fade-in {
   0% {
     display: none;
@@ -73,7 +60,7 @@ and Blueprint http://www.blueprintcss.org/
     display: block;
     opacity: 1; } }
 
-@-keyframes fade-in {
+@keyframes fade-in {
   0% {
     display: none;
     opacity: 0; }
@@ -663,6 +650,55 @@ body {
 @media screen and (max-width: 767px) {
   .page-header, .entry-header, .page-content, .entry-content, .entry-summary, .entry-avatar, .entry-meta, .entry-sharedaddy, .portfolio-sharedaddy, .comments-title, .comment-list, .comment-reply-title, .comment-form {
     width: 100%; } }
+
+/* Spinner */
+.css-transform #spinner {
+  margin: 0 auto;
+  width: 40px;
+  height: 40px;
+  background-color: #e06d5e;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: spinner 1s infinite ease-in-out;
+  -moz-animation: spinner 1s infinite ease-in-out;
+  -ms-animation: spinner 1s infinite ease-in-out;
+  -o-animation: spinner 1s infinite ease-in-out;
+  animation: spinner 1s infinite ease-in-out; }
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: scale(0); }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0; } }
+
+@-moz-keyframes spinner {
+  0% {
+    -moz-transform: scale(0); }
+
+  100% {
+    -moz-transform: scale(1);
+    opacity: 0; } }
+
+@-o-keyframes spinner {
+  0% {
+    -o-transform: scale(0); }
+
+  100% {
+    -o-transform: scale(1);
+    opacity: 0; } }
+
+@keyframes spinner {
+  0% {
+    transform: scale(0); }
+
+  100% {
+    transform: scale(1);
+    opacity: 0; } }
 
 /* Header */
 .site-header {
