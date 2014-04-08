@@ -259,26 +259,17 @@
 }
 
 // Animation
-@mixin animation($function: fade-in, $duration: 250ms) {
-	-webkit-animation: $function $duration;
-	-moz-animation: $function $duration;
-	-ms-animation: $function $duration;
-	-o-animation: $function $duration;
-	animation: $function $duration;
+@mixin animation($function: fade-in 250ms) {
+	-webkit-animation: $function;
+	-moz-animation: $function;
+	-ms-animation: $function;
+	-o-animation: $function;
+	animation: $function;
 }
 @mixin fade-in {
-	0% {
-		display: none;
-		opacity: 0;
-	}
-	1% {
-		display: block;
-		opacity: 0;
-	}
-	100% {
-		display: block;
-		opacity: 1;
-	}
+	0% { display: none; opacity: 0; }
+	1% { display: block; opacity: 0; }
+	100% { display: block; opacity: 1; }
 }
 @-webkit-keyframes fade-in {
 	@include fade-in;
@@ -286,12 +277,9 @@
 @-moz-keyframes fade-in {
 	@include fade-in;
 }
-@-ms-keyframes fade-in {
-	@include fade-in;
-}
 @-o-keyframes fade-in {
 	@include fade-in;
 }
-@-keyframes fade-in {
+@keyframes fade-in {
 	@include fade-in;
 }

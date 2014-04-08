@@ -52,4 +52,6 @@
 		<?php endif; ?>
 	</header><!-- #masthead -->
 
+	<div id="spinner"></div>
+
 	<div id="content" class="site-content">
