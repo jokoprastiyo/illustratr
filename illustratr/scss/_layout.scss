@@ -115,7 +115,7 @@ body {
 		margin: 0 auto;
 		width: $vspacing-double;
 		height: $vspacing-double;
-		background-color: $link-color;
+		background: $link-color;
 		@include border-radius(50%);
 		@include animation(spinner 1s infinite ease-in-out);
 	}
