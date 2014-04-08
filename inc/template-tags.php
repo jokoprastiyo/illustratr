@@ -29,11 +29,11 @@ function illustratr_paging_nav( $max_num_pages = '' ) {
 		<div class="nav-links">
 
 			<?php if ( get_next_posts_link( '', $max_num_pages ) ) : ?>
-			<div class="nav-previous"><?php next_posts_link( __( 'Older', 'illustratr' ), $max_num_pages ); ?></div>
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Previous', 'illustratr' ), $max_num_pages ); ?></div>
 			<?php endif; ?>
 
 			<?php if ( get_previous_posts_link( '', $max_num_pages ) ) : ?>
-			<div class="nav-next"><?php previous_posts_link( __( 'Newer', 'illustratr' ), $max_num_pages ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Next <span class="meta-nav">&rarr;</span>', 'illustratr' ), $max_num_pages ); ?></div>
 			<?php endif; ?>
 
 		</div><!-- .nav-links -->
