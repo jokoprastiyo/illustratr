@@ -6,19 +6,29 @@
 
 		$( '#secondary' ).on( 'click', '.widgets-trigger', function( event ) {
 			event.preventDefault();
-			$( this ).toggleClass( 'active' );
-			$( '.widgets-wrapper' ).slideToggle( 100 );
-			// Trigger resize to make sure widgets fit prefectly.
-			$( this ).trigger( 'resize' );
-
-			// Masonry blocks
-			widgets_area.imagesLoaded( function() {
-				widgets_area.masonry( {
-					columnWidth: 1,
-					itemSelector: '.widget'
+			$( this ).toggleClass( 'active' );		
+			if( $( this ).hasClass( 'active' ) ) {
+				$( '.widgets-wrapper' ).slideDown( 250 );
+				// Trigger resize to make sure widgets fit prefectly.
+				$( this ).trigger( 'resize' );
+				// Masonry blocks
+				widgets_area.imagesLoaded( function() {
+					widgets_area.masonry( {
+						columnWidth: 1,
+						itemSelector: '.widget'
+					} );
+					// Show the widgets
+					widgets_area.children( '.widget' ).animate( {
+						'opacity' : 1
+					}, 250 );
 				} );
-			} );
-
+			} else {
+				$( '.widgets-wrapper' ).slideUp( 250 );
+				// Make sure the widgets are hidden
+				widgets_area.children( '.widget' ).animate( {
+					'opacity' : 0
+				}, 250 );
+			}
 		} );
 		$( '#secondary' ).on( 'mouseenter mouseleave', '.widgets-trigger', function() {
 			$( '#secondary' ).toggleClass( 'hover' );
