@@ -1256,7 +1256,8 @@ Widgets
   display: none; }
 
 .widgets-area .widget {
-  color: white; }
+  color: white;
+  opacity: 0; }
 .widgets-area .widget h1, .widgets-area .widget h2, .widgets-area .widget h3, .widgets-area .widget h4, .widgets-area .widget h5, .widgets-area .widget h6 {
   color: inherit; }
 .widgets-area .widget hr {
