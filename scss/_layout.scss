@@ -260,7 +260,6 @@ body {
 	background: $lighter-color;
 	color: $light-color;
 	font-size: 0.73em;
-	text-align: center;
 	@include full-width-area;
 	a,
 	a:visited {
@@ -272,5 +271,13 @@ body {
 	}
 }
 .site-info {
+	float: left;
 	padding-bottom: $vspacing;
+	width: 50%;
+	line-height: $vspacing-double;
+	@include max-screen($desktop - 1px) {
+		width: 100%;
+		line-height: inherit;
+		text-align: center;
+	}
 }

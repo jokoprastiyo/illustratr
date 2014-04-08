@@ -821,7 +821,6 @@ body {
   background: #f1f2f3;
   color: #b1b2b3;
   font-size: 0.73em;
-  text-align: center;
   padding-left: 40px;
   padding-right: 40px;
   margin-left: -40px;
@@ -841,7 +840,15 @@ body {
   color: #7f8d8c; }
 
 .site-info {
-  padding-bottom: 20px; }
+  float: left;
+  padding-bottom: 20px;
+  width: 50%;
+  line-height: 40px; }
+@media screen and (max-width: 959px) {
+  .site-info {
+    width: 100%;
+    line-height: inherit;
+    text-align: center; } }
 
 /*--------------------------------------------------------------
 Menu
@@ -1107,21 +1114,34 @@ Social
 .menu-social {
   clear: both;
   display: block;
-  width: 100%;
+  float: right;
+  width: 50%;
   text-align: center; }
+@media screen and (max-width: 959px) {
+  .menu-social {
+    float: none;
+    width: 100%; } }
 .menu-social ul {
   display: block;
+  float: right;
   margin: 0 0 10px; }
+@media screen and (max-width: 959px) {
+  .menu-social ul {
+    display: inline-block;
+    float: none;
+    margin: 0 auto; } }
 .menu-social li {
-  display: inline-block;
-  margin: 0 7px 10px 0;
+  display: block;
+  float: left;
+  margin: 0 10px 10px 0;
   line-height: 1; }
 .menu-social li:last-child {
   margin-right: 0; }
 .menu-social li a {
   display: inline-block;
   position: relative;
-  padding: 5px;
+  width: 40px;
+  height: 40px;
   border: 2px solid #b1b2b3;
   text-decoration: none;
   -webkit-border-radius: 50%;
@@ -1134,155 +1154,65 @@ Social
   -o-transition: all 250ms ease;
   transition: all 250ms ease; }
 .menu-social li a:hover, .menu-social li a:focus, .menu-social li a:active {
-  border-color: #7f8d8c; }
+  border-color: #e06d5e; }
+.menu-social li a:hover, .menu-social li a:focus, .menu-social li a:active {
+  color: #e06d5e; }
 .menu-social li a:before {
   content: "\f408";
   display: inline-block;
-  width: 1em;
-  height: 1em;
+  width: 16px;
+  height: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1em;
-  line-height: 1;
+  font-size: 16px;
+  line-height: 38px;
   font-family: 'Genericons';
   text-decoration: inherit;
   font-weight: normal;
   font-style: normal;
   vertical-align: top; }
-.menu-social li a[href$="/feed/"]:hover, .menu-social li a[href$="/feed/"]:focus, .menu-social li a[href$="/feed/"]:active {
-  border-color: #ee802f; }
-.menu-social li a[href$="/feed/"]:hover, .menu-social li a[href$="/feed/"]:focus, .menu-social li a[href$="/feed/"]:active {
-  color: #ee802f; }
 .menu-social li a[href$="/feed/"]:before {
   content: '\f413'; }
-.menu-social li a[href*="codepen.io"]:hover, .menu-social li a[href*="codepen.io"]:focus, .menu-social li a[href*="codepen.io"]:active {
-  border-color: black; }
-.menu-social li a[href*="codepen.io"]:hover, .menu-social li a[href*="codepen.io"]:focus, .menu-social li a[href*="codepen.io"]:active {
-  color: black; }
 .menu-social li a[href*="codepen.io"]:before {
   content: '\f216'; }
-.menu-social li a[href*="digg.com"]:hover, .menu-social li a[href*="digg.com"]:focus, .menu-social li a[href*="digg.com"]:active {
-  border-color: black; }
-.menu-social li a[href*="digg.com"]:hover, .menu-social li a[href*="digg.com"]:focus, .menu-social li a[href*="digg.com"]:active {
-  color: black; }
 .menu-social li a[href*="digg.com"]:before {
   content: '\f221'; }
-.menu-social li a[href*="dribbble.com"]:hover, .menu-social li a[href*="dribbble.com"]:focus, .menu-social li a[href*="dribbble.com"]:active {
-  border-color: #ea4c89; }
-.menu-social li a[href*="dribbble.com"]:hover, .menu-social li a[href*="dribbble.com"]:focus, .menu-social li a[href*="dribbble.com"]:active {
-  color: #ea4c89; }
 .menu-social li a[href*="dribbble.com"]:before {
   content: '\f201'; }
-.menu-social li a[href*="dropbox.com"]:hover, .menu-social li a[href*="dropbox.com"]:focus, .menu-social li a[href*="dropbox.com"]:active {
-  border-color: #007ee5; }
-.menu-social li a[href*="dropbox.com"]:hover, .menu-social li a[href*="dropbox.com"]:focus, .menu-social li a[href*="dropbox.com"]:active {
-  color: #007ee5; }
 .menu-social li a[href*="dropbox.com"]:before {
   content: '\f225'; }
-.menu-social li a[href*="facebook.com"]:hover, .menu-social li a[href*="facebook.com"]:focus, .menu-social li a[href*="facebook.com"]:active {
-  border-color: #3b5998; }
-.menu-social li a[href*="facebook.com"]:hover, .menu-social li a[href*="facebook.com"]:focus, .menu-social li a[href*="facebook.com"]:active {
-  color: #3b5998; }
+.menu-social li a[href*="mailto:"]:before {
+  content: '\f410'; }
 .menu-social li a[href*="facebook.com"]:before {
   content: '\f203'; }
-.menu-social li a[href*="flickr.com"]:hover, .menu-social li a[href*="flickr.com"]:focus, .menu-social li a[href*="flickr.com"]:active {
-  border-color: #ff0084; }
-.menu-social li a[href*="flickr.com"]:hover, .menu-social li a[href*="flickr.com"]:focus, .menu-social li a[href*="flickr.com"]:active {
-  color: #ff0084; }
 .menu-social li a[href*="flickr.com"]:before {
   content: '\f211'; }
-.menu-social li a[href*="plus.google.com"]:hover, .menu-social li a[href*="plus.google.com"]:focus, .menu-social li a[href*="plus.google.com"]:active {
-  border-color: #dd4b39; }
-.menu-social li a[href*="plus.google.com"]:hover, .menu-social li a[href*="plus.google.com"]:focus, .menu-social li a[href*="plus.google.com"]:active {
-  color: #dd4b39; }
-.menu-social li a[href*="plus.google.com"]:before {
-  content: '\f206'; }
-.menu-social li a[href*="github.com"]:hover, .menu-social li a[href*="github.com"]:focus, .menu-social li a[href*="github.com"]:active {
-  border-color: #171515; }
-.menu-social li a[href*="github.com"]:hover, .menu-social li a[href*="github.com"]:focus, .menu-social li a[href*="github.com"]:active {
-  color: #171515; }
 .menu-social li a[href*="github.com"]:before {
   content: '\f200'; }
-.menu-social li a[href*="instagram.com"]:hover, .menu-social li a[href*="instagram.com"]:focus, .menu-social li a[href*="instagram.com"]:active {
-  border-color: #3f729b; }
-.menu-social li a[href*="instagram.com"]:hover, .menu-social li a[href*="instagram.com"]:focus, .menu-social li a[href*="instagram.com"]:active {
-  color: #3f729b; }
+.menu-social li a[href*="plus.google.com"]:before {
+  content: '\f206'; }
 .menu-social li a[href*="instagram.com"]:before {
   content: '\f215'; }
-.menu-social li a[href*="linkedin.com"]:hover, .menu-social li a[href*="linkedin.com"]:focus, .menu-social li a[href*="linkedin.com"]:active {
-  border-color: #0e76a8; }
-.menu-social li a[href*="linkedin.com"]:hover, .menu-social li a[href*="linkedin.com"]:focus, .menu-social li a[href*="linkedin.com"]:active {
-  color: #0e76a8; }
 .menu-social li a[href*="linkedin.com"]:before {
   content: '\f208'; }
-.menu-social li a[href*="pinterest.com"]:hover, .menu-social li a[href*="pinterest.com"]:focus, .menu-social li a[href*="pinterest.com"]:active {
-  border-color: #c8232c; }
-.menu-social li a[href*="pinterest.com"]:hover, .menu-social li a[href*="pinterest.com"]:focus, .menu-social li a[href*="pinterest.com"]:active {
-  color: #c8232c; }
 .menu-social li a[href*="pinterest.com"]:before {
   content: '\f210'; }
-.menu-social li a[href*="getpocket.com"]:hover, .menu-social li a[href*="getpocket.com"]:focus, .menu-social li a[href*="getpocket.com"]:active {
-  border-color: #ee4056; }
-.menu-social li a[href*="getpocket.com"]:hover, .menu-social li a[href*="getpocket.com"]:focus, .menu-social li a[href*="getpocket.com"]:active {
-  color: #ee4056; }
 .menu-social li a[href*="getpocket.com"]:before {
   content: '\f224'; }
-.menu-social li a[href*="polldaddy.com"]:hover, .menu-social li a[href*="polldaddy.com"]:focus, .menu-social li a[href*="polldaddy.com"]:active {
-  border-color: #c43932; }
-.menu-social li a[href*="polldaddy.com"]:hover, .menu-social li a[href*="polldaddy.com"]:focus, .menu-social li a[href*="polldaddy.com"]:active {
-  color: #c43932; }
 .menu-social li a[href*="polldaddy.com"]:before {
   content: '\f217'; }
-.menu-social li a[href*="reddit.com"]:hover, .menu-social li a[href*="reddit.com"]:focus, .menu-social li a[href*="reddit.com"]:active {
-  border-color: orangered; }
-.menu-social li a[href*="reddit.com"]:hover, .menu-social li a[href*="reddit.com"]:focus, .menu-social li a[href*="reddit.com"]:active {
-  color: orangered; }
 .menu-social li a[href*="reddit.com"]:before {
   content: '\f222'; }
-.menu-social li a[href*="skype.com"]:hover, .menu-social li a[href*="skype.com"]:focus, .menu-social li a[href*="skype.com"]:active, .menu-social li a[href*="skype:"]:before:hover, .menu-social li a[href*="skype:"]:before:focus, .menu-social li a[href*="skype:"]:before:active {
-  border-color: #00aff0; }
-.menu-social li a[href*="skype.com"]:hover, .menu-social li a[href*="skype.com"]:focus, .menu-social li a[href*="skype.com"]:active, .menu-social li a[href*="skype:"]:before:hover, .menu-social li a[href*="skype:"]:before:focus, .menu-social li a[href*="skype:"]:before:active {
-  color: #00aff0; }
-.menu-social li a[href*="skype.com"]:before, .menu-social li a[href*="skype:"]:before:before {
-  content: '\f220'; }
-.menu-social li a[href*="stumbleupon.com"]:hover, .menu-social li a[href*="stumbleupon.com"]:focus, .menu-social li a[href*="stumbleupon.com"]:active {
-  border-color: #f74425; }
-.menu-social li a[href*="stumbleupon.com"]:hover, .menu-social li a[href*="stumbleupon.com"]:focus, .menu-social li a[href*="stumbleupon.com"]:active {
-  color: #f74425; }
 .menu-social li a[href*="stumbleupon.com"]:before {
   content: '\f223'; }
-.menu-social li a[href*="tumblr.com"]:hover, .menu-social li a[href*="tumblr.com"]:focus, .menu-social li a[href*="tumblr.com"]:active {
-  border-color: #34526f; }
-.menu-social li a[href*="tumblr.com"]:hover, .menu-social li a[href*="tumblr.com"]:focus, .menu-social li a[href*="tumblr.com"]:active {
-  color: #34526f; }
 .menu-social li a[href*="tumblr.com"]:before {
   content: '\f214'; }
-.menu-social li a[href*="twitter.com"]:hover, .menu-social li a[href*="twitter.com"]:focus, .menu-social li a[href*="twitter.com"]:active {
-  border-color: #55acee; }
-.menu-social li a[href*="twitter.com"]:hover, .menu-social li a[href*="twitter.com"]:focus, .menu-social li a[href*="twitter.com"]:active {
-  color: #55acee; }
 .menu-social li a[href*="twitter.com"]:before {
   content: '\f202'; }
-.menu-social li a[href*="vimeo.com"]:hover, .menu-social li a[href*="vimeo.com"]:focus, .menu-social li a[href*="vimeo.com"]:active {
-  border-color: #44bbff; }
-.menu-social li a[href*="vimeo.com"]:hover, .menu-social li a[href*="vimeo.com"]:focus, .menu-social li a[href*="vimeo.com"]:active {
-  color: #44bbff; }
 .menu-social li a[href*="vimeo.com"]:before {
   content: '\f212'; }
 .menu-social li a[href*="wordpress.com"]:before, .menu-social li a[href*="wordpress.org"]:before {
   content: '\f205'; }
-.menu-social li a[href*="wordpress.com"]:hover, .menu-social li a[href*="wordpress.com"]:focus, .menu-social li a[href*="wordpress.com"]:active {
-  border-color: #1e8cbe; }
-.menu-social li a[href*="wordpress.com"]:hover, .menu-social li a[href*="wordpress.com"]:focus, .menu-social li a[href*="wordpress.com"]:active {
-  color: #1e8cbe; }
-.menu-social li a[href*="wordpress.org"]:hover, .menu-social li a[href*="wordpress.org"]:focus, .menu-social li a[href*="wordpress.org"]:active {
-  border-color: #21759b; }
-.menu-social li a[href*="wordpress.org"]:hover, .menu-social li a[href*="wordpress.org"]:focus, .menu-social li a[href*="wordpress.org"]:active {
-  color: #21759b; }
-.menu-social li a[href*="youtube.com"]:hover, .menu-social li a[href*="youtube.com"]:focus, .menu-social li a[href*="youtube.com"]:active {
-  border-color: #c4302b; }
-.menu-social li a[href*="youtube.com"]:hover, .menu-social li a[href*="youtube.com"]:focus, .menu-social li a[href*="youtube.com"]:active {
-  color: #c4302b; }
 .menu-social li a[href*="youtube.com"]:before {
   content: '\f213'; }
 
