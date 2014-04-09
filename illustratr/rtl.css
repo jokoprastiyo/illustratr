@@ -8,10 +8,452 @@ of your CSS stylesheet in a separate stylesheet file named rtl.css.
 http://codex.wordpress.org/Right_to_Left_Language_Support
 
 */
+@-webkit-keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0; }
 
-/*
+  1% {
+    display: block;
+    opacity: 0; }
+
+  100% {
+    display: block;
+    opacity: 1; } }
+
+@-moz-keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0; }
+
+  1% {
+    display: block;
+    opacity: 0; }
+
+  100% {
+    display: block;
+    opacity: 1; } }
+
+@-o-keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0; }
+
+  1% {
+    display: block;
+    opacity: 0; }
+
+  100% {
+    display: block;
+    opacity: 1; } }
+
+@keyframes fade-in {
+  0% {
+    display: none;
+    opacity: 0; }
+
+  1% {
+    display: block;
+    opacity: 0; }
+
+  100% {
+    display: block;
+    opacity: 1; } }
+
+/*--------------------------------------------------------------
+Reset
+--------------------------------------------------------------*/
 body {
-	direction: rtl;
-	unicode-bidi: embed;
-}
-*/
+  direction: rtl;
+  unicode-bidi: embed; }
+
+caption, th, td {
+  text-align: right; }
+
+/*--------------------------------------------------------------
+Typography
+--------------------------------------------------------------*/
+blockquote {
+  padding-left: 0;
+  padding-right: 40px;
+  border-left: 0;
+  border-right: 2px solid #e06d5e; }
+@media screen and (max-width: 767px) {
+  blockquote {
+    padding-left: 0;
+    padding-right: 20px; } }
+
+/*--------------------------------------------------------------
+Elements
+--------------------------------------------------------------*/
+li > ul, li > ol {
+  margin-left: 0;
+  margin-right: 40px; }
+@media screen and (max-width: 767px) {
+  li > ul, li > ol {
+    margin-left: 0;
+    margin-right: 20px; } }
+
+/*--------------------------------------------------------------
+Forms
+--------------------------------------------------------------*/
+input[type="checkbox"], input[type="radio"] {
+  margin: 0 0 0 5px; }
+
+/* Search from */
+.search-form .search-submit {
+  right: auto;
+  left: 0; }
+
+/*--------------------------------------------------------------
+Navigation
+--------------------------------------------------------------*/
+/*  Pagination */
+.site-main .comment-navigation:before, .site-main .paging-navigation:before, .site-main .post-navigation:before {
+  margin-left: 0;
+  margin-right: -40px; }
+@media screen and (max-width: 767px) {
+  .site-main .comment-navigation:before, .site-main .paging-navigation:before, .site-main .post-navigation:before {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: -20px; } }
+.site-main .comment-navigation .nav-previous, .site-main .comment-navigation .nav-next, .site-main .paging-navigation .nav-previous, .site-main .paging-navigation .nav-next, .site-main .post-navigation .nav-previous, .site-main .post-navigation .nav-next {
+  width: 50%; }
+.site-main .comment-navigation .nav-previous, .site-main .paging-navigation .nav-previous, .site-main .post-navigation .nav-previous {
+  float: right;
+  text-align: right; }
+.site-main .comment-navigation .nav-next, .site-main .paging-navigation .nav-next, .site-main .post-navigation .nav-next {
+  float: left;
+  text-align: left; }
+
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers */
+.screen-reader-text:hover, .screen-reader-text:focus, .screen-reader-text:active {
+  left: auto;
+  right: 5px; }
+
+/*--------------------------------------------------------------
+Layout
+--------------------------------------------------------------*/
+/* Secondary */
+.widgets-wrapper {
+  margin-left: 0;
+  margin-right: -40px; }
+@media screen and (max-width: 767px) {
+  .widgets-wrapper {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: -20px; } }
+
+/* Footer */
+.site-footer {
+  margin-left: 0;
+  margin-right: -40px; }
+@media screen and (max-width: 767px) {
+  .site-footer {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: -20px; } }
+
+.site-info {
+  float: right; }
+
+/*--------------------------------------------------------------
+Menu
+--------------------------------------------------------------*/
+.main-navigation ul li:first-child {
+  margin-right: 0;
+  margin-left: 8px; }
+.main-navigation ul li:last-child {
+  margin-right: 8px;
+  margin-left: 0; }
+.main-navigation ul .genericon {
+  right: auto;
+  left: 0; }
+.main-navigation ul ul {
+  float: right;
+  text-align: right; }
+.main-navigation ul ul ul {
+  top: -1px;
+  right: 100%;
+  left: auto;
+  margin-right: -10px;
+  margin-left: 0; }
+@media screen and (max-width: 959px) {
+  .main-navigation ul {
+    text-align: right; }
+  .main-navigation ul .menu-item-has-children > a {
+    padding-right: 0;
+    padding-left: 50px; }
+  .main-navigation ul ul {
+    right: auto; }
+  .main-navigation ul ul:before {
+    right: -40px;
+    left: auto; }
+  .main-navigation ul ul ul {
+    right: auto; } }
+@media screen and (max-width: 767px) {
+  .main-navigation ul ul {
+    margin-right: 20px;
+    margin-left: 0; }
+  .main-navigation ul ul:before {
+    right: -20px;
+    left: auto; }
+  .main-navigation ul ul ul {
+    margin-right: 20px;
+    margin-left: 0; } }
+
+/*--------------------------------------------------------------
+Social
+--------------------------------------------------------------*/
+.menu-social {
+  float: left; }
+.menu-social ul {
+  float: left; }
+.menu-social li {
+  float: right;
+  margin: 0 0 10px 10px; }
+.menu-social li:last-child {
+  margin-left: 0; }
+
+/*--------------------------------------------------------------
+Widgets
+--------------------------------------------------------------*/
+.widget {
+  float: right; }
+
+.page-content .widget {
+  margin: 0 0 0 40px; }
+.page-content .widget:nth-of-type(3n+3) {
+  margin-right: 40px;
+  margin-left: 0; }
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .page-content .widget:nth-of-type(2n+2) {
+    margin-right: 40px;
+    margin-left: 0; }
+  .page-content .widget:nth-of-type(3n+3) {
+    margin-left: 40px; } }
+
+/* Lists */
+.widget_categories .children:before, .widget_nav_menu .sub-menu:before, .widget_pages .children:before {
+  right: -40px;
+  left: auto; }
+@media screen and (max-width: 767px) {
+  .widget_categories .children:before, .widget_nav_menu .sub-menu:before, .widget_pages .children:before {
+    right: -20px;
+    left: auto; } }
+
+/* List Layout & Grid Layout */
+.widget .widgets-list-layout .widgets-list-layout-links {
+  padding-right: 60px;
+  padding-left: 0; }
+
+/* Tag Cloud */
+.widget_tag_cloud a {
+  float: right;
+  margin: 0 0 5px 5px !important; }
+
+/*--------------------------------------------------------------
+Content
+--------------------------------------------------------------*/
+.page-header + .hentry:before, .hentry + .hentry:before {
+  margin-left: 0;
+  margin-right: -40px; }
+@media screen and (max-width: 767px) {
+  .page-header + .hentry:before, .hentry + .hentry:before {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: -20px; } }
+
+/* Page links */
+.page-links .page-link {
+  float: right;
+  margin-right: 0;
+  margin-left: 5px; }
+.page-links a {
+  float: right;
+  margin-right: 0;
+  margin-left: 5px; }
+
+/*--------------------------------------------------------------
+Post Formats
+--------------------------------------------------------------*/
+.hentry.format-image .size-full.image-big {
+  display: block; }
+@media screen and (min-width: 1220px) {
+  .hentry.format-image .size-full.image-big {
+    margin-left: 0;
+    margin-right: -130px; } }
+@media screen and (min-width: 1220px) {
+  .hentry.format-image .wp-caption.alignnone.caption-big, .hentry.format-image .wp-caption.aligncenter.caption-big {
+    margin-left: 0;
+    margin-right: -130px; } }
+
+/*--------------------------------------------------------------
+Portfolio
+--------------------------------------------------------------*/
+/* Portfolio entry */
+.portfolio-entry .size-full.image-big {
+  display: block; }
+@media screen and (min-width: 1220px) {
+  .portfolio-entry .size-full.image-big {
+    margin-left: 0;
+    margin-right: -130px; } }
+@media screen and (min-width: 1220px) {
+  .portfolio-entry .wp-caption.alignnone.caption-big, .portfolio-entry .wp-caption.aligncenter.caption-big {
+    margin-left: 0;
+    margin-right: -130px; } }
+@media screen and (min-width: 1220px) {
+  .portfolio-entry .video-wrapper, .portfolio-entry .portfolio-gallery {
+    margin-right: -130px;
+    margin-left: 0; } }
+
+ /*--------------------------------------------------------------
+Comments
+--------------------------------------------------------------*/
+.comments-area:before, .comment-list + .comment-respond:before {
+  margin-left: 0;
+  margin-right: -40px; }
+@media screen and (max-width: 767px) {
+  .comments-area:before, .comment-list + .comment-respond:before {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: -20px; } }
+
+/* Comment list */
+.comment-list .children {
+  margin-right: 80px;
+  margin-left: 0; }
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .comment-list .children {
+    margin-right: 40px;
+    margin-left: 0; } }
+@media screen and (max-width: 767px) {
+  .comment-list .children {
+    margin-right: 20px;
+    margin-left: 0; } }
+.comment-list .no-avatar + ol {
+  margin-right: 40px;
+  margin-left: 0; }
+.comment-list .pingback .comment-body {
+  text-align: right; }
+
+/* Comment author */
+.comment-author {
+  float: right; }
+
+/* Comment meta */
+.comment-meta-details {
+  text-align: right; }
+.comment-meta-details span:after {
+  content: "\b7";
+  margin-right: 5px;
+  margin-left: 0; }
+.comment-meta-details span:last-of-type:after {
+  margin-right: 0; }
+
+/* Comment content */
+.comment-content {
+  margin-right: 80px;
+  margin-left: 0; }
+
+.no-avatar .comment-content {
+  margin-right: 0; }
+
+/* No comments */
+.no-comments:before {
+  margin-left: 0;
+  margin-right: -40px; }
+@media screen and (max-width: 767px) {
+  .no-comments:before {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    margin-right: -20px; } }
+
+/*--------------------------------------------------------------
+Media
+--------------------------------------------------------------*/
+/* Galleries */
+.gallery .gallery-item {
+  float: right; }
+
+/* Gallery Columns */
+.gallery-columns-2 .gallery-item {
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-2 .gallery-item:nth-of-type(2n - 2) {
+  clear: left;
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-3 .gallery-item {
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-3 .gallery-item:nth-of-type(3n - 3) {
+  clear: left;
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-4 .gallery-item {
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-4 .gallery-item:nth-of-type(4n - 4) {
+  clear: left;
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-5 .gallery-item {
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-5 .gallery-item:nth-of-type(5n - 5) {
+  clear: left;
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-6 .gallery-item {
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-6 .gallery-item:nth-of-type(6n - 6) {
+  clear: left;
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-7 .gallery-item {
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-7 .gallery-item:nth-of-type(7n - 7) {
+  clear: left;
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-8 .gallery-item {
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-8 .gallery-item:nth-of-type(8n - 8) {
+  clear: left;
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-9 .gallery-item {
+  margin-right: 0;
+  margin-left: 0; }
+
+.gallery-columns-9 .gallery-item:nth-of-type(9n - 9) {
+  clear: left;
+  margin-right: 0;
+  margin-left: 0; }

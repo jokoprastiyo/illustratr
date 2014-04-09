@@ -3,12 +3,12 @@ Comments
 --------------------------------------------------------------*/
 
 .comment-content a {
+	-ms-word-wrap: break-word;
 	word-wrap: break-word;
 }
 .bypostauthor {
 	position: relative;
 }
-
 .comments-area,
 .comment-list + .comment-respond {
 	position: relative;
@@ -65,7 +65,7 @@ Comments
 		position: relative;
 		list-style: none;
 		padding-top: $vspacing-triple + 1px;
-		margin-left: $vspacing + 60px; // wp_list_comments( avatar_size );
+		margin-left: $vspacing + 60px; // wp_list_comments( avatar_size )
 		@include screen($tablet, $desktop - 1px) {
 			margin-left: $vspacing-double;
 		}
@@ -136,7 +136,7 @@ Comments
 
 /* Comment content */
 .comment-content {
-	margin-left: $vspacing + 60px; // wp_list_comments( avatar_size );
+	margin-left: $vspacing + 60px; // wp_list_comments( avatar_size )
 }
 .no-avatar .comment-content {
 	margin-left: 0;

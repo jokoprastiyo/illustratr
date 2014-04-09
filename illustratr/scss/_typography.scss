@@ -88,7 +88,7 @@ code,
 kbd,
 tt,
 var {
-	padding: 0 5px;
+	padding: 0 ($vspacing / 4);
 	background: $lighter-color;
 	font-family: $code-font;
 	letter-spacing: -0.05em;
@@ -107,7 +107,7 @@ acronym {
 }
 mark,
 ins {
-	padding: 0 5px;
+	padding: 0 ($vspacing / 4);
 	background: $link-color;
 	color: $background-color;
 	text-decoration: none;

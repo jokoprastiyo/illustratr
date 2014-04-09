@@ -1,0 +1,20 @@
+/*--------------------------------------------------------------
+Content
+--------------------------------------------------------------*/
+
+.page-header,
+.hentry {
+	+ .hentry {
+		@include hentry-rtl;
+	}
+}
+
+/* Page links */
+.page-links {
+	.page-link {
+		@include page-link-rtl;
+	}
+	a {
+		@include page-link-rtl;
+	}
+}
