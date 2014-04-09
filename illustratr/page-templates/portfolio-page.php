@@ -40,13 +40,10 @@ get_header(); ?>
 
 			<?php
 				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-				// Make it ready for when portfolio reading option will be implemented
-				$posts_per_page = get_option( 'posts_per_page' );
+				$posts_per_page = get_option( 'jetpack_portfolio_posts_per_page', '10' );
 				$args = array(
 					'post_type'      => 'jetpack-portfolio',
 					'posts_per_page' => $posts_per_page,
-					'order'          => 'ASC',
-					'orderby'        => 'menu_order',
 					'paged'          => $paged,
 				);
 				$project_query = new WP_Query ( $args );
