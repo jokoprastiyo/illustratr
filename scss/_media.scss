@@ -159,7 +159,7 @@ Media
 
 /* Gallery Columns */
 @for $i from 2 through 9 {
-	@include gallery_column(0, $i);
+	@include gallery-column(0, $i);
 }
 
 /* Iframes */

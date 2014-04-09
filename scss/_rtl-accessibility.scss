@@ -1,0 +1,13 @@
+/*--------------------------------------------------------------
+Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	&:hover,
+	&:focus,
+	&:active {
+		left: auto;
+		right: 5px;
+	}
+}

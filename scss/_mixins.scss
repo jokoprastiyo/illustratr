@@ -27,6 +27,16 @@
 		margin-left: -$vspacing;
 	}
 }
+@mixin full-width-area-rtl {
+	margin-left: 0;
+	margin-right: -$vspacing-double;
+	@media screen and (max-width: $tablet - 1px) {
+		padding-left: $vspacing;
+		padding-right: $vspacing;
+		margin-left: 0;
+		margin-right: -$vspacing;
+	}
+}
 
 // Hentry
 @mixin hentry {
@@ -45,6 +55,11 @@
 		height: 1px;
 		background: $lighter-color;
 		@include full-width-area;
+	}
+}
+@mixin hentry-rtl {
+	&:before {
+		@include full-width-area-rtl;
 	}
 }
 
@@ -89,6 +104,11 @@
 	height: $vspacing-double;
 	width: $vspacing-double;
 	@include transition(all 250ms ease);
+}
+@mixin page-link-rtl {
+	float: right;
+	margin-right: 0;
+	margin-left: $vspacing / 4;
 }
 @mixin navigation-link {
 	padding-bottom: $vspacing / 4;
@@ -153,9 +173,31 @@
 		}
 	}
 }
+@mixin image-big-rtl {
+	.size-full {
+		&.image-big {
+			display: block;
+			@include min-screen($widescreen) {
+				margin-left: 0;
+				margin-right: -($widescreen - $desktop) / 2;
+			}
+		}
+	}
+	.wp-caption {
+		&.alignnone,
+		&.aligncenter {
+			@include min-screen($widescreen) {
+				&.caption-big {
+					margin-left: 0;
+					margin-right: -($widescreen - $desktop) / 2;
+				}
+			}
+		}
+	}
+}
 
 // Fluid Gallery Columns
-@mixin gallery_column ($margin: 2%, $num: 4) {
+@mixin gallery-column($margin: 2%, $num: 4) {
 	.gallery-columns-#{$num} .gallery-item {
 		margin-right: $margin;
 		width: (100% - $margin * ($num - 1)) / $num;
@@ -165,9 +207,20 @@
   		margin-right: 0;
   	}
 }
+@mixin gallery-column-rtl($margin: 2%, $num: 4) {
+	.gallery-columns-#{$num} .gallery-item {
+		margin-right: 0;
+		margin-left: $margin;
+	}
+  	.gallery-columns-#{$num} .gallery-item:nth-of-type(#{$num}n - #{$num}) {
+  		clear: left;
+  		margin-right: 0;
+  		margin-left: 0;
+  	}
+}
 
 // Fluid Portfolio Columns
-@mixin portfolio_column ($num: 4) {
+@mixin portfolio-column($num: 4) {
 	.jetpack-portfolio-shortcode.column-#{$num} .portfolio-entry {
 		width: 100% / $num;
 	}

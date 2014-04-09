@@ -276,6 +276,7 @@ body {
 	width: 50%;
 	line-height: $vspacing-double;
 	@include max-screen($desktop - 1px) {
+		float: none;
 		width: 100%;
 		line-height: inherit;
 		text-align: center;
