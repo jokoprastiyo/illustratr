@@ -175,7 +175,7 @@ function illustratr_scripts() {
 	if ( wp_style_is( 'genericons', 'registered' ) ) {
 		wp_enqueue_style( 'genericons' );
 	} else {
-		wp_enqueue_style( 'genericons', get_template_directory_uri() . '/css/genericons.css', array(), null );
+		wp_enqueue_style( 'genericons', get_template_directory_uri() . '/genericons/genericons.css', array(), '3.0.3' );
 	}
 
 	wp_enqueue_style( 'illustratr-style', get_stylesheet_uri() );
