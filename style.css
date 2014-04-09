@@ -1564,6 +1564,7 @@ Content
 .entry-thumbnail a, .entry-thumbnail img {
   display: inline-block;
   margin: 0 auto;
+  max-width: 100%;
   -webkit-transition: all 250ms ease;
   -moz-transition: all 250ms ease;
   -o-transition: all 250ms ease;
@@ -1936,6 +1937,7 @@ Portfolio
 .portfolio-thumbnail a, .portfolio-thumbnail img {
   display: inline-block;
   margin: 0 auto;
+  max-width: 100%;
   -webkit-transition: all 250ms ease;
   -moz-transition: all 250ms ease;
   -o-transition: all 250ms ease;
