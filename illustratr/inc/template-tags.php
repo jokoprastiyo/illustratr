@@ -70,40 +70,6 @@ function illustratr_post_nav() {
 }
 endif;
 
-if ( ! function_exists( 'illustratr_portfolio_nav' ) ) :
-/**
- * Display navigation to next/previous project when applicable.
- *
- * @return void
- */
-function illustratr_portfolio_nav() {
-	global $post;
-	$pagination_posts = array();
-
-	$pagination_posts['nav-previous'] = get_adjacent_post( false, '', true );
-	$pagination_posts['nav-next']     = get_adjacent_post( false, '', false );
-
-	if ( ! $pagination_posts['nav-previous'] && ! $pagination_posts['nav-next'] )
-		return false;
-?>
-	<nav class="navigation portfolio-navigation" role="navigation">
-		<h1 class="screen-reader-text"><?php _e( 'Portfolio navigation', 'illustratr' ); ?></h1>
-		<div class="nav-links">
-			<?php
-				foreach ( $pagination_posts as $pagination_post => $post ) {
-					if ( is_object( $post ) && is_a( $post, 'WP_Post' ) && 'jetpack-portfolio' == $post->post_type ) {
-						setup_postdata( $post );
-						the_title( '<div class="' . esc_attr( $pagination_post ) . '"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></div>' );
-						wp_reset_postdata();
-					}
-				}
-			?>
-		</div>
-	</nav>
-<?php
-}
-endif;
-
 if ( ! function_exists( 'illustratr_comment' ) ) :
 /**
  * Template for comments and pingbacks.

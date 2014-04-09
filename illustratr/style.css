@@ -452,16 +452,16 @@ a:hover, a:focus, a:active {
   color: #7f8d8c; }
 
 /*  Pagination */
-.site-main .comment-navigation, .site-main .paging-navigation, .site-main .post-navigation, .site-main .portfolio-navigation {
+.site-main .comment-navigation, .site-main .paging-navigation, .site-main .post-navigation {
   position: relative;
   padding-bottom: 20px;
   padding-top: 81px;
   margin-top: 60px; }
 @media screen and (max-width: 767px) {
-  .site-main .comment-navigation, .site-main .paging-navigation, .site-main .post-navigation, .site-main .portfolio-navigation {
+  .site-main .comment-navigation, .site-main .paging-navigation, .site-main .post-navigation {
     margin-top: 20px;
     padding-top: 41px; } }
-.site-main .comment-navigation:before, .site-main .paging-navigation:before, .site-main .post-navigation:before, .site-main .portfolio-navigation:before {
+.site-main .comment-navigation:before, .site-main .paging-navigation:before, .site-main .post-navigation:before {
   content: '';
   display: block;
   position: absolute;
@@ -477,18 +477,18 @@ a:hover, a:focus, a:active {
   -moz-box-sizing: content-box;
   box-sizing: content-box; }
 @media screen and (max-width: 767px) {
-  .site-main .comment-navigation:before, .site-main .paging-navigation:before, .site-main .post-navigation:before, .site-main .portfolio-navigation:before {
+  .site-main .comment-navigation:before, .site-main .paging-navigation:before, .site-main .post-navigation:before {
     padding-left: 20px;
     padding-right: 20px;
     margin-left: -20px; } }
-.site-main .comment-navigation .nav-previous, .site-main .comment-navigation .nav-next, .site-main .paging-navigation .nav-previous, .site-main .paging-navigation .nav-next, .site-main .post-navigation .nav-previous, .site-main .post-navigation .nav-next, .site-main .portfolio-navigation .nav-previous, .site-main .portfolio-navigation .nav-next {
+.site-main .comment-navigation .nav-previous, .site-main .comment-navigation .nav-next, .site-main .paging-navigation .nav-previous, .site-main .paging-navigation .nav-next, .site-main .post-navigation .nav-previous, .site-main .post-navigation .nav-next {
   width: 50%; }
-.site-main .comment-navigation .nav-previous, .site-main .paging-navigation .nav-previous, .site-main .post-navigation .nav-previous, .site-main .portfolio-navigation .nav-previous {
+.site-main .comment-navigation .nav-previous, .site-main .paging-navigation .nav-previous, .site-main .post-navigation .nav-previous {
   float: left; }
-.site-main .comment-navigation .nav-next, .site-main .paging-navigation .nav-next, .site-main .post-navigation .nav-next, .site-main .portfolio-navigation .nav-next {
+.site-main .comment-navigation .nav-next, .site-main .paging-navigation .nav-next, .site-main .post-navigation .nav-next {
   float: right;
   text-align: right; }
-.site-main .comment-navigation a, .site-main .paging-navigation a, .site-main .post-navigation a, .site-main .portfolio-navigation a {
+.site-main .comment-navigation a, .site-main .paging-navigation a, .site-main .post-navigation a {
   padding-bottom: 5px;
   border-bottom: 1px solid #f1f2f3;
   color: #24282d;
@@ -497,9 +497,9 @@ a:hover, a:focus, a:active {
   -moz-transition: all 250ms ease;
   -o-transition: all 250ms ease;
   transition: all 250ms ease; }
-.site-main .comment-navigation a:hover, .site-main .comment-navigation a:focus, .site-main .comment-navigation a:active, .site-main .paging-navigation a:hover, .site-main .paging-navigation a:focus, .site-main .paging-navigation a:active, .site-main .post-navigation a:hover, .site-main .post-navigation a:focus, .site-main .post-navigation a:active, .site-main .portfolio-navigation a:hover, .site-main .portfolio-navigation a:focus, .site-main .portfolio-navigation a:active {
+.site-main .comment-navigation a:hover, .site-main .comment-navigation a:focus, .site-main .comment-navigation a:active, .site-main .paging-navigation a:hover, .site-main .paging-navigation a:focus, .site-main .paging-navigation a:active, .site-main .post-navigation a:hover, .site-main .post-navigation a:focus, .site-main .post-navigation a:active {
   color: #e06d5e; }
-.site-main .comment-navigation a:hover, .site-main .comment-navigation a:focus, .site-main .comment-navigation a:active, .site-main .paging-navigation a:hover, .site-main .paging-navigation a:focus, .site-main .paging-navigation a:active, .site-main .post-navigation a:hover, .site-main .post-navigation a:focus, .site-main .post-navigation a:active, .site-main .portfolio-navigation a:hover, .site-main .portfolio-navigation a:focus, .site-main .portfolio-navigation a:active {
+.site-main .comment-navigation a:hover, .site-main .comment-navigation a:focus, .site-main .comment-navigation a:active, .site-main .paging-navigation a:hover, .site-main .paging-navigation a:focus, .site-main .paging-navigation a:active, .site-main .post-navigation a:hover, .site-main .post-navigation a:focus, .site-main .post-navigation a:active {
   border-bottom-color: transparent; }
 
 /*--------------------------------------------------------------

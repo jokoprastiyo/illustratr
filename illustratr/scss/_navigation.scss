@@ -12,8 +12,7 @@ a {
 .site-main {
 	.comment-navigation,
 	.paging-navigation,
-	.post-navigation,
-	.portfolio-navigation {
+	.post-navigation {
 		position: relative;
 		padding-bottom: $vspacing;
 		@include hentry;
