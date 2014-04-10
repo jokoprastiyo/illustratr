@@ -42,6 +42,14 @@ Menu
 		// 1st level
 		ul {
 			text-align: right;
+			li {
+				margin: 0;
+				&:first-child,
+				&:last-child {
+					margin-left: 0;
+					margin-right: 0;
+				}
+			}
 			.menu-item-has-children {
 				> a {
 					padding-right: 0;
@@ -52,6 +60,8 @@ Menu
 			// 2nd level
 			ul {
 				right: auto;
+				float: none;
+				margin: 0 $vspacing-double 0 0;
 				&:before {
 					right: -$vspacing-double;
 					left: auto;
@@ -60,6 +70,7 @@ Menu
 				// 3rd level
 				ul {
 					right: auto;
+					margin: 0 $vspacing-double 0 0;
 				}
 			}
 		}

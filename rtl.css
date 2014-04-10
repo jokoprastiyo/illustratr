@@ -181,16 +181,24 @@ Menu
 @media screen and (max-width: 959px) {
   .main-navigation ul {
     text-align: right; }
+  .main-navigation ul li {
+    margin: 0; }
+  .main-navigation ul li:first-child, .main-navigation ul li:last-child {
+    margin-left: 0;
+    margin-right: 0; }
   .main-navigation ul .menu-item-has-children > a {
     padding-right: 0;
     padding-left: 50px; }
   .main-navigation ul ul {
-    right: auto; }
+    right: auto;
+    float: none;
+    margin: 0 40px 0 0; }
   .main-navigation ul ul:before {
     right: -40px;
     left: auto; }
   .main-navigation ul ul ul {
-    right: auto; } }
+    right: auto;
+    margin: 0 40px 0 0; } }
 @media screen and (max-width: 767px) {
   .main-navigation ul ul {
     margin-right: 20px;

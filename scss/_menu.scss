@@ -223,6 +223,11 @@ Menu
 				min-height: $vspacing-double - 2px;
 				border-bottom: 1px solid $lighter-color;
 				line-height: $vspacing - 2px;
+				&:first-child,
+				&:last-child {
+					margin-left: 0;
+					margin-right: 0;
+				}
 				a {
 					padding: 0;
 					@include hover(color, $darker-color);
