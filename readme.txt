@@ -112,7 +112,7 @@ Available icons:
 1. The main column width is 840.
 2. A widget in the widget area is 340.
 3. Featured Images for posts and pages are 1100 wide by 500 high.
-4. Featured Images for projects are 1100 wide by unlimited high.
+4. Featured Images for projects are 800 wide by unlimited high.
 
 == Changelog ==
 
