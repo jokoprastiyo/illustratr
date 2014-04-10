@@ -1,3 +1,25 @@
+=== Illustratr ===
+
+Contributors: automattic
+Tags: dark, red, white, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, infinite-scroll, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+
+Requires at least: 3.4
+Tested up to: 3.9
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+A minimalist portfolio theme.
+
+== Description ==
+
+Illustratr is a minimalist portfolio theme that helps you create a strong — yet beautiful — online presence. Primarily crafted for designers and photographers, it is a simple, powerful, and flexible theme.
+
+* Responsive layout.
+* Portfolio Page Template.
+* Custom Header.
+* Jetpack.me compatibility for Infinite Scroll, Portfolio Custom Post Type.
+* The GPL v2.0 or later license. :) Use it to make something cool.
+
 == Installation ==
 
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
@@ -6,44 +28,62 @@
 
 == Frequently Asked Questions ==
 
+= I don't see the Portfolio menu in my admin, where can I find it? =
+
+To make the Portfolio menu appear in your admin, you need to install the [Jetpack plugin](http://jetpack.me) because it has the required code needed to make [custom post types](http://codex.wordpress.org/Post_Types#Custom_Post_Types) work for the Illustratr theme.
+
+Once Jetpack is active, the Portfolio menu will appear in your admin, in addition to standard blog posts. No special Jetpack module is needed and a WordPress.com connection is not required for the Portfolio feature to function. Portfolio will work on a localhost installation of WordPress if you add this line to `wp-config.php`:
+
+`define( 'JETPACK_DEV_DEBUG', TRUE );`
+
+The Portfolio admin: https://cloudup.com/cOznO6emIyD
+
 = How to setup the front page like the demo site? =
 
 The demo site URL: http://illustratrdemo.wordpress.com/?demo
 
-1. Create or edit a page, and assign it to the Portfolio Page Template from the Page Attributes module. https://cloudup.com/cRr9vf-2JFS
-2. Go to Settings > Reading and set "Front page displays" to "A static page".
-3. Select the page you just assigned the Portfolio Page Template to as "Front page" and then choose another page as "Posts page" to serve your blog posts.
-4. Add some Projects to your Portfolio!
+When you first activate Illustratr, you’ll see your posts in a traditional blog format. If you’d like to use the portfolio page template as the front page of your site, as the demo site does, it’s simple to configure:
 
-= I don't see the Portfolio menu in my admin, where can I find it? =
+1. Create or edit a page, and assign it to the Portfolio Page Template from the Page Attributes module. https://cloudup.com/iz8PUZy0j0L
+2. Go to Settings > Reading and set “Front page displays” to “A static page”.
+3. Select the page you just assigned the Portfolio Page Template to as “Front page” and set another page as the “Posts page” to display your blog posts.
 
-To make the Portfolio menu appear in your admin, you need to install the [Jetpack plugin](http://jetpack.me) because it has the required code needed to make [custom post types](http://codex.wordpress.org/Post_Types#Custom_Post_Types) work for Illustratr.
+By default, page title and content will appear. You can hide them if you prefer by going to Appearance → Customize → Theme Options and check “Hide title and content on Portfolio Page Template” option.
 
-Once Jetpack is active, the Portfolio menu will appear in your admin, in addition to standard blog posts. No special Jetpack module is needed and a WordPress.com connection is not required for the Portfolio feature to function.
+= Where is the page that lists all projects? =
 
-You can now start adding Projects to your Portfolio.
+Along with the Portfolio Page Template, your projects will be displayed on portfolio archive pages.
 
-= Where is the page that lists all my projects? =
-
-Let's say you have a WordPress site at: http://mygroovydomain.com
+Let's say you have a WordPress.com site at: http://mygroovydomain.com
 
 The URL of the portfolio archive page will be: http://mygroovydomain.com/portfolio/
+
+If your blog’s URL is http://mygroovydomain.com/, you’ll find your portfolio archive page at http://mygroovydomain.com/portfolio/.
 
 You'll need pretty permalinks (any structure) for this URL to work though. If you're stuck with default permalinks - your links have a query string at the end, like ?p=123 - then your portfolio archive can be accessed by adding this immediately after your URL:
 
 `/?post_type=jetpack-portfolio`
 
-= How to add the social links in the footer? =
+The portfolio archive page: https://illustratrdemo.wordpress.com/portfolio/
 
-Illustratr allows you display links to your social media profiles, like Twitter and Facebook, as icons in custom menus.
+= How to add large images in projects? =
 
-- Set up the menu -
-To automatically apply icons to your links, simply create a new custom menu. Next, add each of your social links to this menu. Each menu item should be added as a custom link.
-Once your menu is created and your social links added, you need to tick “Social Menu” in the Menu Settings; if the option isn’t ticked, the theme will not display the menu in its footer.
-Illustratr will automatically apply an icon if it’s available.
+People love full-size images of your work, so make sure the images you include are at least 1100px wide. Illustratr displays these images at full width on larger screens.
 
-- Available icons -
-Below is a list of sites with bundled icons you can include in your menu:
+= How to use Portfolio Shortcodes? =
+
+Once you create a project, you can use the portfolio shortcode to display it anywhere on your site. Adding the [portfolio] shortcode to any post or page will insert your project. [Learn more about working with the portfolio shortcode](http://en.support.wordpress.com/portfolios/portfolio-shortcode/).
+
+= How to add the social links in the sidebar? =
+
+Illustratr allows you display links to your social media profiles, like Twitter and Facebook, as icons using a custom menu.
+
+1. Create a new Custom Menu, and assign it to the Social Links Menu location.
+2. Add links to each of your social services using the Links panel.
+3. Icons for your social links will automatically appear if it’s available.
+
+Available icons:
+
 * Codepen
 * Digg
 * Dribbble
@@ -54,12 +94,12 @@ Below is a list of sites with bundled icons you can include in your menu:
 * Google+
 * Instagram
 * LinkedIn
-* Email (`mailto:` links)
+* Email (mailto: links)
 * Pinterest
 * Pocket
 * PollDaddy
 * Reddit
-* RSS Feed (urls with `/feed/`)
+* RSS Feed (urls with /feed/)
 * StumbleUpon
 * Tumblr
 * Twitter
@@ -67,10 +107,14 @@ Below is a list of sites with bundled icons you can include in your menu:
 * WordPress
 * YouTube
 
-== Quick Specs (all measurements in pixels) ==
+== Quick Illustratr Specs (all measurements in pixels) ==
 
 1. The main column width is 840.
 2. A widget in the widget area is 340.
+3. Featured Images for posts and pages are 1100 wide by 500 high.
+4. Featured Images for projects are 1100 wide by unlimited high.
+
+== Changelog ==
 
 = 1.0 - Apr 10 2014 =
 * Initial release.
