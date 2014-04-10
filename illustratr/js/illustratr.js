@@ -81,15 +81,19 @@
 
 		$( '.entry-thumbnail, .entry-gallery, .entry-media, .hentry.format-video > .video-wrapper, .caption-big' ).each( function() {
 			if( $( window ).width() < 768 ) {
-	    		$( this ).css( {
-	    			'width': '100%',
-	    			'margin-left': '-20px',
-	    		} ).css( 'width', '+=40px' );
+	    		$( this ).css( 'width', '100%' ).css( 'width', '+=40px' );
+	    		if ( $( 'body' ).hasClass( 'rtl' ) ) {
+		    		$( this ).css( 'margin-right', '-20px' );
+	    		} else {
+		    		$( this ).css( 'margin-left', '-20px' );
+	    		}
 			} else if( $( window ).width() < 960 ) {
-	    		$( this ).css( {
-	    			'width': '100%',
-	    			'margin-left': '-40px',
-	    		} ).css( 'width', '+=80px' );
+	    		$( this ).css( 'width', '100%' ).css( 'width', '+=80px' );
+	    		if ( $( 'body' ).hasClass( 'rtl' ) ) {
+		    		$( this ).css( 'margin-right', '-40px' );
+	    		} else {
+		    		$( this ).css( 'margin-left', '-40px' );
+	    		}
 			} else {
 				$( this ).css( {
 					'width': '',
@@ -110,14 +114,22 @@
 	    		$( this ).parents( '.image-big-wrapper' ).css( {
 	    			'display': 'block',
 	    			'width': '100%',
-	    			'margin-left': '-20px',
 	    		} ).css( 'width', '+=40px' );
+	    		if ( $( 'body' ).hasClass( 'rtl' ) ) {
+		    		$( this ).parents( '.image-big-wrapper' ).css( 'margin-right', '-20px' );
+	    		} else {
+		    		$( this ).parents( '.image-big-wrapper' ).css( 'margin-left', '-20px' );
+	    		}
 			} else if( $( window ).width() < 960 ) {
 	    		$( this ).parents( '.image-big-wrapper' ).css( {
 	    			'display': 'block',
 	    			'width': '100%',
-	    			'margin-left': '-40px',
 	    		} ).css( 'width', '+=80px' );
+	    		if ( $( 'body' ).hasClass( 'rtl' ) ) {
+		    		$( this ).parents( '.image-big-wrapper' ).css( 'margin-right', '-40px' );
+	    		} else {
+		    		$( this ).parents( '.image-big-wrapper' ).css( 'margin-left', '-40px' );
+	    		}
 			} else {
 				$( this ).parents( '.image-big-wrapper' ).css( {
 					'display': '',

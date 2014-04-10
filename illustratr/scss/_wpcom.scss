@@ -82,6 +82,13 @@ WP.com
 		@include hentry;
 	}
 }
+body.rtl {
+	#comments {
+		.comment-list + #respond {
+			@include hentry-rtl;
+		}
+	}
+}
 
 /* Sharedaddy */
 .page-content,
@@ -294,6 +301,14 @@ WP.com
 		vertical-align: middle;
 	}
 }
+body.rtl {
+	.widget_authors {
+		img {
+			margin-right: 0;
+			margin-left: $vspacing - 5px;
+		}
+	}
+}
 
 /* Widget - Blog Stats */
 .widget_blog-stats {
@@ -364,6 +379,17 @@ WP.com
 				@include transition(all 250ms ease);
 				@include hover(background, lighten($dark-color, 5%) !important);
 				@include hover(color, $darker-color);
+			}
+		}
+	}
+}
+body.rtl {
+	.widget_flickr {
+		#flickr_badge_uber_wrapper {
+			a {
+				&:not(:last-of-type) {
+					float: right;
+				}
 			}
 		}
 	}
@@ -507,6 +533,18 @@ WP.com
 		}
 	}
 }
+body.rtl {
+	.widget_links .children {
+		&:before {
+			right: -$vspacing-double;
+			left: auto;
+			@include max-screen($tablet - 1px) {
+				right: -$vspacing-double;
+				left: auto;
+			}
+		}
+	}
+}
 
 /* Widget - Milestone */
 .milestone-widget {
@@ -619,6 +657,13 @@ WP.com
 		margin: -($vspacing / 2) 0 ($vspacing / 2) 0;
 	}
 }
+body.rtl {
+	.widget_recent_images {
+		a {
+			float: right;
+		}
+	}
+}
 
 /* Widget - Tag Cloud */
 .wp_widget_tag_cloud {
@@ -649,6 +694,13 @@ WP.com
     	a {
     	
     	}
+	}
+}
+body.rtl {
+	.wp_widget_tag_cloud {
+		a {
+			float: right;
+		}
 	}
 }
 
@@ -685,15 +737,4 @@ img#wpstats,
 img[id*="botd"] {
 	position: absolute;
 	top: -9999px;
-}
-
-/* Right to Left */
-.rtl {
-	// Widget authors
-	.widget_authors {
-		img {
-			margin-right: auto;
-			margin-left: 5px;
-		}
-	}
 }

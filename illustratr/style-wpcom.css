@@ -153,6 +153,14 @@ WP.com
     padding-right: 20px;
     margin-left: -20px; } }
 
+body.rtl #comments .comment-list + #respond:before {
+  margin-right: -40px;
+  margin-left: 0; }
+@media screen and (max-width: 767px) {
+  body.rtl #comments .comment-list + #respond:before {
+    margin-right: -20px;
+    margin-left: 0; } }
+
 /* Sharedaddy */
 .page-content > .sharedaddy .jetpack-likes-widget-wrapper, .entry-content > .sharedaddy .jetpack-likes-widget-wrapper, .entry-sharedaddy > .sharedaddy .jetpack-likes-widget-wrapper {
   padding: 20px 0;
@@ -304,6 +312,10 @@ WP.com
   margin-right: 15px;
   vertical-align: middle; }
 
+body.rtl .widget_authors img {
+  margin-right: 0;
+  margin-left: 15px; }
+
 /* Widget - Blog Stats */
 .widget_blog-stats ul {
   padding: 5px 10px;
@@ -358,6 +370,9 @@ WP.com
   background: #525a5a !important; }
 .widget_flickr #flickr_badge_uber_wrapper a:last-of-type:hover, .widget_flickr #flickr_badge_uber_wrapper a:last-of-type:focus, .widget_flickr #flickr_badge_uber_wrapper a:last-of-type:active {
   color: #24282d; }
+
+body.rtl .widget_flickr #flickr_badge_uber_wrapper a:not(:last-of-type) {
+  float: right; }
 
 /* Widget - GoodReads */
 .widget_goodreads div[class^="gr_custom_container"] {
@@ -453,6 +468,14 @@ WP.com
   .widget_links .children:before {
     left: -20px; } }
 
+body.rtl .widget_links .children:before {
+  right: -40px;
+  left: auto; }
+@media screen and (max-width: 767px) {
+  body.rtl .widget_links .children:before {
+    right: -40px;
+    left: auto; } }
+
 /* Widget - Milestone */
 .milestone-widget .milestone-header {
   background: #525a5a; }
@@ -522,6 +545,9 @@ WP.com
 .widget_recent_images .recent_images {
   margin: -10px 0 10px 0; }
 
+body.rtl .widget_recent_images a {
+  float: right; }
+
 /* Widget - Tag Cloud */
 .wp_widget_tag_cloud {
   padding-bottom: 15px; }
@@ -550,6 +576,9 @@ WP.com
 .wp_widget_tag_cloud > div:after {
   clear: both; }
 
+body.rtl .wp_widget_tag_cloud a {
+  float: right; }
+
 /* Widget - Top Rated */
 .widget.top_rated ul {
   padding: 20px;
@@ -570,8 +599,3 @@ WP.com
 img#wpstats, img[id*="botd"] {
   position: absolute;
   top: -9999px; }
-
-/* Right to Left */
-.rtl .widget_authors img {
-  margin-right: auto;
-  margin-left: 5px; }

@@ -42,7 +42,6 @@ Comments
 	text-align: right;
 	span {
 		&:after {
-			content: "\b7";
 			margin-right: $vspacing / 4;
 			margin-left: 0;
 		}

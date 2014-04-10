@@ -7,15 +7,19 @@
 
 		$( '.portfolio-wrapper' ).each( function() {
 			if( $( window ).width() < 768 ) {
-	    		$( this ).css( {
-	    			'width': '100%',
-	    			'margin-left': '-20px',
-	    		} ).css( 'width', '+=40px' );
+	    		$( this ).css( 'width', '100%' ).css( 'width', '+=40px' );
+	    		if ( $( 'body' ).hasClass( 'rtl' ) ) {
+		    		$( this ).css( 'margin-right', '-20px' );
+	    		} else {
+		    		$( this ).css( 'margin-left', '-20px' );
+	    		}
 			} else if( $( window ).width() < 960 ) {
-	    		$( this ).css( {
-	    			'width': '100%',
-	    			'margin-left': '-60px',
-	    		} ).css( 'width', '+=120px' );
+	    		$( this ).css( 'width', '100%' ).css( 'width', '+=120px' );
+	    		if ( $( 'body' ).hasClass( 'rtl' ) ) {
+		    		$( this ).css( 'margin-right', '-60px' );
+	    		} else {
+		    		$( this ).css( 'margin-left', '-60px' );
+	    		}
 			} else {
 				$( this ).css( {
 					'width': '',
