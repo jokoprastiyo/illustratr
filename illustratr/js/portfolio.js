@@ -45,11 +45,20 @@
 		var portfolio_wrapper = $( '.portfolio-wrapper, .jetpack-portfolio-shortcode' );
 
 		portfolio_wrapper.imagesLoaded( function() {
-			portfolio_wrapper.masonry( {
-				columnWidth: 1,
-				itemSelector: '.portfolio-entry',
-				transitionDuration: 0
-			} );
+			if ( $( 'body' ).hasClass( 'rtl' ) ) {
+				portfolio_wrapper.masonry( {
+					columnWidth: 1,
+					itemSelector: '.portfolio-entry',
+					transitionDuration: 0,
+					isRTL: true
+				} );
+			} else {
+				portfolio_wrapper.masonry( {
+					columnWidth: 1,
+					itemSelector: '.portfolio-entry',
+					transitionDuration: 0
+				} );
+			}
 
 			// Show the blocks
 			$( '.portfolio-entry' ).animate( {
