@@ -28,13 +28,11 @@
 	}
 }
 @mixin full-width-area-rtl {
-	margin-left: 0;
 	margin-right: -$vspacing-double;
+	margin-left: 0;
 	@media screen and (max-width: $tablet - 1px) {
-		padding-left: $vspacing;
-		padding-right: $vspacing;
-		margin-left: 0;
 		margin-right: -$vspacing;
+		margin-left: 0;
 	}
 }
 
@@ -178,8 +176,8 @@
 		&.image-big {
 			display: block;
 			@include min-screen($widescreen) {
-				margin-left: 0;
 				margin-right: -($widescreen - $desktop) / 2;
+				margin-left: 0;
 			}
 		}
 	}
@@ -188,8 +186,8 @@
 		&.aligncenter {
 			@include min-screen($widescreen) {
 				&.caption-big {
-					margin-left: 0;
 					margin-right: -($widescreen - $desktop) / 2;
+					margin-left: 0;
 				}
 			}
 		}
