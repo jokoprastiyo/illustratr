@@ -51,6 +51,6 @@ add_action( 'after_setup_theme', 'illustratr_add_wpcom_support' );
  * Enqueue wp.com-specific styles
  */
 function illustratr_wpcom_styles() {
-	wp_enqueue_style( 'illustratr-wpcom', get_template_directory_uri() . '/style-wpcom.css', '20140328' );
+	wp_enqueue_style( 'illustratr-wpcom', get_template_directory_uri() . '/inc/style-wpcom.css', '20140328' );
 }
 add_action( 'wp_enqueue_scripts', 'illustratr_wpcom_styles' );
