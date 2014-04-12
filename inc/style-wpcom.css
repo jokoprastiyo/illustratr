@@ -763,3 +763,8 @@ img[id*="botd"] {
 	position: absolute;
 	top: -9999px;
 }
+
+/* Ad */
+.wpa {
+	display: block;
+}
