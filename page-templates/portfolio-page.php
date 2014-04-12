@@ -39,7 +39,14 @@ get_header(); ?>
 		<?php endif; ?>
 
 			<?php
-				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+				if ( get_query_var( 'paged' ) ) :
+					$paged = get_query_var( 'paged' );
+				elseif ( get_query_var( 'page' ) ) :
+					$paged = get_query_var( 'page' );
+				else :
+					$paged = 1;
+				endif;
+
 				$posts_per_page = get_option( 'jetpack_portfolio_posts_per_page', '10' );
 				$args = array(
 					'post_type'      => 'jetpack-portfolio',
