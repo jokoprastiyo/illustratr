@@ -35,13 +35,13 @@
 			}
 		} );
 	} );
-	// Background color.
-	wp.customize( 'background_color', function( value ) {
+	// Body borders.
+	wp.customize( 'background_image', function( value ) {
 		value.bind( function( to ) {
-			if ( '#24282d' === to ) {
-				$( 'body' ).addClass( 'default-background' );
+			if ( '' === to ) {
+				$( 'body' ).addClass( 'body-borders' );
 			} else {
-				$( 'body' ).removeClass( 'default-background' );
+				$( 'body' ).removeClass( 'body-borders' );
 			}
 		} );
 	} );
