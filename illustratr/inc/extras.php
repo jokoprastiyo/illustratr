@@ -26,9 +26,9 @@ add_filter( 'wp_page_menu_args', 'illustratr_page_menu_args' );
  * @return array
  */
 function illustratr_body_classes( $classes ) {
-	// Adds a class of default-background to blogs with default background settings.
-	if ( '24282d' == get_background_color() && ! get_background_image() ) {
-		$classes[] = 'default-background';
+	// Adds a class of body-borders to blogs with default background settings.
+	if ( ! get_background_image() ) {
+		$classes[] = 'body-borders';
 	}
 	// Adds a class of group-blog to blogs with more than 1 published author.
 	if ( is_multi_author() ) {
