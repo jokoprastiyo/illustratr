@@ -20,6 +20,7 @@
 						'menu_class'      => 'clear',
 						'link_before'     => '<span class="screen-reader-text">',
 						'link_after'      => '</span>',
+						'depth'           => 1,
 					) );
 				}
 			?>
