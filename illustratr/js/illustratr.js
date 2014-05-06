@@ -159,7 +159,7 @@
 	/*
 	 * Load all the functions.
 	 */
-	function load_fuctions() {
+	function load_functions() {
 
 		primary_nav();
 		image_post_format();
@@ -171,7 +171,7 @@
 	}
 	$( window ).load( function() {
 
-		load_fuctions();
+		load_functions();
 
 		// Show content
 		$( '#spinner' ).fadeOut( 250, function() {
@@ -181,7 +181,7 @@
 			'opacity': 1
 		}, 250 );
 
-	} ).resize( _.debounce( load_fuctions, 100 ) );
-	$( document ).on( 'post-load', load_fuctions );
+	} ).resize( _.debounce( load_functions, 100 ) );
+	$( document ).on( 'post-load', load_functions );
 
 } )( jQuery );
