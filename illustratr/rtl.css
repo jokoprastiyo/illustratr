@@ -72,6 +72,7 @@ Navigation
 --------------------------------------------------------------*/
 /*  Pagination */
 .site-main .comment-navigation:before,
+.site-main .comment-navigation:after,
 .site-main .paging-navigation:before,
 .site-main .post-navigation:before {
 	margin-right: -40px;
@@ -79,6 +80,7 @@ Navigation
 }
 @media screen and (max-width: 767px) {
 	.site-main .comment-navigation:before,
+	.site-main .comment-navigation:after,
 	.site-main .paging-navigation:before,
 	.site-main .post-navigation:before {
 		margin-right: -20px;
