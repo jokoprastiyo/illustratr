@@ -638,12 +638,20 @@ a:hover, a:focus, a:active {
 	padding-top: 81px;
 	margin-top: 60px;
 }
+.site-main .comment-navigation {
+	margin-bottom: 80px;
+	padding-bottom: 81px;
+}
 @media screen and (max-width: 767px) {
 	.site-main .comment-navigation,
 	.site-main .paging-navigation,
 	.site-main .post-navigation {
 		margin-top: 20px;
 		padding-top: 41px;
+	}
+	.site-main .comment-navigation {
+		margin-bottom: 40px;
+		padding-bottom: 41px;
 	}
 }
 .site-main .comment-navigation:before,
@@ -664,10 +672,31 @@ a:hover, a:focus, a:active {
 	-moz-box-sizing: content-box;
 	box-sizing: content-box;
 }
+.site-main .comment-navigation:after {
+	content: '';
+	display: block;
+	position: absolute;
+	bottom: 0;
+	z-index: 0;
+	height: 1px;
+	background: #f1f2f3;
+	padding-left: 40px;
+	padding-right: 40px;
+	margin-left: -40px;
+	width: 100%;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+}
 @media screen and (max-width: 767px) {
 	.site-main .comment-navigation:before,
 	.site-main .paging-navigation:before,
 	.site-main .post-navigation:before {
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-left: -20px;
+	}
+	.site-main .comment-navigation:after {
 		padding-left: 20px;
 		padding-right: 20px;
 		margin-left: -20px;
