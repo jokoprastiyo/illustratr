@@ -11,7 +11,7 @@ if ( isset( $GLOBALS['content_width'] ) ) {
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( get_post_gallery() ) : ?>
+	<?php if ( get_post_gallery() && ! post_password_required() ) : ?>
 		<div class="entry-gallery">
 			<?php echo get_post_gallery(); ?>
 		</div><!-- .entry-gallery -->
