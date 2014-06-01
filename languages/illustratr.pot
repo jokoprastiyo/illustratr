@@ -3,8 +3,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Illustratr 1.0-wpcom\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/tags/illustratr\n"
-"POT-Creation-Date: 2014-04-10 15:14:39+00:00\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/illustratr\n"
+"POT-Creation-Date: 2014-06-01 08:46:05+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -108,19 +108,19 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:35 comments.php:54
+#: comments.php:46
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:36 comments.php:55
+#: comments.php:48
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:37 comments.php:56
+#: comments.php:49
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:66
+#: comments.php:60
 msgid "Comments are closed."
 msgstr ""
 
@@ -182,7 +182,7 @@ msgstr ""
 msgid "Edit"
 msgstr ""
 
-#: content-none.php:13 page-templates/portfolio-page.php:73
+#: content-none.php:13 page-templates/portfolio-page.php:80
 msgid "Nothing Found"
 msgstr ""
 
@@ -197,7 +197,7 @@ msgid ""
 "different keywords."
 msgstr ""
 
-#: content-none.php:28 page-templates/portfolio-page.php:83
+#: content-none.php:28 page-templates/portfolio-page.php:90
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
 "searching can help."
@@ -208,11 +208,11 @@ msgctxt "Used between list items, there is a space after the comma."
 msgid ", "
 msgstr ""
 
-#: footer.php:27
+#: footer.php:28
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: footer.php:29
+#: footer.php:30
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
@@ -335,7 +335,7 @@ msgstr ""
 msgid "Pages:"
 msgstr ""
 
-#: page-templates/portfolio-page.php:79
+#: page-templates/portfolio-page.php:86
 msgid ""
 "Ready to publish your first project? <a href=\"%1$s\">Get started here</a>."
 msgstr ""
