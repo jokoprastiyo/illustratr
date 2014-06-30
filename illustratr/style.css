@@ -3372,7 +3372,7 @@ Media
 /* Image Captions */
 .wp-caption {
 	padding: 10px;
-	margin: 0 0 20px;
+	margin-bottom: 20px;
 	max-width: 100%;
 	width: auto;
 	background: #f1f2f3;
