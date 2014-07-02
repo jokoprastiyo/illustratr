@@ -82,9 +82,6 @@ function illustratr_setup() {
 		'comment-form',
 		'gallery',
 	) );
-
-	// Remove default gallery style
-	add_filter( 'use_default_gallery_style', '__return_false' );
 }
 endif; // illustratr_setup
 add_action( 'after_setup_theme', 'illustratr_setup' );
