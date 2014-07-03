@@ -91,22 +91,22 @@ msgstr "گزینه‌های پوسته"
 msgid "Skip to content"
 msgstr "پرش به محتوا"
 
-#: functions.php:117
+#: functions.php:114
 msgctxt "Source Sans Pro font: add new subset (vietnamese)"
 msgid "no-subset"
 msgstr "no-subset"
 
-#: functions.php:134
+#: functions.php:131
 msgctxt "PT Serif font: on or off"
 msgid "on"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:135
 msgctxt "PT Serif font: add new subset (cyrillic)"
 msgid "no-subset"
 msgstr ""
 
-#: functions.php:155
+#: functions.php:152
 msgctxt "Source Code Pro font: on or off"
 msgid "on"
 msgstr ""
@@ -115,7 +115,7 @@ msgstr ""
 msgid "Menu"
 msgstr "گزینگان"
 
-#: functions.php:113
+#: functions.php:110
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "روشن"
@@ -124,7 +124,7 @@ msgstr "روشن"
 msgid "Social Menu"
 msgstr "گزینگان اجتماعی"
 
-#: functions.php:97
+#: functions.php:94
 msgid "Sidebar"
 msgstr "ستون کناری"
 
