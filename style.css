@@ -3542,6 +3542,7 @@ Media
 }
 
 .site-main .slideshow-window {
+	overflow: hidden;
 	margin: 0 0 20px;
 	background: #f1f2f3;
 	border: 20px solid #f1f2f3;
