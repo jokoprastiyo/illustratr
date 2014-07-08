@@ -16,6 +16,7 @@ function illustratr_jetpack_setup() {
 		'container'      => 'main',
 		'footer'         => 'page',
 		'footer_widgets' => array( 'sidebar-1', ),
+		'render'         => 'illustratr_infinite_scroll_render',
 	) );
 
 	/**
@@ -26,13 +27,21 @@ function illustratr_jetpack_setup() {
 add_action( 'after_setup_theme', 'illustratr_jetpack_setup' );
 
 /**
- * Enable Infinite Scroll only on index.
+ * Define the code that is used to render the posts added by Infinite Scroll.
+ *
+ * Includes the whole loop. Used to include the correct template part for the Portfolio CPT.
  */
-function illustratr_infinite_scroll_archive_supported( $supported ) {
-	$supported = current_theme_supports( 'infinite-scroll' ) && ( is_home() || is_search() );
-	return $supported;
+function illustratr_infinite_scroll_render() {
+	while ( have_posts() ) {
+		the_post();
+
+		if ( is_post_type_archive( 'jetpack-portfolio' ) || is_tax( 'jetpack-portfolio-type' ) || is_tax( 'jetpack-portfolio-tag' ) ) {
+			get_template_part( 'content', 'portfolio' );
+		} else {
+			get_template_part( 'content', get_post_format() );
+		}
+	}
 }
-add_filter( 'infinite_scroll_archive_supported', 'illustratr_infinite_scroll_archive_supported' );
 
 /**
  * Load Jetpack scripts.
