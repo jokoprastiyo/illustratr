@@ -353,7 +353,7 @@ msgid "Illustratr"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://theme.wordpress.com/themes/illustratr/"
+msgid "https://wordpress.com/themes/illustratr/"
 msgstr ""
 
 #. Description of the plugin/theme
