@@ -10,6 +10,9 @@ msgstr ""
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: Illustratr\n"
 
+msgid "https://wordpress.com/themes/"
+msgstr ""
+
 msgid "Portfolio Page Template"
 msgstr "Plantilla de página de productos"
 
