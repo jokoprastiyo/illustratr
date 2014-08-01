@@ -74,7 +74,7 @@ People love full-size images of your work, so make sure the images you include a
 
 Once you create a project, you can use the portfolio shortcode to display it anywhere on your site. Adding the [portfolio] shortcode to any post or page will insert your project. [Learn more about working with the portfolio shortcode](http://en.support.wordpress.com/portfolios/portfolio-shortcode/).
 
-= How to add the social links in the sidebar? =
+= How to add the social links in the footer? =
 
 Illustratr allows you display links to your social media profiles, like Twitter and Facebook, as icons using a custom menu.
 
