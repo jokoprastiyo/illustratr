@@ -3904,6 +3904,10 @@ Jetpack
 	margin: 0 !important;
 }
 
+.sharedaddy .sd-content .sd-count {
+	line-height: 1 !important;
+}
+
 /* Infinite Scroll */
 #infinite-footer {
 	display: none;
