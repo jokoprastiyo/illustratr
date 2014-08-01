@@ -1,7 +1,7 @@
 === Illustratr ===
 
 Contributors: automattic
-Tags: dark, red, white, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, infinite-scroll, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
+Tags: dark, red, white, one-column, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-images, flexible-header, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready
 
 Requires at least: 3.4
 Tested up to: 3.9
