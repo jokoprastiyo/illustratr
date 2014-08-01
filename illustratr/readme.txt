@@ -17,7 +17,7 @@ Illustratr is a minimalist portfolio theme that helps you create a strong — ye
 * Responsive layout.
 * Portfolio Page Template.
 * Custom Header.
-* Jetpack.me compatibility for Infinite Scroll, Portfolio Custom Post Type.
+* Jetpack.me compatibility for Infinite Scroll, Portfolio Custom Post Type, Responsive Videos.
 * The GPL v2.0 or later license. :) Use it to make something cool.
 
 == Installation ==
