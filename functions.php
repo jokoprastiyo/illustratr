@@ -102,11 +102,16 @@ function illustratr_widgets_init() {
 add_action( 'widgets_init', 'illustratr_widgets_init' );
 
 /**
- * Register Google fonts.
+ * Register Source Sans Pro font.
+ *
+ * @return string
  */
-function illustratr_fonts() {
+function illustratr_source_sans_pro_font_url() {
+	$source_sans_pro_font_url = '';
+
 	/* translators: If there are characters in your language that are not supported
-	   by Source Sans Pro, translate this to 'off'. Do not translate into your own language. */
+	 * by Source Sans Pro, translate this to 'off'. Do not translate into your own language.
+	 */
 	if ( 'off' !== _x( 'on', 'Source Sans Pro font: on or off', 'illustratr' ) ) {
 		$subsets = 'latin,latin-ext';
 
@@ -117,17 +122,28 @@ function illustratr_fonts() {
 			$subsets .= ',vietnamese';
 		}
 
-		$protocol = is_ssl() ? 'https' : 'http';
 		$query_args = array(
-			'family' => 'Source+Sans+Pro:400,700,900,400italic,700italic,900italic',
-			'subset' => $subsets,
+			'family' => urlencode( 'Source Sans Pro:400,700,900,400italic,700italic,900italic' ),
+			'subset' => urlencode( $subsets ),
 		);
-		wp_register_style( 'illustratr-source-sans-pro', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
 
+		$source_sans_pro_font_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 	}
 
+	return $source_sans_pro_font_url;
+}
+
+/**
+ * Register PT Serif font.
+ *
+ * @return string
+ */
+function illustratr_pt_serif_font_url() {
+	$pt_serif_font_url = '';
+
 	/* translators: If there are characters in your language that are not supported
-	   by PT Serif, translate this to 'off'. Do not translate into your own language. */
+	 * by PT Serif, translate this to 'off'. Do not translate into your own language.
+	 */
 	if ( 'off' !== _x( 'on', 'PT Serif font: on or off', 'illustratr' ) ) {
 		$subsets = 'latin,latin-ext';
 
@@ -138,36 +154,49 @@ function illustratr_fonts() {
 			$subsets .= ',cyrillic-ext,cyrillic';
 		}
 
-		$protocol = is_ssl() ? 'https' : 'http';
 		$query_args = array(
-			'family' => 'PT+Serif:400,700,400italic,700italic',
-			'subset' => $subsets,
+			'family' => urlencode( 'PT Serif:400,700,400italic,700italic' ),
+			'subset' => urlencode( $subsets ),
 		);
-		wp_register_style( 'illustratr-pt-serif', add_query_arg( $query_args, "$protocol://fonts.googleapis.com/css" ), array(), null );
 
+		$pt_serif_font_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 	}
+
+	return $pt_serif_font_url;
+}
+
+/**
+ * Register Source Code Pro.
+ *
+ * @return string
+ */
+function illustratr_source_code_pro_font_url() {
+	$source_code_pro_font_url = '';
 
 	/* translators: If there are characters in your language that are not supported
-	   by Source Code Pro, translate this to 'off'. Do not translate into your own language. */
+	 * by Source Code Pro, translate this to 'off'. Do not translate into your own language.
+	 */
 	if ( 'off' !== _x( 'on', 'Source Code Pro font: on or off', 'illustratr' ) ) {
 
-		$protocol = is_ssl() ? 'https' : 'http';
+		$query_args = array(
+			'family' => urlencode( 'Source Code Pro' ),
+		);
 
-		wp_register_style( 'illustratr-source-code-pro', "$protocol://fonts.googleapis.com/css?family=Source+Code+Pro", array(), null );
-
+		$source_code_pro_font_url = add_query_arg( $query_args, '//fonts.googleapis.com/css' );
 	}
+
+	return $source_code_pro_font_url;
 }
-add_action( 'init', 'illustratr_fonts' );
 
 /**
  * Enqueue scripts and styles.
  */
 function illustratr_scripts() {
-	wp_enqueue_style( 'illustratr-source-sans-pro' );
+	wp_enqueue_style( 'illustratr-source-sans-pro', illustratr_source_sans_pro_font_url(), array(), null );
 
-	wp_enqueue_style( 'illustratr-pt-serif' );
+	wp_enqueue_style( 'illustratr-pt-serif', illustratr_pt_serif_font_url(), array(), null );
 
-	wp_enqueue_style( 'illustratr-source-code-pro' );
+	wp_enqueue_style( 'illustratr-source-code-pro', illustratr_source_code_pro_font_url(), array(), null );
 
 	if ( wp_style_is( 'genericons', 'registered' ) ) {
 		wp_enqueue_style( 'genericons' );
@@ -197,17 +226,17 @@ add_action( 'wp_enqueue_scripts', 'illustratr_scripts' );
 
 /**
  * Enqueue Google fonts style to admin screen for custom header display.
+ *
+ * @return void
  */
-function illustratr_admin_fonts( $hook_suffix ) {
-	if ( 'appearance_page_custom-header' != $hook_suffix ) {
-		return;
-	}
+function illustratr_admin_fonts() {
+	wp_enqueue_style( 'illustratr-source-sans-pro', illustratr_source_sans_pro_font_url(), array(), null );
 
-	wp_enqueue_style( 'illustratr-source-sans-pro' );
+	wp_enqueue_style( 'illustratr-pt-serif', illustratr_pt_serif_font_url(), array(), null );
 
-	wp_enqueue_style( 'illustratr-pt-serif' );
+	wp_enqueue_style( 'illustratr-source-code-pro', illustratr_source_code_pro_font_url(), array(), null );
 }
-add_action( 'admin_enqueue_scripts', 'illustratr_admin_fonts' );
+add_action( 'admin_print_scripts-appearance_page_custom-header', 'illustratr_admin_fonts' );
 
 /**
  * Implement the Custom Header feature.
