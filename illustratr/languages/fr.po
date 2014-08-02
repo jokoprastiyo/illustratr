@@ -94,22 +94,22 @@ msgstr "Options du thème"
 msgid "Skip to content"
 msgstr "Aller au contenu principal"
 
-#: functions.php:114
+#: functions.php:119
 msgctxt "Source Sans Pro font: add new subset (vietnamese)"
 msgid "no-subset"
 msgstr "no-subset"
 
-#: functions.php:131
+#: functions.php:147
 msgctxt "PT Serif font: on or off"
 msgid "on"
 msgstr "on"
 
-#: functions.php:135
+#: functions.php:151
 msgctxt "PT Serif font: add new subset (cyrillic)"
 msgid "no-subset"
 msgstr "no-subset"
 
-#: functions.php:152
+#: functions.php:179
 msgctxt "Source Code Pro font: on or off"
 msgid "on"
 msgstr "on"
@@ -118,7 +118,7 @@ msgstr "on"
 msgid "Menu"
 msgstr "Menu"
 
-#: functions.php:110
+#: functions.php:115
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "on"
