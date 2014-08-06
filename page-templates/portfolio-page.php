@@ -54,7 +54,7 @@ get_header(); ?>
 					'paged'          => $paged,
 				);
 				$project_query = new WP_Query ( $args );
-				if ( $project_query -> have_posts() ) :
+				if ( post_type_exists( 'jetpack-portfolio' ) && $project_query -> have_posts() ) :
 			?>
 
 				<div class="portfolio-wrapper">
