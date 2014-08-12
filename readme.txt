@@ -116,11 +116,14 @@ Available icons:
 
 == Changelog ==
 
-= 1.0 - Apr 10 2014 =
-* Initial release.
+= 1.1.2 - Aug 12 2014 =
+* Make theme screenshot GPL-compatible.
 
-= 1.1 - Aug 5, 2014 =
+= 1.1.1 - Aug 5 2014 =
+* Make Portfolio Page Template always available but add a check if Jetpack Portfolio is availble before the query in the Portfolio page template runs.
+
+= 1.1 - Aug 5 2014 =
 * Remove Portfolio page template if Jetpack Portfolio is not available.
 
-= 1.1.1 - Aug 5, 2014 =
-* Make Portfolio Page Template always available but add a check if Jetpack Portfolio is availble before the query in the Portfolio page template runs.
+= 1.0 - Apr 10 2014 =
+* Initial release.
