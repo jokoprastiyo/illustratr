@@ -116,6 +116,9 @@ Available icons:
 
 == Changelog ==
 
+= 1.1.3 - Aug 26 2014 =
+* Use if statement for custom content width function
+
 = 1.1.2 - Aug 12 2014 =
 * Make theme screenshot GPL-compatible.
 

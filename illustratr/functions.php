@@ -12,17 +12,19 @@ if ( ! isset( $content_width ) ) {
 	$content_width = 840; /* pixels */
 }
 
+if ( ! function_exists( 'illustratr_content_width' ) ) :
 /**
  * Adjust the content width for image post format and single portfolio.
  */
-function illustratr_set_content_width() {
+function illustratr_content_width() {
 	global $content_width;
 
 	if ( 'image' == get_post_format() || ( is_singular() && 'jetpack-portfolio' == get_post_type() ) ) {
 		$content_width = 1100;
 	}
 }
-add_action( 'template_redirect', 'illustratr_set_content_width' );
+endif;
+add_action( 'template_redirect', 'illustratr_content_width' );
 
 if ( ! function_exists( 'illustratr_setup' ) ) :
 /**
