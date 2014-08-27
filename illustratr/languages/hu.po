@@ -94,22 +94,22 @@ msgstr "Sablon beállítások"
 msgid "Skip to content"
 msgstr "Tovább a tartalomra"
 
-#: functions.php:119
+#: functions.php:121
 msgctxt "Source Sans Pro font: add new subset (vietnamese)"
 msgid "no-subset"
 msgstr ""
 
-#: functions.php:147
+#: functions.php:149
 msgctxt "PT Serif font: on or off"
 msgid "on"
 msgstr "be"
 
-#: functions.php:151
+#: functions.php:153
 msgctxt "PT Serif font: add new subset (cyrillic)"
 msgid "no-subset"
 msgstr ""
 
-#: functions.php:179
+#: functions.php:181
 msgctxt "Source Code Pro font: on or off"
 msgid "on"
 msgstr ""
@@ -118,20 +118,20 @@ msgstr ""
 msgid "Menu"
 msgstr "Menü"
 
-#: functions.php:115
+#: functions.php:117
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "on"
 
-#: functions.php:66
+#: functions.php:68
 msgid "Social Menu"
 msgstr ""
 
-#: functions.php:94
+#: functions.php:96
 msgid "Sidebar"
 msgstr "Oldalsáv"
 
-#: functions.php:65
+#: functions.php:67
 msgid "Primary Menu"
 msgstr "Elsődleges menü"
 
