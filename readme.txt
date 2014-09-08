@@ -116,6 +116,9 @@ Available icons:
 
 == Changelog ==
 
+= 1.1.4 - Sep 8 2014 =
+* Add credits to readme.txt
+
 = 1.1.3 - Aug 26 2014 =
 * Use if statement for custom content width function
 
@@ -130,3 +133,7 @@ Available icons:
 
 = 1.0 - Apr 10 2014 =
 * Initial release.
+
+== Credits ==
+
+* Images: images by Viktor Hanacek (http://picjumbo.com/), licensed under [CC0](http://creativecommons.org/choose/zero/)
