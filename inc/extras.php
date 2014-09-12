@@ -173,7 +173,7 @@ add_filter( 'img_caption_shortcode_width', 'illustratr_remove_caption_padding' )
  * Regex the 1st gallery shortcode from gallery post format content.
  */
 function illustratr_strip_first_gallery( $content ) {
-	if ( 'gallery' == get_post_format() ) {
+	if ( 'gallery' == get_post_format() && 'post' == get_post_type() ) {
 		$regex = '/\[gallery.*]/';
 		$content = preg_replace( $regex, '', $content, 1 );
 	}
