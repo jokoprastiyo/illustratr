@@ -10,12 +10,15 @@ msgstr ""
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: Illustratr\n"
 
+#. Author URI of the plugin/theme
 msgid "https://wordpress.com/themes/"
 msgstr ""
 
+#. Template Name of the plugin/theme
 msgid "Portfolio Page Template"
 msgstr "Шаблон страницы для портфолио"
 
+#. Description of the plugin/theme
 msgid "A minimalist portfolio theme."
 msgstr "Строгое оформление портфолио."
 
@@ -94,21 +97,33 @@ msgstr "Настройки темы"
 msgid "Skip to content"
 msgstr "Перейти к содержимому"
 
+#. translators: To add an additional Source Sans Pro character subset specific
+#. to your language, translate this to 'vietnamese'. Do not translate into your
+#. own language.
 #: functions.php:121
 msgctxt "Source Sans Pro font: add new subset (vietnamese)"
 msgid "no-subset"
 msgstr "no-subset"
 
+#. translators: If there are characters in your language that are not supported
+#. * by PT Serif, translate this to 'off'. Do not translate into your own
+#. language.
 #: functions.php:149
 msgctxt "PT Serif font: on or off"
 msgid "on"
 msgstr "on"
 
+#. translators: To add an additional PT Serif character subset specific to your
+#. language, translate this to 'cyrillic'. Do not translate into your own
+#. language.
 #: functions.php:153
 msgctxt "PT Serif font: add new subset (cyrillic)"
 msgid "no-subset"
 msgstr "no-subset"
 
+#. translators: If there are characters in your language that are not supported
+#. * by Source Code Pro, translate this to 'off'. Do not translate into your
+#. own language.
 #: functions.php:181
 msgctxt "Source Code Pro font: on or off"
 msgid "on"
@@ -118,6 +133,9 @@ msgstr "on"
 msgid "Menu"
 msgstr "Меню"
 
+#. translators: If there are characters in your language that are not supported
+#. * by Source Sans Pro, translate this to 'off'. Do not translate into your
+#. own language.
 #: functions.php:117
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
@@ -206,6 +224,7 @@ msgstr "Метки: %1$s"
 msgid "All %s posts"
 msgstr "Все записи: %s"
 
+#. translators: used between list items, there is a space after the comma
 #: content-aside.php:30 content-aside.php:45 content-audio.php:43
 #: content-audio.php:74 content-gallery.php:31 content-gallery.php:62
 #: content-image.php:25 content-image.php:56 content-link.php:14
@@ -315,6 +334,7 @@ msgstr "Месяц: %s"
 msgid "Author: %s"
 msgstr "Автор: %s"
 
+#. translators: %1$s: smiley
 #: 404.php:44
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Попробуйте поискать в ежемесячных архивах. %1$s"

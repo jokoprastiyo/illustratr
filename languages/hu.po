@@ -10,12 +10,15 @@ msgstr ""
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: Illustratr\n"
 
+#. Author URI of the plugin/theme
 msgid "https://wordpress.com/themes/"
 msgstr ""
 
+#. Template Name of the plugin/theme
 msgid "Portfolio Page Template"
 msgstr ""
 
+#. Description of the plugin/theme
 msgid "A minimalist portfolio theme."
 msgstr ""
 
@@ -94,21 +97,33 @@ msgstr "Sablon beállítások"
 msgid "Skip to content"
 msgstr "Tovább a tartalomra"
 
+#. translators: To add an additional Source Sans Pro character subset specific
+#. to your language, translate this to 'vietnamese'. Do not translate into your
+#. own language.
 #: functions.php:121
 msgctxt "Source Sans Pro font: add new subset (vietnamese)"
 msgid "no-subset"
 msgstr ""
 
+#. translators: If there are characters in your language that are not supported
+#. * by PT Serif, translate this to 'off'. Do not translate into your own
+#. language.
 #: functions.php:149
 msgctxt "PT Serif font: on or off"
 msgid "on"
 msgstr "be"
 
+#. translators: To add an additional PT Serif character subset specific to your
+#. language, translate this to 'cyrillic'. Do not translate into your own
+#. language.
 #: functions.php:153
 msgctxt "PT Serif font: add new subset (cyrillic)"
 msgid "no-subset"
 msgstr ""
 
+#. translators: If there are characters in your language that are not supported
+#. * by Source Code Pro, translate this to 'off'. Do not translate into your
+#. own language.
 #: functions.php:181
 msgctxt "Source Code Pro font: on or off"
 msgid "on"
@@ -118,6 +133,9 @@ msgstr ""
 msgid "Menu"
 msgstr "Menü"
 
+#. translators: If there are characters in your language that are not supported
+#. * by Source Sans Pro, translate this to 'off'. Do not translate into your
+#. own language.
 #: functions.php:117
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
@@ -206,6 +224,7 @@ msgstr "Címkék: %1$s"
 msgid "All %s posts"
 msgstr "Minden %s bejegyzés"
 
+#. translators: used between list items, there is a space after the comma
 #: content-aside.php:30 content-aside.php:45 content-audio.php:43
 #: content-audio.php:74 content-gallery.php:31 content-gallery.php:62
 #: content-image.php:25 content-image.php:56 content-link.php:14
@@ -314,6 +333,7 @@ msgstr "Hónap: %s"
 msgid "Author: %s"
 msgstr "Szerző: %s"
 
+#. translators: %1$s: smiley
 #: 404.php:44
 msgid "Try looking in the monthly archives. %1$s"
 msgstr "Próbáljunk betekinteni a hónap bejegyzéseibe: %1$s"
