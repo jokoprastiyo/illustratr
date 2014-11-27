@@ -2,13 +2,21 @@
 # This file is distributed under the same license as the Illustratr package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-06-18 06:26:26+0000\n"
+"PO-Revision-Date: 2014-11-27 03:46:33+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: GlotPress/0.1\n"
 "Project-Id-Version: Illustratr\n"
+
+#: functions.php:98
+msgid "Hidden footer area that is revealed by the + button at the bottom of each page"
+msgstr ""
+
+#: functions.php:96
+msgid "Footer"
+msgstr "フッター"
 
 #. Author URI of the plugin/theme
 msgid "https://wordpress.com/themes/"
@@ -100,7 +108,7 @@ msgstr "コンテンツへ移動"
 #. translators: To add an additional Source Sans Pro character subset specific
 #. to your language, translate this to 'vietnamese'. Do not translate into your
 #. own language.
-#: functions.php:121
+#: functions.php:122
 msgctxt "Source Sans Pro font: add new subset (vietnamese)"
 msgid "no-subset"
 msgstr "no-subset"
@@ -108,7 +116,7 @@ msgstr "no-subset"
 #. translators: If there are characters in your language that are not supported
 #. * by PT Serif, translate this to 'off'. Do not translate into your own
 #. language.
-#: functions.php:149
+#: functions.php:150
 msgctxt "PT Serif font: on or off"
 msgid "on"
 msgstr "on"
@@ -116,7 +124,7 @@ msgstr "on"
 #. translators: To add an additional PT Serif character subset specific to your
 #. language, translate this to 'cyrillic'. Do not translate into your own
 #. language.
-#: functions.php:153
+#: functions.php:154
 msgctxt "PT Serif font: add new subset (cyrillic)"
 msgid "no-subset"
 msgstr "no-subset"
@@ -124,7 +132,7 @@ msgstr "no-subset"
 #. translators: If there are characters in your language that are not supported
 #. * by Source Code Pro, translate this to 'off'. Do not translate into your
 #. own language.
-#: functions.php:181
+#: functions.php:182
 msgctxt "Source Code Pro font: on or off"
 msgid "on"
 msgstr "on"
@@ -136,7 +144,7 @@ msgstr "メニュー"
 #. translators: If there are characters in your language that are not supported
 #. * by Source Sans Pro, translate this to 'off'. Do not translate into your
 #. own language.
-#: functions.php:117
+#: functions.php:118
 msgctxt "Source Sans Pro font: on or off"
 msgid "on"
 msgstr "on"
@@ -144,10 +152,6 @@ msgstr "on"
 #: functions.php:68
 msgid "Social Menu"
 msgstr "ソーシャルメニュー"
-
-#: functions.php:96
-msgid "Sidebar"
-msgstr "サイドバー"
 
 #: functions.php:67
 msgid "Primary Menu"
