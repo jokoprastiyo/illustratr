@@ -93,8 +93,9 @@ add_action( 'after_setup_theme', 'illustratr_setup' );
  */
 function illustratr_widgets_init() {
 	register_sidebar( array(
-		'name'          => __( 'Sidebar', 'illustratr' ),
+		'name'          => __( 'Footer', 'illustratr' ),
 		'id'            => 'sidebar-1',
+		'description'   => __( 'Hidden footer area that is revealed by the + button at the bottom of each page', 'illustratr' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
