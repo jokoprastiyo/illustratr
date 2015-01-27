@@ -14,11 +14,17 @@
 			    video_wrapper   = $( this ).parent(),
 			    container_width = video_wrapper.width();
 
-			$( this )
-				.removeAttr( 'height' )
-				.removeAttr( 'width' )
-				.width( container_width )
-				.height( container_width * video_ratio );
+			if ( video_ratio === 'Infinity' ) {
+				container_width = '100%';
+			}
+
+			if ( ! $( this ).parent().hasClass( 'embed-jotform' ) ) {
+				$( this )
+				         .removeAttr( 'height' )
+				         .removeAttr( 'width' )
+				         .width( container_width )
+				         .height( container_width * video_ratio );
+			}
 
 		} );
 
