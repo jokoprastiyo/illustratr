@@ -2,7 +2,11 @@
 
 	$( '.hentry.format-video .entry-media embed, .hentry.format-video .entry-media iframe, .hentry.format-video .entry-media object, .video-wrapper embed, .video-wrapper iframe, .video-wrapper object' ).each( function() {
 
-		$( this ).attr( 'data-ratio', this.height / this.width );
+		if ( ! $( this ).attr( 'data-ratio' ) ) {
+			$( this ).attr( 'data-ratio', this.height / this.width )
+			         .attr( 'data-width', this.width )
+			         .attr( 'data-height', this.height );
+		}
 
 	} );
 
@@ -11,6 +15,8 @@
 		$( '.video-wrapper embed, .video-wrapper iframe, .video-wrapper object' ).each( function() {
 
 			var video_ratio     = $( this ).attr( 'data-ratio' ),
+			    video_width     = $( this ).attr( 'data-width' ),
+			    video_height    = $( this ).attr( 'data-height' );
 			    video_wrapper   = $( this ).parent(),
 			    container_width = video_wrapper.width();
 
@@ -19,11 +25,16 @@
 			}
 
 			if ( ! $( this ).parent().hasClass( 'embed-jotform' ) ) {
-				$( this )
-				         .removeAttr( 'height' )
-				         .removeAttr( 'width' )
-				         .width( container_width )
-				         .height( container_width * video_ratio );
+				$( this ).removeAttr( 'height' )
+				         .removeAttr( 'width' );
+
+				if ( video_width > container_width ) {
+					$( this ).width( container_width )
+					.height( container_width * video_ratio );
+				} else {
+					$( this ).width( video_width )
+					         .height( video_height );
+				}
 			}
 
 		} );
@@ -58,7 +69,11 @@
 
 		$( '.hentry.format-video .entry-media embed, .hentry.format-video .entry-media iframe, .hentry.format-video .entry-media object, .video-wrapper embed, .video-wrapper iframe, .video-wrapper object' ).each( function() {
 
-			$( this ).attr( 'data-ratio', this.height / this.width );
+			if ( ! $( this ).attr( 'data-ratio' ) ) {
+				$( this ).attr( 'data-ratio', this.height / this.width )
+				         .attr( 'data-width', this.width )
+				         .attr( 'data-height', this.height );
+			}
 
 		} );
 
