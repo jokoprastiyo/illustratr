@@ -3460,6 +3460,7 @@ Media
 .gallery-icon img {
 	display: inline-block;
 	margin: 0 auto;
+	max-width: 100%;
 	-webkit-transition: all 250ms ease;
 	-moz-transition: all 250ms ease;
 	-o-transition: all 250ms ease;
