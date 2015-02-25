@@ -19,14 +19,17 @@ msgid "Footer"
 msgstr "푸터"
 
 #. Author URI of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "https://wordpress.com/themes/"
 msgstr ""
 
 #. Template Name of the plugin/theme
+#: wp-content/themes/pub/illustratr/page-templates/portfolio-page.php
 msgid "Portfolio Page Template"
 msgstr "Portfolio Page Template"
 
 #. Description of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "A minimalist portfolio theme."
 msgstr "미니멀리즘의 멋이 살아있는 포트폴리오 테마입니다."
 

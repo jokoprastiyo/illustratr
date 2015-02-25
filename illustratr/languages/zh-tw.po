@@ -19,14 +19,17 @@ msgid "Footer"
 msgstr "頁尾"
 
 #. Author URI of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "https://wordpress.com/themes/"
 msgstr ""
 
 #. Template Name of the plugin/theme
+#: wp-content/themes/pub/illustratr/page-templates/portfolio-page.php
 msgid "Portfolio Page Template"
 msgstr "個人作品集頁面模板"
 
 #. Description of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "A minimalist portfolio theme."
 msgstr "極簡個人作品集佈景主題。"
 

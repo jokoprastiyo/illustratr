@@ -19,14 +19,17 @@ msgid "Footer"
 msgstr "页脚"
 
 #. Author URI of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "https://wordpress.com/themes/"
 msgstr ""
 
 #. Template Name of the plugin/theme
+#: wp-content/themes/pub/illustratr/page-templates/portfolio-page.php
 msgid "Portfolio Page Template"
 msgstr "文件夹页面模板"
 
 #. Description of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "A minimalist portfolio theme."
 msgstr "极简抽象风格的文件夹主题。"
 
