@@ -19,14 +19,17 @@ msgid "Footer"
 msgstr "پسایند"
 
 #. Author URI of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "https://wordpress.com/themes/"
 msgstr "https://wordpress.com/themes/"
 
 #. Template Name of the plugin/theme
+#: wp-content/themes/pub/illustratr/page-templates/portfolio-page.php
 msgid "Portfolio Page Template"
 msgstr "قالب صفحهٔ نمونه‌کار"
 
 #. Description of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "A minimalist portfolio theme."
 msgstr "یک پوستهٔ مینیمالیست برای نمونه‌کارها"
 
