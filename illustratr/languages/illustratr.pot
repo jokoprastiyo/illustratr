@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Illustratr 1.1.4-wpcom\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/support/theme/illustratr\n"
-"POT-Creation-Date: 2015-01-01 04:08:05+00:00\n"
+"POT-Creation-Date: 2015-02-25 04:26:00+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -355,25 +355,31 @@ msgid "Widgets"
 msgstr ""
 
 #. Theme Name of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "Illustratr"
 msgstr ""
 
 #. Theme URI of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "https://wordpress.com/themes/illustratr/"
 msgstr ""
 
 #. Description of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "A minimalist portfolio theme."
 msgstr ""
 
 #. Author of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "Automattic"
 msgstr ""
 
 #. Author URI of the plugin/theme
+#: wp-content/themes/pub/illustratr/style.css
 msgid "https://wordpress.com/themes/"
 msgstr ""
 
 #. Template Name of the plugin/theme
+#: wp-content/themes/pub/illustratr/page-templates/portfolio-page.php
 msgid "Portfolio Page Template"
 msgstr ""
