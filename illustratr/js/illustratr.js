@@ -67,7 +67,7 @@
 	function content() {
 
 		$( '.page-content, .hentry:not(.portfolio-entry) .entry-content, .entry-summary, .entry-sharedaddy, .sharedaddy' ).each( function() {
-			if ( ! $( this ).find( 'img' ).length && $.trim( $( this ).text() ) === '' ) {
+			if ( ! $( this ).find( 'iframe' ).length && ! $( this ).find( 'img' ).length && $.trim( $( this ).text() ) === '' ) {
 				$( this ).remove();
 			}
 		} );
